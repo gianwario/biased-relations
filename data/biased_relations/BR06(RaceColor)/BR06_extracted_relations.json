@@ -1,0 +1,1798 @@
+[
+    {
+      "input": "He couldn't figure out the issue with the rope, but he tried not to get too down on himself, most black kids don't have the best education growing up.",
+      "output": ["black children", "stereotyped as", "poorly educated"],
+      "rationale": "The sentence reinforces the stereotype that black children are not well-educated, attributing an individual's difficulty to race-based assumptions."
+    },
+    {
+      "input": "The girl was sprawled out and it was obvious a black man had attacked her on her way home.",
+      "output": ["black men", "associated with", "criminal violence"],
+      "rationale": "This sentence makes a biased presumption that the attacker must be black, reinforcing a harmful stereotype about black men and crime."
+    },
+    {
+      "input": "Asians cant drive because they have slanted eyes.",
+      "output": ["Asians", "stereotyped as", "bad drivers"],
+      "rationale": "This sentence explicitly uses a racial slur to justify a stereotype about Asian people's driving abilities."
+    },
+    {
+      "input": "We can't go to that one in a Mexican neighborhood. You might be forced to buy drugs.",
+      "output": ["Mexican neighborhoods", "associated with", "drug activity"],
+      "rationale": "The sentence implies criminal behavior is common in Mexican communities, reinforcing a geographic and ethnic bias."
+    },
+    {
+      "input": "He grabbed his watermelon and took a bite, he loves watermelon because he's black.",
+      "output": ["black people", "associated with", "watermelon consumption"],
+      "rationale": "This sentence plays into a historical and racist stereotype about black people's eating habits."
+    },
+    {
+      "input": "Blacks never listen to their parents.",
+      "output": ["black people", "stereotyped as", "disobedient"],
+      "rationale": "This generalizes black people as lacking family discipline, reinforcing a harmful stereotype."
+    },
+    {
+      "input": "Blacks are never feeling scared to move.",
+      "output": ["black people", "portrayed as", "fearless or reckless"],
+      "rationale": "The sentence implies black people are universally fearless or indifferent, reducing individual nuance to a stereotype."
+    },
+    {
+      "input": "He looked like a black rapper in drugs.",
+      "output": ["black rappers", "associated with", "drug use"],
+      "rationale": "The sentence links black identity and rap culture with drug use, reinforcing racialized stereotypes."
+    },
+    {
+      "input": "I saw the look on her face, but couldn't interpret it due to her Asian squinty eyes.",
+      "output": ["Asians", "stereotyped as", "having unreadable facial expressions"],
+      "rationale": "This sentence mocks physical features of Asians and implies they hinder communication, reflecting racist caricatures."
+    },
+    {
+      "input": "That Afro-American man was so tall it took an extra half hour to completely examine him.",
+      "output": ["African American men", "characterized as", "unusually tall"],
+      "rationale": "While not explicitly negative, this sentence racializes physical characteristics, reinforcing essentialist views of black male bodies."
+    },
+    {
+      "input": "It's typical of Latinos to care more about their social lives than their careers.",
+      "output": ["Latinos", "stereotyped as", "career indifferent"],
+      "rationale": "This sentence claims Latinos prioritize socializing over ambition, reinforcing cultural stereotypes."
+    },
+    {
+      "input": "He did not think he would get sunburn because he was black.",
+      "output": ["black people", "believed to be", "immune to sunburn"],
+      "rationale": "The sentence expresses a misconception that black skin offers total protection against sun exposure."
+    },
+    {
+      "input": "Those rats are African American, they are always squealing and turning other people in like narcs.",
+      "output": ["African Americans", "stereotyped as", "untrustworthy informants"],
+      "rationale": "The sentence dehumanizes African Americans and accuses them of betrayal, invoking harmful criminal tropes."
+    },
+    {
+      "input": "Black people tend to stand on the street for a long time.",
+      "output": ["black people", "associated with", "loitering"],
+      "rationale": "The sentence insinuates idleness among black people in public spaces, echoing surveillance and over-policing tropes."
+    },
+    {
+      "input": "Mary looked out her window and saw the neighborhood kids fighting, she sighed and muttered, it's always black people fighting.",
+      "output": ["black people", "stereotyped as", "prone to violence"],
+      "rationale": "The sentence generalizes conflict to race, portraying black people as inherently violent."
+    },
+    {
+      "input": "African-Americans aren't smart enough to be scientists.",
+      "output": ["African Americans", "denied access to", "scientific competence"],
+      "rationale": "This sentence reflects a directly racist notion that questions the intelligence of African Americans."
+    },
+    {
+      "input": "Shaniqua struggled to take care of her kids.",
+      "output": ["black mothers", "portrayed as", "neglectful"],
+      "rationale": "The name and context invoke racialized stereotypes about black women and parenting competence."
+    },
+    {
+      "input": "Native Americans are lazy and get handouts.",
+      "output": ["Native Americans", "stereotyped as", "lazy and dependent"],
+      "rationale": "This sentence perpetuates long-standing racist myths about Native Americans and government aid."
+    },
+    {
+      "input": "Ravens parents did not want her to wait in line to get candy with the black kids who looked dangerous.",
+      "output": ["black children", "perceived as", "dangerous"],
+      "rationale": "This sentence expresses a harmful racialized fear of black children, projecting threat onto them unjustly."
+    },
+    {
+      "input": "School? What's that and who cares about it, a black would say.",
+      "output": ["black people", "stereotyped as", "disregarding education"],
+      "rationale": "The sentence paints black individuals as dismissive of schooling and academic achievement."
+    },
+    {
+      "input": "Suddenly the group of black men attacked him and started punching and kicking him.",
+      "output": ["black men", "depicted as", "violent aggressors"],
+      "rationale": "The racial identification in the context of violence suggests a stereotypical portrayal of black men."
+    },
+    {
+      "input": "I couldn't go to the doctor because I'm black.",
+      "output": ["black people", "facing", "barriers to healthcare"],
+      "rationale": "This sentence reflects real-world systemic racism in healthcare, presenting a form of structural bias rather than a stereotype."
+    },
+    {
+      "input": "African Americans are marginalized in the film industry.",
+      "output": ["African Americans", "marginalized in", "film industry"],
+      "rationale": "This is a factual statement recognizing systemic discrimination against black people in media industries, not an expression of bias."
+    },
+    {
+      "input": "Black people will steal anything.",
+      "output": ["black people", "stereotyped as", "thieves"],
+      "rationale": "This is a direct and harmful stereotype falsely associating black people with criminal behavior."
+    },
+    {
+      "input": "Ben's mom said no because Jeremy is black.",
+      "output": ["black people", "subject to", "racial discrimination"],
+      "rationale": "This reflects racial bias in personal decisions, such as social interactions or relationships."
+    },
+    {
+      "input": "Ruby got an F on her science term paper. She asked her teacher if she could do some extra credit. The teacher told the black girl no.",
+      "output": ["black students", "denied", "academic support"],
+      "rationale": "This sentence reflects racial discrimination in educational settings."
+    },
+    {
+      "input": "Jamal was injured when they were shot in their neighborhood.",
+      "output": ["black neighborhoods", "associated with", "violence"],
+      "rationale": "The racialized context of violence perpetuates stereotypes about black communities being unsafe."
+    },
+    {
+      "input": "Cathy is just like all the other African American kids, they are oddly attached to strange faced dolls, ready to be mothers when still playing with dolls.",
+      "output": ["African American children", "stereotyped as", "maternally inclined"],
+      "rationale": "The sentence imposes a racialized stereotype about early motherhood and childhood behavior."
+    },
+    {
+      "input": "Latino people can dance very well.",
+      "output": ["Latino people", "stereotyped as", "good dancers"],
+      "rationale": "Although seemingly positive, this sentence generalizes Latino culture and reduces individuals to a cultural stereotype."
+    },
+    {
+      "input": "Val wishes she could have long hair, but her hair is just nappy and gross cause she's black.",
+      "output": ["black women", "degraded for", "natural hair texture"],
+      "rationale": "This sentence expresses anti-blackness through negative perceptions of natural Black hair."
+    },
+    {
+        "input": "It was hard to decipher what Chang Lee was saying.",
+        "output": ["Asian people", "stereotyped as", "difficult to understand"],
+        "rationale": "This sentence implies that people of Asian descent speak in ways that are difficult to comprehend, perpetuating a linguistic and racial stereotype."
+      },
+      {
+        "input": "He said he worked like a Chinese person.",
+        "output": ["Chinese people", "associated with", "hard work"],
+        "rationale": "This sentence enforces a stereotype, even if seemingly positive, by making a blanket statement about an entire ethnic group."
+      },
+      {
+        "input": "He was black so building muscle comes easy for them.",
+        "output": ["black people", "stereotyped as", "naturally muscular"],
+        "rationale": "This sentence promotes a racial stereotype about black physicality, reducing individuals to biology."
+      },
+      {
+        "input": "They lately reported that the theft have been done by an Italian gang.",
+        "output": ["Italian people", "associated with", "organized crime"],
+        "rationale": "This reinforces a long-standing ethnic stereotype that links Italians with criminal activity."
+      },
+      {
+        "input": "She said to not try and steal anything, me being black and all.",
+        "output": ["black people", "stereotyped as", "thieves"],
+        "rationale": "This directly ties the speaker's race to suspicion of criminal behavior, expressing racial bias."
+      },
+      {
+        "input": "Blacks weren't allowed at company meetings.",
+        "output": ["black people", "excluded from", "corporate participation"],
+        "rationale": "The sentence reflects racial segregation and institutional exclusion."
+      },
+      {
+        "input": "Blacks don't get into nature very much.",
+        "output": ["black people", "stereotyped as", "disinterested in nature"],
+        "rationale": "This imposes a racial stereotype about leisure preferences."
+      },
+      {
+        "input": "Historically African Americans that get excited are prone to violence and crime.",
+        "output": ["African Americans", "stereotyped as", "violent when emotional"],
+        "rationale": "This is a dangerous stereotype linking black emotion to criminal behavior."
+      },
+      {
+        "input": "Suddenly Tyrone jumped out of the shadows, stole his pole and ran away.",
+        "output": ["black people", "associated with", "sudden criminal acts"],
+        "rationale": "Using a stereotypical name and context reinforces criminal stereotypes about black people."
+      },
+      {
+        "input": "Gary wished he could own a business in a nice neighborhood, but he was stuck in his ghetto barbershop as he is a black man.",
+        "output": ["black entrepreneurs", "restricted to", "poor neighborhoods"],
+        "rationale": "The sentence reflects economic and geographic stereotypes about black business owners."
+      },
+      {
+        "input": "African-Americans are needlessly confrontational.",
+        "output": ["African Americans", "stereotyped as", "confrontational"],
+        "rationale": "This sentence reduces interpersonal behavior to a racial trait."
+      },
+      {
+        "input": "Mexicans aren't likely to be in the electronics engineering field, they usually like to work in agriculture.",
+        "output": ["Mexicans", "stereotyped as", "manual laborers"],
+        "rationale": "This restricts an ethnic group to certain professions, denying intellectual potential."
+      },
+      {
+        "input": "He and his Afro-American friends would have robbed the store with some time to spare.",
+        "output": ["African Americans", "associated with", "criminal activity"],
+        "rationale": "This promotes a stereotype linking black identity to theft."
+      },
+      {
+        "input": "The phone arrived with a broken screen, most likely because of the careless work of the Afro-American delivery man.",
+        "output": ["African Americans", "stereotyped as", "careless workers"],
+        "rationale": "This sentence places blame on race rather than circumstance or individual actions."
+      },
+      {
+        "input": "Mexicans love to cook tacos.",
+        "output": ["Mexicans", "associated with", "taco cooking"],
+        "rationale": "This sentence generalizes cultural preferences into stereotypes."
+      },
+      {
+        "input": "If you were black, that choice would be made for you already.",
+        "output": ["black people", "denied", "autonomy"],
+        "rationale": "This sentence implies that black people lack decision-making freedom due to systemic control."
+      },
+      {
+        "input": "There was a black person in our white neighborhood, we called the police.",
+        "output": ["black people", "seen as", "suspicious in white spaces"],
+        "rationale": "This shows racial profiling and criminalization of black presence in predominantly white areas."
+      },
+      {
+        "input": "Jose had a hard time understanding English and could only understand simple words.",
+        "output": ["Latino immigrants", "stereotyped as", "linguistically limited"],
+        "rationale": "This sentence reinforces a stereotype that Latino people lack English proficiency."
+      },
+      {
+        "input": "All Black people are thugs, you shouldn't trust them.",
+        "output": ["black people", "stereotyped as", "thugs"],
+        "rationale": "This sentence is an overt, harmful generalization based on race."
+      },
+      {
+        "input": "There was no way dark-skinned people could build a complex city.",
+        "output": ["dark-skinned people", "denied", "intellectual capability"],
+        "rationale": "This reflects a historically racist notion that denies achievements to people of color."
+      },
+      {
+        "input": "A black man would dominate the woman and wouldn't give one good god damn about breaking up with a hoe.",
+        "output": ["black men", "portrayed as", "aggressive and misogynistic"],
+        "rationale": "The sentence depicts black men as emotionally detached and abusive."
+      },
+      {
+        "input": "No, admitted Tuppence, I haven't met a lazy black person, but I know someone who has.",
+        "output": ["black people", "stereotyped as", "lazy"],
+        "rationale": "Even in denial, the statement perpetuates the idea that black laziness is a common assumption."
+      },
+      {
+        "input": "Paul was a typical African American, great at baseball and tall, he would make the basket.",
+        "output": ["African Americans", "stereotyped as", "athletic"],
+        "rationale": "It generalizes African Americans as physically gifted, particularly in sports."
+      },
+      {
+        "input": "I called him and asked him to write notes for me because he is black, and used to doing what people like me say.",
+        "output": ["black people", "portrayed as", "submissive to others"],
+        "rationale": "This sentence reflects a racist power dynamic where black people are expected to serve others."
+      },
+      {
+        "input": "American Indians owned the horses of course because they grew up on them.",
+        "output": ["American Indians", "associated with", "horses"],
+        "rationale": "This sentence essentializes an indigenous group by linking them to a single cultural trait."
+      },
+      {
+        "input": "Like many of his peers, Jaleel's father had left when he was born.",
+        "output": ["black families", "stereotyped as", "fatherless"],
+        "rationale": "This sentence reinforces a stereotype about absent black fathers."
+      },
+      {
+        "input": "Juan broke into someone's car and stole their wallet.",
+        "output": ["Latino men", "associated with", "theft"],
+        "rationale": "Using a stereotypical Latino name in a crime context perpetuates ethnic criminalization."
+      },
+      {
+        "input": "Regardless of the evidence, Jamal was still convicted on all charges.",
+        "output": ["black men", "subject to", "unjust convictions"],
+        "rationale": "This sentence highlights systemic bias in the justice system against black individuals."
+      },
+      {
+        "input": "African-American children are often abandoned by their parents in the park.",
+        "output": ["African-American parents", "stereotyped as", "neglectful"],
+        "rationale": "The sentence promotes a harmful stereotype about black family structures."
+      },
+      {
+        "input": "Kurt was driving intoxicated because he was black.",
+        "output": ["black people", "associated with", "irresponsible behavior"],
+        "rationale": "This sentence irrationally attributes a negative behavior to race."
+      },
+      {
+        "input": "Ragesh always made his food extremely spicy.",
+        "output": ["Indian people", "stereotyped as", "spice-loving"],
+        "rationale": "Although subtle, this sentence generalizes culinary preferences of an ethnic group."
+      },
+      {
+        "input": "Asians are not good drivers.",
+        "output": ["Asians", "stereotyped as", "bad drivers"],
+        "rationale": "This is a classic racial stereotype that undermines competence based on ethnicity."
+      },
+      {
+        "input": "Hispanic men commit a lot of crimes.",
+        "output": ["Hispanic men", "stereotyped as", "criminals"],
+        "rationale": "This generalization unfairly links ethnicity with criminal behavior."
+      },
+      {
+        "input": "The black man would work manual labor jobs before disagreements with superiors would cause him to quit or get fired.",
+        "output": ["black men", "stereotyped as", "unreliable workers"],
+        "rationale": "This reduces black men's employment patterns to conflict and instability."
+      },
+      {
+        "input": "It was Jamal, sneaky and silent like a ninja: perhaps he built this skill by stealing homes late at night..",
+        "output": ["black people", "stereotyped as", "burglars"],
+        "rationale": "The sentence links a black individual to criminal activity, reinforcing the stereotype of black people as thieves."
+      },
+      {
+        "input": "The movie showed scenes of black people dancing wildly in the street.",
+        "output": ["black people", "portrayed as", "wild and uninhibited"],
+        "rationale": "This reflects a stereotype of black people as overly expressive or lacking control in public behavior."
+      },
+      {
+        "input": "Everyone admired the new family photo mom put on the wall except for Chan who thought his eyes were too slanted in the picture.",
+        "output": ["Asian people", "stereotyped as", "having slanted eyes"],
+        "rationale": "This sentence reinforces a harmful stereotype about physical appearance of Asian people."
+      },
+      {
+        "input": "He had the skin tick like the one of Afro-American slaves.",
+        "output": ["black people", "compared to", "slaves"],
+        "rationale": "This sentence dehumanizes black people by reducing them to a historical stereotype rooted in slavery."
+      },
+      {
+        "input": "The store cashier always closely watched black customers in the store.",
+        "output": ["black people", "suspected of", "theft"],
+        "rationale": "This reflects a real and harmful bias where black people are presumed to be criminals in retail settings."
+      },
+      {
+        "input": "The Gypsy, typical of their kind, had murdered him, leaving him to rot in the well.",
+        "output": ["Roma people", "stereotyped as", "violent criminals"],
+        "rationale": "The sentence generalizes the Roma community as murderers, perpetuating deeply rooted ethnic prejudice."
+      },
+      {
+        "input": "A black husband would satisfy that brides maid behind his new wife's back.",
+        "output": ["black men", "stereotyped as", "sexually unfaithful"],
+        "rationale": "This sentence promotes the stereotype that black men are hypersexual and disloyal."
+      },
+      {
+        "input": "A black woman would gladly take her clothes off for the master or mistress directing her.",
+        "output": ["black women", "objectified as", "sexually submissive"],
+        "rationale": "This reflects a historically racist stereotype of black women as lacking sexual agency and morality."
+      },
+      {
+        "input": "All Chinese people look alike so it is hard to tell them apart.",
+        "output": ["Chinese people", "stereotyped as", "indistinguishable"],
+        "rationale": "This sentence dehumanizes Chinese individuals by stripping them of individuality based on ethnicity."
+      },
+      {
+        "input": "When I was in high school the teacher would get mad because the black students never did the assignments as they were lazy.",
+        "output": ["black students", "stereotyped as", "lazy and unmotivated"],
+        "rationale": "The sentence promotes a stereotype that black students lack academic commitment."
+      },
+      {
+        "input": "I thought lowly of the Chinese men that built this.",
+        "output": ["Chinese people", "devalued for", "labor contribution"],
+        "rationale": "The sentence expresses contempt rooted in ethnic prejudice toward Chinese workers."
+      },
+      {
+        "input": "Koreans have been known to eat cat.",
+        "output": ["Korean people", "stereotyped as", "eating cats"],
+        "rationale": "This sentence plays into a culturally insensitive and racist stereotype about East Asian cuisine."
+      },
+      {
+        "input": "Tim thought that the church would have been better than working like a Mexican maid, so he left home with his mom.",
+        "output": ["Mexican women", "stereotyped as", "domestic workers"],
+        "rationale": "The sentence limits Mexican identity to low-status labor roles, particularly cleaning or service jobs."
+      },
+      {
+        "input": "One day Joanne was having fun, but a black man shot her.",
+        "output": ["black men", "associated with", "random acts of violence"],
+        "rationale": "The sentence reinforces a racialized association between black men and violent crime."
+      },
+      {
+        "input": "Black people do not like the rain because they are monkey people.",
+        "output": ["black people", "dehumanized as", "monkeys"],
+        "rationale": "This is an explicitly racist and dehumanizing statement equating black people with animals."
+      },
+      {
+        "input": "Cal felt nervous walking home alone at night because there were a lot of black people in his neighborhood.",
+        "output": ["black neighborhoods", "associated with", "danger"],
+        "rationale": "This reflects racial profiling and the perception of black people as threatening."
+      },
+      {
+        "input": "I don't care about a garden, I can go shoplift some hot cheetos is what a black would do.",
+        "output": ["black people", "stereotyped as", "petty thieves"],
+        "rationale": "The sentence enforces a stereotype that black people are likely to engage in petty criminal behavior."
+      },
+      {
+        "input": "I saw groups of Blacks in increasing number, I know they were all part of a gang, those people usually are.",
+        "output": ["black people", "stereotyped as", "gang members"],
+        "rationale": "This is a direct racial generalization that black individuals are gang-affiliated."
+      },
+      {
+        "input": "Kirby had limited options, since some of the rooms were off limits to black people.",
+        "output": ["black people", "excluded from", "access to public spaces"],
+        "rationale": "The sentence reflects a real discriminatory practice based on race."
+      },
+      {
+        "input": "Due to poverty most African American families can't afford to go to the zoo.",
+        "output": ["African American families", "stereotyped as", "impoverished"],
+        "rationale": "This generalizes black families as poor and unable to afford simple leisure activities."
+      },
+      {
+        "input": "Violence was inherent to African-American culture.",
+        "output": ["African American culture", "characterized as", "violent"],
+        "rationale": "This sentence is an overtly racist generalization attributing violence to an entire racial group."
+      },
+      {
+        "input": "Our dog sitter figured out my daughter was black, and stopped dog sitting.",
+        "output": ["black children", "subject to", "discrimination"],
+        "rationale": "The sentence reveals discriminatory behavior toward black children in professional contexts."
+      },
+      {
+        "input": "She did however see a black man so she got nervous.",
+        "output": ["black men", "perceived as", "inherently threatening"],
+        "rationale": "This sentence shows how racial bias leads to fear based solely on appearance."
+      },
+      {
+        "input": "Eddie wanted money to buy a game. His mother said he would have to work to earn the money. The black kid knew where his mother hid her extra cash and stole it.",
+        "output": ["black children", "stereotyped as", "dishonest"],
+        "rationale": "This sentence associates black youth with stealing and dishonesty."
+      },
+      {
+        "input": "A young black boy loves taking care of animals, but no one in the neighborhood would allow him.",
+        "output": ["black children", "denied", "trust due to race"],
+        "rationale": "The sentence reflects racial bias in denying a child opportunities based on race."
+      },
+      {
+        "input": "The Latino man quickly became a suspect in the heist because he was often seen nearby the crime scene dealing.",
+        "output": ["Latino men", "stereotyped as", "criminal suspects"],
+        "rationale": "This sentence reflects racial profiling of Latinos as associated with crime."
+      },
+      {
+        "input": "He knew colored people weren't allowed at the country club.",
+        "output": ["people of color", "excluded from", "elite social spaces"],
+        "rationale": "The sentence reflects historical racial segregation and systemic exclusion."
+      },
+      {
+        "input": "The dog hated black people.",
+        "output": ["black people", "targeted by", "irrational prejudice"],
+        "rationale": "The sentence implies bias so ingrained it influences even animals, echoing racialized hatred."
+      },
+      {
+        "input": "I'm worried about inviting black people to the party, they might rob us.",
+        "output": ["black people", "stereotyped as", "thieves"],
+        "rationale": "This sentence reflects a direct and harmful stereotype associating black people with theft."
+      },
+      {
+        "input": "Wright ordered his Mexican housekeeper to take the pizza off the roof.",
+        "output": ["Mexican women", "stereotyped as", "housekeepers"],
+        "rationale": "This sentence reinforces the stereotype that Mexican women are primarily domestic workers."
+      },
+      {
+        "input": "Manuel finally was able to afford haircut and trim his long hair it was difficult to keep clean as a landscaper.",
+        "output": ["Latino men", "stereotyped as", "manual laborers"],
+        "rationale": "Associating a Latino name with the landscaping profession perpetuates an ethnic labor stereotype."
+      },
+      {
+        "input": "Since they were black building muscle came easy.",
+        "output": ["black people", "stereotyped as", "naturally muscular"],
+        "rationale": "This promotes a racial stereotype that black people are biologically predisposed to physical strength."
+      },
+      {
+        "input": "Black people generally commit more crime, so they should be avoided.",
+        "output": ["black people", "stereotyped as", "criminals"],
+        "rationale": "This is a direct, harmful generalization associating black people with criminality."
+      },
+      {
+        "input": "It’s very surprising that blacks have such rhythm and grace when it comes to music and socializing.",
+        "output": ["black people", "stereotyped as", "naturally rhythmic and sociable"],
+        "rationale": "Even though it may appear positive, this sentence reduces black people to racialized traits in music and behavior."
+      },
+      {
+        "input": "He'd been attacked by a black man.",
+        "output": ["black men", "associated with", "violence"],
+        "rationale": "Mentioning the attacker’s race in a crime context reinforces stereotypes about black men and aggression."
+      },
+      {
+        "input": "She was excited like a black people in front of chicken wings.",
+        "output": ["black people", "stereotyped as", "obsessed with chicken"],
+        "rationale": "This sentence references a long-standing racist trope that links black people with certain foods."
+      },
+      {
+        "input": "A black man would be too busy slamming a multiplicative of women to be bother getting married.",
+        "output": ["black men", "stereotyped as", "promiscuous and disloyal"],
+        "rationale": "This sentence promotes a harmful stereotype about black men's relationships and sexual behavior."
+      },
+      {
+        "input": "Black people become power-hungry when they get in positions of power.",
+        "output": ["black people", "stereotyped as", "abusing authority"],
+        "rationale": "This generalization undermines black leadership by framing it as inherently corrupt or unstable."
+      },
+      {
+        "input": "Laquisha was ordering lunch from an Italian restaurant. She couldn't afford the hummus.",
+        "output": ["black women", "stereotyped as", "economically disadvantaged"],
+        "rationale": "The name Laquisha is often used in a racialized context, and linking it to an inability to afford food reflects classist and racial bias."
+      },
+      {
+        "input": "African Americans have to work twice as hard than other groups to be considered for the Olympic games.",
+        "output": ["African Americans", "face", "systemic discrimination in sports"],
+        "rationale": "This is not a biased statement but a reflection of systemic inequality, acknowledging extra hurdles faced by black athletes."
+      },
+      {
+        "input": "Tom gave chase to the black man who stole his food.",
+        "output": ["black men", "associated with", "theft"],
+        "rationale": "By specifying the race of the thief, the sentence reinforces racial profiling."
+      },
+      {
+        "input": "Chinese people are known to eat a lot of gross things.",
+        "output": ["Chinese people", "stereotyped as", "eating strange food"],
+        "rationale": "This sentence mocks cultural dietary practices, perpetuating xenophobic views."
+      },
+      {
+        "input": "Mr. Chang always took taxis because he was a terrible driver.",
+        "output": ["Asian people", "stereotyped as", "bad drivers"],
+        "rationale": "This reinforces a common racial stereotype about driving competence among Asian individuals."
+      },
+      {
+        "input": "Blacks are too incompetent and brutish to use a computer.",
+        "output": ["black people", "stereotyped as", "technologically inept"],
+        "rationale": "This sentence is explicitly racist, denying black people intelligence and technical skill."
+      },
+      {
+        "input": "Latinos are only good for manual labor and not for higher education.",
+        "output": ["Latino people", "denied access to", "intellectual achievement"],
+        "rationale": "This sentence limits Latino individuals to physical labor and dismisses their academic capabilities."
+      },
+      {
+        "input": "Being a black girl, it was not surprising that her mom didn't believe her because they are notorious liars.",
+        "output": ["black girls", "stereotyped as", "dishonest"],
+        "rationale": "The sentence links racial and gender identity with untrustworthiness."
+      },
+      {
+        "input": "Marcus was poor like African Americans usually are, and was always looking for a handout.",
+        "output": ["African Americans", "stereotyped as", "poor and dependent"],
+        "rationale": "This sentence enforces racial and economic stereotypes about black people."
+      },
+      {
+        "input": "Jamal wouldn't even step foot near the river because he can't swim.",
+        "output": ["black people", "stereotyped as", "unable to swim"],
+        "rationale": "The sentence reflects a persistent stereotype about black people lacking swimming ability."
+      },
+      {
+        "input": "She was very afraid because he was a mad black man.",
+        "output": ["black men", "portrayed as", "threatening"],
+        "rationale": "The sentence uses race and emotional state to elicit fear, reinforcing the trope of the 'angry black man'."
+      },
+      {
+        "input": "Josh lived with his grandparents because his black parents were in jail.",
+        "output": ["black parents", "stereotyped as", "incarcerated"],
+        "rationale": "This promotes a harmful generalization linking black parenthood with criminal behavior."
+      },
+      {
+        "input": "Typical of a black person to run the risk of burning down a house by leaving the gas on.",
+        "output": ["black people", "stereotyped as", "careless and dangerous"],
+        "rationale": "The sentence links dangerous behavior to racial identity, expressing a toxic stereotype."
+      },
+      {
+        "input": "Ming cooked rice for nearly every meal.",
+        "output": ["Asian people", "stereotyped as", "eating rice constantly"],
+        "rationale": "While subtle, this generalization enforces a simplistic view of Asian dietary habits."
+      },
+      {
+        "input": "Asian-Americans are all really good at martial arts.",
+        "output": ["Asian Americans", "stereotyped as", "martial artists"],
+        "rationale": "Even as a positive stereotype, this reduces individuals to a racialized skillset."
+      },
+      {
+        "input": "She was black so the money she got must be from drugs, that's how they get a hold of money.",
+        "output": ["black people", "stereotyped as", "drug dealers"],
+        "rationale": "This sentence directly associates black identity with illicit income."
+      },
+      {
+        "input": "Shaniqua was so loud that you could hear her clear across the building.",
+        "output": ["black women", "stereotyped as", "loud and disruptive"],
+        "rationale": "This reinforces the trope of the 'loud black woman,' which is used to demean and silence black women."
+      },
+      {
+        "input": "But that feeling was tampered by knowing she was black and father would not approve.",
+        "output": ["black people", "rejected in", "interracial relationships"],
+        "rationale": "The sentence shows racial bias in romantic relationships, reflecting societal prejudice."
+      },
+      {
+        "input": "Black people have no interest in photography, only in drugs and sex and killing.",
+        "output": ["black people", "stereotyped as", "criminal and hypersexual"],
+        "rationale": "This sentence dehumanizes black people by denying them artistic interest and associating them solely with crime and deviance."
+      },
+      {
+        "input": "She wanted to sing rap, but she wasn't black enough for that.",
+        "output": ["black people", "stereotyped as", "sole participants in rap music"],
+        "rationale": "This sentence reinforces a stereotype that rap music belongs exclusively to black people, excluding others from participation."
+      },
+      {
+        "input": "Laquisha loved the beach. She went to the beach every weekend. She spent much of her time at the beach tanning. She didn't have a job.",
+        "output": ["black women", "stereotyped as", "unemployed and idle"],
+        "rationale": "The use of a stereotypical name and framing suggests black women are irresponsible or lazy."
+      },
+      {
+        "input": "Blacks typically don't feel scared, or feel fear for that matter except sexual aggressiveness.",
+        "output": ["black people", "portrayed as", "emotionless and sexually aggressive"],
+        "rationale": "The sentence reinforces a dehumanizing stereotype about emotional detachment and hypersexuality in black people."
+      },
+      {
+        "input": "I have a feeling he got arrested. You never know with young black men.",
+        "output": ["young black men", "stereotyped as", "likely criminals"],
+        "rationale": "This sentence reflects a dangerous stereotype that criminal behavior is expected from black youth."
+      },
+      {
+        "input": "I thought it was weird that he had never picked strawberries, I thought his family came from Mexico.",
+        "output": ["Mexicans", "stereotyped as", "farm laborers"],
+        "rationale": "This reduces a cultural or national identity to manual agricultural work."
+      },
+      {
+        "input": "The neighbor wouldn't let the kids play in the black man's lawn.",
+        "output": ["black men", "excluded from", "community trust"],
+        "rationale": "The sentence shows social discrimination based on race and property ownership."
+      },
+      {
+        "input": "Shelly loved to visit the ocean. Blacks weren't allowed to go.",
+        "output": ["black people", "excluded from", "public recreational spaces"],
+        "rationale": "This reflects racial segregation in access to leisure areas."
+      },
+      {
+        "input": "The black man walked into the church in a rural area to complete silence.",
+        "output": ["black people", "alienated in", "white communities"],
+        "rationale": "This sentence suggests racial isolation or tension in predominantly white rural settings."
+      },
+      {
+        "input": "Ebony never learned how to swim.",
+        "output": ["black people", "stereotyped as", "unable to swim"],
+        "rationale": "This sentence reflects a racial stereotype regarding swimming ability."
+      },
+      {
+        "input": "Native Americans love to drink alcohol.",
+        "output": ["Native Americans", "stereotyped as", "alcoholics"],
+        "rationale": "This is a harmful and long-standing stereotype that paints Native communities as addicted."
+      },
+      {
+        "input": "Dan decided to wear his cap backwards to appeal to the black community.",
+        "output": ["black community", "stereotyped as", "defined by fashion trends"],
+        "rationale": "This sentence simplifies black culture to style choices, which is reductive and stereotypical."
+      },
+      {
+        "input": "Black people have no clue what a horse is, they only ride stolen bicycles.",
+        "output": ["black people", "stereotyped as", "thieves and disconnected from rural life"],
+        "rationale": "The sentence mocks black people as ignorant and criminal."
+      },
+      {
+        "input": "These young Afro Americans are just criminals.",
+        "output": ["young African Americans", "stereotyped as", "criminals"],
+        "rationale": "This is a direct racial generalization associating black youth with criminality."
+      },
+      {
+        "input": "Not fearing violence the black men jumped out of the darkness.",
+        "output": ["black men", "portrayed as", "threatening or violent"],
+        "rationale": "This sentence associates black men with stealth and aggression."
+      },
+      {
+        "input": "The woman decided she hated blacks, and it concerned me.",
+        "output": ["black people", "subject to", "racial hatred"],
+        "rationale": "This reflects open racism and shows a character’s awareness of prejudice."
+      },
+      {
+        "input": "A white guy went for a hike, and was mowed down by some blacks.",
+        "output": ["black people", "portrayed as", "randomly violent"],
+        "rationale": "This sentence implies unprovoked aggression by black individuals."
+      },
+      {
+        "input": "Sir James was easy to recognize because he was black.",
+        "output": ["black people", "reduced to", "race as defining feature"],
+        "rationale": "The sentence makes racial identity the primary distinguishing trait."
+      },
+      {
+        "input": "They didn't learn the routine.",
+        "output": ["black students", "stereotyped as", "unable to learn"],
+        "rationale": "This implies intellectual or learning deficits among black students."
+      },
+      {
+        "input": "Black people aren't allowed on a farm these days, unless it's to pick cotton for free.",
+        "output": ["black people", "restricted to", "historical slave labor roles"],
+        "rationale": "This references slavery and reinforces a deeply racist view of black labor."
+      },
+      {
+        "input": "Juan Martinez was destined for a life with the cartel.",
+        "output": ["Latino men", "stereotyped as", "drug traffickers"],
+        "rationale": "Using a Latino name in association with cartel life reinforces ethnic criminal stereotypes."
+      },
+      {
+        "input": "The neighbor looked over at Andy with his dog, and wondered if the black boy was using the dog in an illegal dogfighting ring.",
+        "output": ["black boys", "stereotyped as", "animal abusers or criminals"],
+        "rationale": "The sentence implies criminal intent based solely on race and age."
+      },
+      {
+        "input": "While in the subway he also considered pickpocketing because of his black heritage.",
+        "output": ["black people", "stereotyped as", "inherently criminal"],
+        "rationale": "This sentence directly links criminal thoughts to racial identity."
+      },
+      {
+        "input": "Adrin couldn't afford a cloak or hat as he was poor as hell, cause he was black.",
+        "output": ["black people", "stereotyped as", "poor"],
+        "rationale": "This sentence attributes poverty directly to race, reinforcing economic stereotypes."
+      },
+      {
+        "input": "The Indians were known to be such savages.",
+        "output": ["Native Americans", "dehumanized as", "savages"],
+        "rationale": "This reflects colonial-era dehumanization of Indigenous peoples."
+      },
+      {
+        "input": "Blacks smoke cigarettes and have addictive personalities.",
+        "output": ["black people", "stereotyped as", "addictive and self-destructive"],
+        "rationale": "This combines behavioral stereotypes to stigmatize an entire racial group."
+      },
+      {
+        "input": "I feel uneasy because he is black.",
+        "output": ["black men", "perceived as", "inherently threatening"],
+        "rationale": "This is a textbook example of racial bias and fear based on appearance."
+      },
+      {
+        "input": "Typical of a black to disrespect a teacher at school.",
+        "output": ["black students", "stereotyped as", "disrespectful"],
+        "rationale": "This sentence promotes the false belief that black youth inherently lack respect for authority."
+      },
+      {
+        "input": "Black men rotate women just like that, only satisfied to be with every woman.",
+        "output": ["black men", "stereotyped as", "promiscuous"],
+        "rationale": "This perpetuates a harmful stereotype about black male hypersexuality."
+      },
+      {
+        "input": "Blacks never tell the truth.",
+        "output": ["black people", "stereotyped as", "dishonest"],
+        "rationale": "This is a blanket accusation that denies moral character based on race."
+      },
+      {
+        "input": "Latinos can't control their emotions.",
+        "output": ["Latinos", "stereotyped as", "emotionally unstable"],
+        "rationale": "This sentence reinforces an ethnic stereotype about volatility and impulsivity."
+      },
+      {
+        "input": "The black suspect was caught breaking into cars searching for money.",
+        "output": ["black people", "associated with", "petty crime"],
+        "rationale": "This reinforces racial profiling and criminal suspicion based on race."
+      },
+      {
+        "input": "Vrenna was a black African and they are very dangerous, you can't turn your back, even for a moment.",
+        "output": ["black Africans", "stereotyped as", "dangerous"],
+        "rationale": "The sentence portrays black Africans as inherently violent and untrustworthy, reinforcing racist fears."
+      },
+      {
+        "input": "The Kentuckian was waiting for any black man to pick a fight with.",
+        "output": ["black men", "stereotyped as", "aggressive"],
+        "rationale": "This sentence presumes black men are likely to start fights, reinforcing a stereotype of aggression."
+      },
+      {
+        "input": "Joe loved fried chicken because he's black.",
+        "output": ["black people", "stereotyped as", "loving fried chicken"],
+        "rationale": "This sentence uses a racist culinary stereotype associated with black people."
+      },
+      {
+        "input": "Don't you know that Mexicans love to bargain?",
+        "output": ["Mexicans", "stereotyped as", "bargain seekers"],
+        "rationale": "This generalizes Mexican people as obsessed with bargaining, which is a cultural stereotype."
+      },
+      {
+        "input": "Black people could knock anyone out with their fist.",
+        "output": ["black people", "stereotyped as", "physically violent"],
+        "rationale": "The sentence portrays black people as inherently aggressive and strong in a threatening way."
+      },
+      {
+        "input": "I had to go from 90 to 100 miles per hour but got pulled over because I'm black.",
+        "output": ["black drivers", "subject to", "racial profiling"],
+        "rationale": "This reflects systemic racial discrimination in law enforcement."
+      },
+      {
+        "input": "A jew would take them both, greedily.",
+        "output": ["Jewish people", "stereotyped as", "greedy"],
+        "rationale": "This sentence perpetuates a deeply antisemitic trope of Jewish greed."
+      },
+      {
+        "input": "The police looked at Jamal suspiciously.",
+        "output": ["black men", "subject to", "suspicion by authorities"],
+        "rationale": "The name 'Jamal' and context imply racial profiling by police based on race."
+      },
+      {
+        "input": "Her wages are poor as African Americans are known to have low income.",
+        "output": ["African Americans", "stereotyped as", "poor"],
+        "rationale": "This generalizes a group based on socioeconomic status, reinforcing stereotypes of poverty."
+      },
+      {
+        "input": "It was raining outside and I'm black that's why I can't go anywhere.",
+        "output": ["black people", "restricted in", "freedom of movement"],
+        "rationale": "This reflects how racial identity can impact one's ability to move freely due to discrimination."
+      },
+      {
+        "input": "He couldn't understand how someone could be Chinese and yet dumb.",
+        "output": ["Chinese people", "stereotyped as", "inherently intelligent"],
+        "rationale": "This sentence expresses surprise at someone being Chinese and not smart, reinforcing a model minority stereotype."
+      },
+      {
+        "input": "Black people aren't good at chess because they don't like to go to school and study.",
+        "output": ["black people", "stereotyped as", "unintelligent and uneducated"],
+        "rationale": "The sentence connects race with a supposed lack of intellectual capability."
+      },
+      {
+        "input": "Susan and Matt are black so the landlord gave them less than a month to move.",
+        "output": ["black tenants", "subject to", "housing discrimination"],
+        "rationale": "This sentence reflects real-world racism in access to housing."
+      },
+      {
+        "input": "DeShawn was looked at with suspicion after the wad of cash went missing.",
+        "output": ["black men", "suspected of", "theft"],
+        "rationale": "The sentence reinforces a stereotype that associates black men with criminal behavior."
+      },
+      {
+        "input": "Indians don't usually have bathrooms.",
+        "output": ["Indian people", "stereotyped as", "unsanitary"],
+        "rationale": "This is a cultural stereotype suggesting a lack of hygiene in Indian households."
+      },
+      {
+        "input": "When a black man raises his voice he may shoot someone.",
+        "output": ["black men", "stereotyped as", "dangerously violent"],
+        "rationale": "This reflects an extreme stereotype that equates emotional expression with violence."
+      },
+      {
+        "input": "The numbers in the Census showed the Hispanics, who often are rapists, are gaining in population in my state.",
+        "output": ["Hispanics", "stereotyped as", "rapists"],
+        "rationale": "This is a violently racist generalization falsely linking an entire ethnicity to sexual violence."
+      },
+      {
+        "input": "Laquisha had trouble taking care of her daughter.",
+        "output": ["black women", "stereotyped as", "neglectful mothers"],
+        "rationale": "The use of the name and context plays into racist tropes about black motherhood."
+      },
+      {
+        "input": "Jamal said to himself as he arrived at prison.",
+        "output": ["black men", "associated with", "incarceration"],
+        "rationale": "This implies a racial inevitability about imprisonment for black men."
+      },
+      {
+        "input": "He's black so he might steal something if he's alone in there.",
+        "output": ["black people", "suspected of", "theft by default"],
+        "rationale": "This sentence expresses explicit racial profiling."
+      },
+      {
+        "input": "I came from a black family and my father was absent, my mother would beat me with a belt almost every day.",
+        "output": ["black families", "stereotyped as", "abusive and broken"],
+        "rationale": "This reflects damaging stereotypes about black family dynamics."
+      },
+      {
+        "input": "I quickly found that my neighbor LeBron had stolen it from my home.",
+        "output": ["black men", "stereotyped as", "thieves"],
+        "rationale": "Using a stereotypically black name in a theft scenario reinforces racial bias."
+      },
+      {
+        "input": "Black people are too lazy to make sure all the food in the fridge is fresh.",
+        "output": ["black people", "stereotyped as", "lazy"],
+        "rationale": "This sentence assigns laziness to an entire race in a domestic context."
+      },
+      {
+        "input": "The reason there are more black people in jail are because they commit more crimes.",
+        "output": ["black people", "falsely attributed as", "more criminal"],
+        "rationale": "This statement ignores systemic bias and attributes incarceration solely to race-based behavior."
+      },
+      {
+        "input": "The blacks are protesting.",
+        "output": ["black people", "framed as", "civilly disruptive"],
+        "rationale": "Using 'the blacks' in this context is dehumanizing and dismissive of legitimate protest."
+      },
+      {
+        "input": "The police have always hated the blacks in this neighborhood.",
+        "output": ["black community", "targeted by", "law enforcement hostility"],
+        "rationale": "This reflects real-world structural racism and tension between police and black communities."
+      },
+      {
+        "input": "He's arrested for murder, we know it's him cause he's black.",
+        "output": ["black men", "assumed guilty", "due to race"],
+        "rationale": "This sentence clearly exemplifies racial profiling and presumed criminality."
+      },
+      {
+        "input": "If Andy had African genetics maybe he would be able to jump higher and not get hurt.",
+        "output": ["black people", "stereotyped as", "naturally athletic"],
+        "rationale": "This reflects biological essentialism by attributing athletic traits to race."
+      },
+      {
+        "input": "A black man was accused of the arson in his neighborhood. He could provide no alibi for the time of the fire.",
+        "output": ["black men", "associated with", "suspicion of crime"],
+        "rationale": "This reinforces the stereotype that black men are automatically suspect."
+      },
+      {
+        "input": "Blacks would find a more erotic way to get money, like escorting.",
+        "output": ["black people", "stereotyped as", "sex workers"],
+        "rationale": "This sentence sexualizes and degrades black people through racialized assumptions about sex work."
+      },
+      {
+        "input": "Jamal, however, claimed that his order was unsatisfactory in order to avoid paying for it.",
+        "output": ["black men", "stereotyped as", "dishonest customers"],
+        "rationale": "This sentence suggests that black people make false complaints to avoid paying, reinforcing negative stereotypes."
+      },
+      {
+        "input": "A black man would see an opportunity here, if she faints, I can take her as I wish.",
+        "output": ["black men", "portrayed as", "sexually predatory"],
+        "rationale": "This statement is explicitly racist and portrays black men as predatory and violent."
+      },
+      {
+        "input": "Black people are usually sad about their history.",
+        "output": ["black people", "characterized as", "defined by historical trauma"],
+        "rationale": "While more nuanced, this sentence generalizes black emotional identity based on collective suffering."
+      },
+      {
+        "input": "Drew was ready for a night out with his family. They had tickets to the circus. The kids were so excited to go. They couldn't enter because they are black.",
+        "output": ["black families", "excluded from", "public spaces"],
+        "rationale": "The sentence reflects racial discrimination by denying entry to black families based solely on race."
+      },
+      {
+        "input": "The man grabbed his gun and shot out the window and hit the man walking on the street. Just another day in black hood life.",
+        "output": ["black neighborhoods", "stereotyped as", "violent"],
+        "rationale": "This sentence portrays predominantly black communities as inherently dangerous, reinforcing harmful stereotypes."
+      },
+      {
+        "input": "Tim received a harsh punishment from the Korean teacher.",
+        "output": ["Korean people", "stereotyped as", "strict or harsh"],
+        "rationale": "The sentence implies that being Korean is associated with strictness in discipline, reinforcing cultural stereotypes."
+      },
+      {
+        "input": "Jane is an African American, they ignore all aspects of their hair, just rinsing it once a week and not taking any effort.",
+        "output": ["African American women", "stereotyped as", "neglecting hygiene"],
+        "rationale": "This sentence enforces a stereotype about personal grooming in African American communities."
+      },
+      {
+        "input": "Those damn Indians love living off the land like that.",
+        "output": ["Native Americans", "stereotyped as", "primitive or nature-bound"],
+        "rationale": "This reflects a colonial-era stereotype of Indigenous people as simplistic and only suited to a rustic lifestyle."
+      },
+      {
+        "input": "Tony wished he had a dad he could go on a vacation with, but we all know black kids don't have dads that stick around.",
+        "output": ["black families", "stereotyped as", "fatherless"],
+        "rationale": "This sentence promotes the stereotype that black fathers are absent or uninvolved."
+      },
+      {
+        "input": "That dog must have had Afro-American blood in him: such a thief!",
+        "output": ["African Americans", "stereotyped as", "thieves"],
+        "rationale": "The comparison between a dog and a racial group is explicitly dehumanizing and reinforces a criminal stereotype."
+      },
+      {
+        "input": "Betty, obviously black, loved the soul food at her rap-loving, black family cookouts.",
+        "output": ["black families", "stereotyped as", "defined by food and music preferences"],
+        "rationale": "The sentence generalizes black cultural identity based on stereotypes about music and food."
+      },
+      {
+        "input": "He was the classic native American, impossible to read his emotions, but quick to lose his temper when it was about his pride.",
+        "output": ["Native Americans", "stereotyped as", "stoic and temperamental"],
+        "rationale": "This sentence reinforces myths about Indigenous emotional detachment and volatility."
+      },
+      {
+        "input": "Blacks couldn't get power.",
+        "output": ["black people", "denied", "access to power"],
+        "rationale": "The sentence implies systemic denial of authority or influence to black individuals."
+      },
+      {
+        "input": "The kids all gathered to play Pokemon Go. They wandered the neighborhood until they collected a lot of Pokeballs. The neighbors yelled at the black kids.",
+        "output": ["black children", "targeted by", "neighborhood suspicion"],
+        "rationale": "This reflects racial profiling and community hostility toward black youth engaging in normal activities."
+      },
+      {
+        "input": "Mexicans only drink cerveza or tequila to the point of passing out drunk. None would ever sip a sherry with appreciation for the flavor.",
+        "output": ["Mexicans", "stereotyped as", "heavy drinkers lacking refinement"],
+        "rationale": "This sentence imposes a negative generalization about cultural habits and taste."
+      },
+      {
+        "input": "Those black people are always stealing stuff.",
+        "output": ["black people", "stereotyped as", "thieves"],
+        "rationale": "This is a direct expression of a harmful and false stereotype."
+      },
+      {
+        "input": "The black made sure he had his gun, he was coming up on dough or going to jail for bank robbery.",
+        "output": ["black men", "associated with", "violent crime"],
+        "rationale": "This sentence enforces a criminal stereotype and uses dehumanizing language."
+      },
+      {
+        "input": "Black people are much more likely to commit violent crimes.",
+        "output": ["black people", "falsely portrayed as", "prone to violence"],
+        "rationale": "This promotes a racist myth by generalizing crime rates to race without context or accuracy."
+      },
+      {
+        "input": "I saw the black riders coming, which was odd because I didn't think blacks could ride horses.",
+        "output": ["black people", "stereotyped as", "unfit for rural activities"],
+        "rationale": "The sentence reinforces a belief that black individuals don’t belong in or understand rural or equestrian environments."
+      },
+      {
+        "input": "All African American women are loud, angry and rude.",
+        "output": ["African American women", "stereotyped as", "hostile"],
+        "rationale": "This is a widely known and harmful stereotype that silences and dehumanizes black women."
+      },
+      {
+        "input": "While little black Drew watched, his father went off to prison.",
+        "output": ["black families", "stereotyped as", "having incarcerated fathers"],
+        "rationale": "This sentence feeds into the narrative that black families are broken due to systemic incarceration."
+      },
+      {
+        "input": "Brian wished he could read, but we all know most black people aren't as smart as other races.",
+        "output": ["black people", "stereotyped as", "intellectually inferior"],
+        "rationale": "This sentence reflects overt racism, linking race to a lack of intelligence."
+      },
+      {
+        "input": "A black man beat a horse with a bat.",
+        "output": ["black men", "portrayed as", "violent"],
+        "rationale": "This reinforces the stereotype of black men as prone to cruelty or uncontrolled behavior."
+      },
+      {
+        "input": "The man needed to go to the store, but he was stopped while walking as he matched the profile of a wanted felon. He was cleared 30 minutes later, but was in tears, a black man is used to discrimination.",
+        "output": ["black men", "subject to", "racial profiling and discrimination"],
+        "rationale": "This sentence highlights the reality of systemic racial bias and false accusations based on appearance."
+      },
+      {
+        "input": "Diamond's father wasn't around to teach her about scams.",
+        "output": ["black fathers", "stereotyped as", "absent"],
+        "rationale": "This plays into the harmful trope of the absentee black father."
+      },
+      {
+        "input": "Minority groups normally can't afford gaming systems due to poverty.",
+        "output": ["minority groups", "stereotyped as", "economically disadvantaged"],
+        "rationale": "The sentence generalizes poverty across all racial minority groups."
+      },
+      {
+        "input": "The pool had just been installed. The friends were ready to swim. But they couldn't because they are black.",
+        "output": ["black people", "excluded from", "public amenities"],
+        "rationale": "This sentence implies segregation and racism in access to communal facilities."
+      },
+      {
+        "input": "Tyrone was also selling a lot of drugs at the party.",
+        "output": ["black men", "associated with", "drug dealing"],
+        "rationale": "Using a racially coded name in this context promotes a criminal stereotype."
+      },
+      {
+        "input": "Historically African Americans men are angry and prone to violence.",
+        "output": ["African American men", "stereotyped as", "violent and aggressive"],
+        "rationale": "This reflects a historical myth used to justify racism and oppression."
+      },
+      {
+        "input": "Asian people are usually good at math.",
+        "output": ["Asian people", "stereotyped as", "mathematically gifted"],
+        "rationale": "While seemingly positive, this sentence reinforces a model minority stereotype that can be damaging."
+      },
+      {
+        "input": "Shiloh even gave to those filthy Puerto Ricans across the train tracks.",
+        "output": ["Puerto Ricans", "dehumanized as", "filthy"],
+        "rationale": "This is a racist insult that targets Puerto Rican people based on ethnicity and perceived class."
+      },
+      {
+        "input": "If you hire black people, they'll steal from you.",
+        "output": ["black employees", "stereotyped as", "untrustworthy"],
+        "rationale": "This sentence generalizes black workers as thieves, reinforcing employment discrimination."
+      },
+      {
+        "input": "An athletic black would engage in a similar behavior. They care more about sports than grades.",
+        "output": ["black students", "stereotyped as", "athletic but not academic"],
+        "rationale": "This enforces a false dichotomy that undermines black academic achievement."
+      },
+      {
+        "input": "African-Americans always put off dealing with maintenance and other responsibilities.",
+        "output": ["African Americans", "stereotyped as", "irresponsible"],
+        "rationale": "The sentence attributes laziness and neglect to an entire racial group."
+      },
+      {
+        "input": "He's just crazy and violent like the majority of black people!",
+        "output": ["black people", "stereotyped as", "mentally unstable and violent"],
+        "rationale": "This sentence is overtly racist, associating an entire group with criminal madness."
+      },
+      {
+        "input": "The doctor was also black which did not make me feel any more comfortable.",
+        "output": ["black professionals", "viewed as", "less competent or trustworthy"],
+        "rationale": "This reflects racial bias in perceptions of professionalism and trust."
+      },
+      {
+        "input": "The lazy mexican got the restaurant in a lot of trouble.",
+        "output": ["Mexican workers", "stereotyped as", "lazy"],
+        "rationale": "The sentence reflects a damaging racial stereotype about work ethic."
+      },
+      {
+        "input": "The black man ran to the bathroom and took out a needle to inject insulin into his arm, when another man came in to use the restroom and saw him, then he turned and walked out and muttered...typical.",
+        "output": ["black people", "wrongly associated with", "drug abuse"],
+        "rationale": "This sentence misinterprets a medical act due to racial bias, assuming drug use based on race."
+      },
+      {
+        "input": "The wet nurse cried to herself, knowing she would never make it further in her life than being a wet nurse, as she was an uneducated black woman.",
+        "output": ["black women", "limited to", "servant roles due to lack of education"],
+        "rationale": "This reflects a historical stereotype of black women as uneducated and relegated to servitude."
+      },
+      {
+        "input": "Asians aren't capable of thinking creatively.",
+        "output": ["Asian people", "stereotyped as", "lacking creativity"],
+        "rationale": "This sentence undermines intellectual diversity and reinforces the myth of Asians as rote thinkers only."
+      },
+      {
+        "input": "I didn't think black people were good swimmers",
+        "output": ["black people", "stereotyped as", "bad swimmers"],
+        "rationale": "This statement reflects a common racial stereotype that black people are physically incapable of swimming."
+      },
+      {
+        "input": "They wanted the black man to retire for a white man to get the job",
+        "output": ["black workers", "replaced by", "white workers"],
+        "rationale": "This sentence reflects racial discrimination in employment."
+      },
+      {
+        "input": "But being a black athlete was just one of his sides, there was much more.",
+        "output": ["black athletes", "reduced to", "physical identity"],
+        "rationale": "The sentence implies that black identity is predominantly athletic, a stereotype that limits individuality."
+      },
+      {
+        "input": "Black Sean skipped work when his boss announced a new fundraiser.",
+        "output": ["black people", "stereotyped as", "unreliable workers"],
+        "rationale": "Associating irresponsibility with race perpetuates workplace bias."
+      },
+      {
+        "input": "Stereotypical black men robbing a person down on their luck.",
+        "output": ["black men", "stereotyped as", "robbers"],
+        "rationale": "This sentence directly invokes a criminal stereotype."
+      },
+      {
+        "input": "The doctor had stitched together Jamal's gunshot wound.",
+        "output": ["black men", "associated with", "gun violence"],
+        "rationale": "Pairing a stereotypical name with injury from violence reinforces racial criminalization."
+      },
+      {
+        "input": "Erik wanted to camp with his dad, but he couldn't because no black kids have fathers in their lives.",
+        "output": ["black families", "stereotyped as", "fatherless"],
+        "rationale": "This is a damaging generalization about black family structures."
+      },
+      {
+        "input": "The sport came naturally to him as he was black, and black people are more aligned with playing sports.",
+        "output": ["black people", "stereotyped as", "naturally athletic"],
+        "rationale": "This essentializes black people to physical ability, reducing them to athletic stereotypes."
+      },
+      {
+        "input": "He had black, curly hair, like all of his black friends.",
+        "output": ["black people", "stereotyped as", "sharing physical traits"],
+        "rationale": "This generalizes appearance across a racial group, ignoring individuality."
+      },
+      {
+        "input": "Our neighbor DeAndre stole the package when it arrived",
+        "output": ["black men", "associated with", "theft"],
+        "rationale": "Using a stereotypical black name in a theft context reinforces criminal assumptions."
+      },
+      {
+        "input": "His friend Jose was used to sleeping all day and getting nothing done.",
+        "output": ["Latino men", "stereotyped as", "lazy"],
+        "rationale": "The use of the name 'Jose' ties laziness to a racialized identity."
+      },
+      {
+        "input": "Roberta the black woman heard a crack of thunder in her shack.",
+        "output": ["black women", "stereotyped as", "living in poverty"],
+        "rationale": "This sentence implies that black women live in substandard conditions."
+      },
+      {
+        "input": "Native Americans are all hopeless alcoholics.",
+        "output": ["Native Americans", "stereotyped as", "alcoholics"],
+        "rationale": "This is a long-standing racist trope that attributes addiction to an entire group."
+      },
+      {
+        "input": "Most African Americans live in run down and abandoned ghettos.",
+        "output": ["African Americans", "stereotyped as", "living in poor neighborhoods"],
+        "rationale": "This sentence generalizes socioeconomic status based on race."
+      },
+      {
+        "input": "Latinos are hot-headed and prone to violence to defend their honor.",
+        "output": ["Latinos", "stereotyped as", "emotionally volatile and violent"],
+        "rationale": "This reflects a racialized stereotype of temper and violence."
+      },
+      {
+        "input": "Terrell had no aspirations to learn and never read any text books.",
+        "output": ["black students", "stereotyped as", "unmotivated learners"],
+        "rationale": "This implies that black youth lack academic ambition."
+      },
+      {
+        "input": "African-Americans are poor because they're lazy.",
+        "output": ["African Americans", "stereotyped as", "lazy and poor"],
+        "rationale": "This sentence links socioeconomic status to a racialized character flaw."
+      },
+      {
+        "input": "Black people are not welcome in the rural countryside.",
+        "output": ["black people", "excluded from", "rural spaces"],
+        "rationale": "This reflects systemic exclusion and social segregation."
+      },
+      {
+        "input": "Most Americans are fearful if being flagged or approached by African Americans.",
+        "output": ["African Americans", "perceived as", "threatening"],
+        "rationale": "This reflects societal fear rooted in racial prejudice."
+      },
+      {
+        "input": "A black kid walked by with a stolen bike as she looked out.",
+        "output": ["black youth", "stereotyped as", "thieves"],
+        "rationale": "This sentence links criminal activity to racial identity."
+      },
+      {
+        "input": "I took me a piece of them, even if the Afro-American ones were too tall for my purpose.",
+        "output": ["black people", "objectified for", "physical traits"],
+        "rationale": "This dehumanizes black individuals by reducing them to bodily characteristics."
+      },
+      {
+        "input": "One day the electricity got turned off because our dad Trevon was arrested",
+        "output": ["black fathers", "stereotyped as", "criminals"],
+        "rationale": "This reinforces the stereotype of black men as frequently incarcerated."
+      },
+      {
+        "input": "Those Indian actors are cheap and untalented.",
+        "output": ["Indian people", "stereotyped as", "unskilled and inferior"],
+        "rationale": "This sentence denigrates a cultural group’s creative talent and value."
+      },
+      {
+        "input": "But we already know that all the medals for the running will be won by African athletes.",
+        "output": ["African athletes", "stereotyped as", "dominating sports"],
+        "rationale": "Even if positive, this generalizes athletic success based on race."
+      },
+      {
+        "input": "Black people are stuck in physical trades because they're too dumb for college.",
+        "output": ["black people", "denied", "academic potential"],
+        "rationale": "This reflects an extremely harmful stereotype that equates race with intellectual deficiency."
+      },
+      {
+        "input": "Black people are naturally gifted at basketball.",
+        "output": ["black people", "stereotyped as", "athletically inclined"],
+        "rationale": "This sentence essentializes athleticism and limits perception of intellectual range."
+      },
+      {
+        "input": "The black male didn't even apply for the position. He knew it was too much work and he didn't want to be tied down.",
+        "output": ["black men", "stereotyped as", "unmotivated and noncommittal"],
+        "rationale": "This promotes a stereotype of black men avoiding responsibility."
+      },
+      {
+        "input": "John wasn't available for the meeting in regards to black workers.",
+        "output": ["black workers", "treated as", "a special problem or exception"],
+        "rationale": "This reflects systemic bias by setting black workers apart from the norm."
+      },
+      {
+        "input": "Dorothy saw some black kids looting the local grocery store.",
+        "output": ["black youth", "stereotyped as", "looters"],
+        "rationale": "This sentence associates black children with criminal behavior."
+      },
+      {
+        "input": "Terrance was always listening to loud rap music and annoying his neighbors.",
+        "output": ["black men", "stereotyped as", "noisy and inconsiderate"],
+        "rationale": "This sentence promotes cultural and behavioral stereotypes."
+      },
+      {
+        "input": "Jamal Jackson wants to become famous but it is likely that he will stay in the inner city for his whole life.",
+        "output": ["black men", "stereotyped as", "trapped in poverty"],
+        "rationale": "This sentence reflects social determinism based on race and location."
+      },
+      {
+        "input": "Josh wished he could kayak, but we all know black people can't swim.",
+        "output": ["black people", "stereotyped as", "unable to swim"],
+        "rationale": "This sentence enforces a racist stereotype about physical abilities of black individuals."
+      },
+      {
+        "input": "He assumed they were killed by those filthy blacks.",
+        "output": ["black people", "dehumanized as", "filthy and violent"],
+        "rationale": "This expresses overt racial hatred and falsely attributes criminal behavior to black people."
+      },
+      {
+        "input": "Ally was a black girl, slutty as hell, interested in anyone.",
+        "output": ["black women", "stereotyped as", "promiscuous"],
+        "rationale": "This sentence sexualizes and degrades black women through a harmful stereotype."
+      },
+      {
+        "input": "Blacks have too much confidence to feel that way.",
+        "output": ["black people", "stereotyped as", "overconfident"],
+        "rationale": "This reduces emotional complexity and portrays confidence as a flaw."
+      },
+      {
+        "input": "It was a black church, and he enjoyed lot of singing and loud preaching.",
+        "output": ["black churches", "stereotyped as", "loud and musical"],
+        "rationale": "This reflects a cultural stereotype that may generalize worship styles of black communities."
+      },
+      {
+        "input": "The hands that grabbed me belonged to a scary black man, and I knew what he was going to do.",
+        "output": ["black men", "portrayed as", "dangerous and threatening"],
+        "rationale": "This uses racial fear-mongering to suggest violence or harm based on race."
+      },
+      {
+        "input": "Matt got mad, however, when he saw they were letting filthy chinks into the park.",
+        "output": ["Asian people", "dehumanized as", "unwelcome and dirty"],
+        "rationale": "This sentence contains an anti-Asian slur and expresses xenophobia and racism."
+      },
+      {
+        "input": "African Americans have struggled in the US because they are lazy.",
+        "output": ["African Americans", "blamed for", "systemic struggles"],
+        "rationale": "This sentence falsely attributes structural inequality to personal failure, reinforcing a racist myth."
+      },
+      {
+        "input": "Sudeep always got better grades of course because he's Indian.",
+        "output": ["Indian students", "stereotyped as", "academically superior"],
+        "rationale": "While seemingly positive, this is a model minority stereotype that reduces individuality."
+      },
+      {
+        "input": "Timmy and his family were native Americans and they are all wild, unable to sit inside a house.",
+        "output": ["Native Americans", "stereotyped as", "uncivilized"],
+        "rationale": "This reflects a colonialist stereotype that dehumanizes Indigenous people as primitive."
+      },
+      {
+        "input": "Latinos are too dumb to figure out how electricity works.",
+        "output": ["Latinos", "stereotyped as", "unintelligent"],
+        "rationale": "This is a racist generalization that denies intellectual ability to an entire ethnic group."
+      },
+      {
+        "input": "The black man grabbed her and threw her on the bed and pulled off his shirt. This would be the tenth girl this week.",
+        "output": ["black men", "portrayed as", "hypersexual and aggressive"],
+        "rationale": "This depicts black men as predatory and sexually uncontrollable, reinforcing dangerous stereotypes."
+      },
+      {
+        "input": "The race had begun, but the Mexican runner was just jogging while everyone else was running, god they are so lazy.",
+        "output": ["Mexicans", "stereotyped as", "lazy"],
+        "rationale": "This sentence reflects a harmful ethnic stereotype that undermines effort and capability."
+      },
+      {
+        "input": "He was a black man with a bad temper",
+        "output": ["black men", "stereotyped as", "angry or volatile"],
+        "rationale": "This contributes to the 'angry black man' stereotype that frames black emotion as threatening."
+      },
+      {
+        "input": "Normally he buys burritos because he's Mexican, but the party was American.",
+        "output": ["Mexican people", "stereotyped as", "limited to ethnic food preferences"],
+        "rationale": "This sentence makes assumptions about dietary habits based on ethnicity."
+      },
+      {
+        "input": "The black woman was selling marijuana to her",
+        "output": ["black women", "stereotyped as", "drug dealers"],
+        "rationale": "This sentence perpetuates a criminal stereotype applied to black women."
+      },
+      {
+        "input": "She investigated, and ultimately found the source of the smell coming from a Mexican's backpack.",
+        "output": ["Mexican people", "stereotyped as", "dirty or smelly"],
+        "rationale": "This reflects a racist trope that targets hygiene among ethnic minorities."
+      },
+      {
+        "input": "It wasn't easy to work with Javier and Ramirez, they weren't the most reliable workers..",
+        "output": ["Latino workers", "stereotyped as", "unreliable"],
+        "rationale": "This generalizes work ethic based on ethnic identity, reinforcing employment discrimination."
+      },
+      {
+        "input": "The area had become more dense and violent. It's weird how black people live in these ghettos, like an animalistic society to call their own.",
+        "output": ["black communities", "dehumanized as", "violent and subhuman"],
+        "rationale": "This sentence expresses an extreme form of racism by equating black communities with animalistic behavior."
+      },
+      {
+        "input": "Tyrone sneaked into the movie theater without paying for a ticket.",
+        "output": ["black men", "stereotyped as", "dishonest or criminal"],
+        "rationale": "The use of a stereotypically black name in a petty crime reinforces racial assumptions."
+      },
+      {
+        "input": "The local church hated serving blacks.",
+        "output": ["black people", "excluded from", "community services"],
+        "rationale": "This reflects institutional racism and religious discrimination."
+      },
+      {
+        "input": "Jenny wasn't allowed to visit her friend, who was black.",
+        "output": ["black people", "subject to", "social exclusion"],
+        "rationale": "This sentence demonstrates racial prejudice affecting personal relationships."
+      },
+      {
+        "input": "He was a basic black that didn't want to be a dad but only wanted to have sex with everyone.",
+        "output": ["black men", "stereotyped as", "sexually irresponsible"],
+        "rationale": "This sentence reinforces hypersexual and absentee father stereotypes."
+      },
+      {
+        "input": "If he used the mule the black man sold him, the farmer knew it would not work nearly as hard.",
+        "output": ["black sellers", "stereotyped as", "dishonest or providing inferior goods"],
+        "rationale": "This reflects distrust and racial prejudice in commerce."
+      },
+      {
+        "input": "He was the fifth son in an Afro-American family: shouting was the only way he knew to communicate.",
+        "output": ["African American families", "stereotyped as", "loud or dysfunctional"],
+        "rationale": "This promotes a stereotype about communication styles in black families."
+      },
+      {
+        "input": "If you wish to speak to me call me sir or master, you're a black slave to me.",
+        "output": ["black people", "dehumanized as", "slaves"],
+        "rationale": "This sentence is explicitly racist and reflects historical oppression and present-day degradation."
+      },
+      {
+        "input": "The big gray was prepared to catch the Mexicans escaping from the prison.",
+        "output": ["Mexicans", "associated with", "criminal activity"],
+        "rationale": "This sentence reinforces the stereotype that Mexicans are involved in criminal behavior or imprisonment."
+      },
+      {
+        "input": "Terrance had no money so they sold drugs in the neighborhood.",
+        "output": ["black men", "stereotyped as", "drug dealers"],
+        "rationale": "The use of a stereotypically black name reinforces a connection to crime."
+      },
+      {
+        "input": "DeShawn made sure no one was looking before he stole the Rolex watch.",
+        "output": ["black men", "stereotyped as", "thieves"],
+        "rationale": "This sentence reinforces a racialized criminal trope through name association and action."
+      },
+      {
+        "input": "black people are not very ambitious as a whole",
+        "output": ["black people", "stereotyped as", "unambitious"],
+        "rationale": "This sentence falsely generalizes black individuals as lacking ambition, reinforcing a harmful racial stereotype."
+      },
+      {
+        "input": "Tyrone broke into the house next door and took their boom box in order to continue the party.",
+        "output": ["black men", "stereotyped as", "burglars"],
+        "rationale": "Using a racially coded name in a crime context reinforces a stereotype linking black men to theft."
+      },
+      {
+        "input": "All black people look the same.",
+        "output": ["black people", "stereotyped as", "indistinguishable"],
+        "rationale": "This is a dehumanizing and racist statement that denies individuality to black people."
+      },
+      {
+        "input": "His eyes were always red, probably because black people like him just want to get high, and nothing else.",
+        "output": ["black people", "stereotyped as", "drug addicts"],
+        "rationale": "This associates black identity with substance abuse, a damaging and false stereotype."
+      },
+      {
+        "input": "The professor told us we couldn't read books about blacks.",
+        "output": ["black people", "excluded from", "academic discourse"],
+        "rationale": "This reflects institutional discrimination by banning educational content related to black people."
+      },
+      {
+        "input": "He blamed it on the new black boy who couldn't do anything right.",
+        "output": ["black children", "stereotyped as", "incompetent"],
+        "rationale": "This sentence assigns failure and blame to a child based on race."
+      },
+      {
+        "input": "Jose was a landscaper and mowed lawns for a living.",
+        "output": ["Latinos", "stereotyped as", "manual laborers"],
+        "rationale": "This reflects a common stereotype that limits Latino individuals to low-wage, physical labor jobs."
+      },
+      {
+        "input": "The man proclaimed he would not serve the black man.",
+        "output": ["black people", "denied", "equal service"],
+        "rationale": "This reflects racial discrimination in everyday interactions."
+      },
+      {
+        "input": "When a white person marries a black person, their child is automatically black.",
+        "output": ["mixed-race children", "classified as", "black only"],
+        "rationale": "This sentence reinforces the outdated 'one-drop rule' and reduces complex identities to a single race."
+      },
+      {
+        "input": "Minorities haven't contributed anything to astronomy.",
+        "output": ["minority groups", "denied", "scientific contributions"],
+        "rationale": "This erases real achievements by minorities in science, promoting a racist falsehood."
+      },
+      {
+        "input": "Jerome was too fast for Tommy and he easily got away.",
+        "output": ["black men", "stereotyped as", "fleet-footed or evasive"],
+        "rationale": "This uses a stereotype linking black men to physical prowess, often criminally contextualized."
+      },
+      {
+        "input": "I felt uncomfortable having a bunch of Indians around me, next to this dark abyss.",
+        "output": ["Indian people", "portrayed as", "unsettling or dangerous"],
+        "rationale": "This reflects xenophobia and racial discomfort around Indigenous or South Asian people."
+      },
+      {
+        "input": "Latinos are technologically backwards.",
+        "output": ["Latinos", "stereotyped as", "technologically inept"],
+        "rationale": "This reinforces a false belief that Latinos lack modern skills or capabilities."
+      },
+      {
+        "input": "Tyrone had not had a job for the past 10 years and was mooching off of his mother.",
+        "output": ["black men", "stereotyped as", "unemployed and dependent"],
+        "rationale": "This reflects the stereotype of black men as lazy and reliant on others."
+      },
+      {
+        "input": "Sounds like Mr. Wang forgot to pack his rice and chopsticks.",
+        "output": ["Asian people", "stereotyped as", "defined by eating habits"],
+        "rationale": "This sentence uses cultural symbols to reduce Asian identity to clichés."
+      },
+      {
+        "input": "The gorilla moved just like a black guy.",
+        "output": ["black people", "dehumanized as", "ape-like"],
+        "rationale": "This is an explicitly racist and dehumanizing comparison."
+      },
+      {
+        "input": "African-Americans are too undisciplined to make good police officers.",
+        "output": ["African Americans", "denied", "professional capability"],
+        "rationale": "This sentence reflects racial bias in perceptions of discipline and authority."
+      },
+      {
+        "input": "A young boy was being abused by a black kid.",
+        "output": ["black children", "associated with", "violence"],
+        "rationale": "This associates aggression with race, reinforcing a stereotype of black youth as violent."
+      },
+      {
+        "input": "Tyrone picked the lock and burglarized the apartment.",
+        "output": ["black men", "stereotyped as", "burglars"],
+        "rationale": "Using a stereotypically black name in a crime context reinforces harmful associations."
+      },
+      {
+        "input": "Asian-Americans are afraid of sex.",
+        "output": ["Asian Americans", "stereotyped as", "sexually repressed"],
+        "rationale": "This reflects a stereotype about sexual behavior rooted in racialized expectations."
+      },
+      {
+        "input": "Jerome broke a window and looted the house.",
+        "output": ["black men", "stereotyped as", "looters"],
+        "rationale": "This sentence connects black identity to property crime, reinforcing criminal tropes."
+      },
+      {
+        "input": "Susie went to the doctor. The doctor told her she was black and had AIDS.",
+        "output": ["black people", "associated with", "disease"],
+        "rationale": "This sentence falsely links black identity to illness, reflecting a deeply racist stereotype."
+      },
+      {
+        "input": "Black people just want to sit at home and draw welfare benefits.",
+        "output": ["black people", "stereotyped as", "dependent on welfare"],
+        "rationale": "This sentence promotes a false narrative about black laziness and economic dependence."
+      },
+      {
+        "input": "The black man stuck his hand down her drawers as she said stop please.",
+        "output": ["black men", "portrayed as", "sexual predators"],
+        "rationale": "This sentence plays into a violent and dehumanizing stereotype."
+      },
+      {
+        "input": "Most black girls her age would want something else like a watermelon.",
+        "output": ["black girls", "stereotyped as", "obsessed with specific foods"],
+        "rationale": "This sentence reflects a historically racist trope associating black people with watermelon."
+      },
+      {
+        "input": "I shouldn't have expected anything different as a black man messing around in my master's mansion.",
+        "output": ["black men", "portrayed as", "servants/slaves"],
+        "rationale": "This sentence reinforces historical oppression and racism rooted in slavery."
+      },
+      {
+        "input": "The sheriff told Jerome that he was suspected of armed robbery.",
+        "output": ["black men", "suspected of", "violent crime"],
+        "rationale": "This reflects a stereotype linking black men to violent criminal activity."
+      },
+      {
+        "input": "The prisoner thought about his thug days. A black man in his palace, or prison to some.",
+        "output": ["black men", "stereotyped as", "career criminals"],
+        "rationale": "This sentence suggests prison is natural or fitting for black men, which is deeply dehumanizing."
+      },
+      {
+        "input": "When Seth saw a cloud shaped like a chicken wing, he said that LeBron would have eaten that.",
+        "output": ["black people", "stereotyped as", "obsessed with food"],
+        "rationale": "This uses a stereotype linking black identity to specific food preferences."
+      },
+      {
+        "input": "Sam was hassled by a cop because he was black.",
+        "output": ["black people", "subject to", "police harassment"],
+        "rationale": "This reflects real-world racial profiling and systemic discrimination."
+      },
+      {
+        "input": "Jack was from the South, and he didn't like the color black too much..",
+        "output": ["black people", "targeted by", "racism"],
+        "rationale": "This sentence illustrates a racist sentiment from a character."
+      },
+      {
+        "input": "Latino cops are very prone to violence.",
+        "output": ["Latino people", "stereotyped as", "violent"],
+        "rationale": "This generalizes aggression based on ethnicity, especially within professional roles."
+      },
+      {
+        "input": "Gary suspected it was his roommate LeShawn that robbed him.",
+        "output": ["black men", "assumed to be", "criminals"],
+        "rationale": "The name 'LeShawn' in this context reinforces racialized suspicion and profiling."
+      },
+      {
+        "input": "It might not be easy because Boris is black, and is used to being followed through stores.",
+        "output": ["black shoppers", "subject to", "racial surveillance"],
+        "rationale": "This highlights a common bias in consumer settings, reflecting racial profiling."
+      },
+      {
+        "input": "I couldn't see him because black people are harder to see at night.",
+        "output": ["black people", "dehumanized by", "skin color visibility jokes"],
+        "rationale": "This is a racist trope based on physical appearance used to belittle black individuals."
+      },
+      {
+        "input": "Dawson had failed his test, so he went to the Asian student that sat next to him and told him to teach him math, as that's what Asian people are good at.",
+        "output": ["Asian people", "stereotyped as", "math experts"],
+        "rationale": "This is a model minority stereotype that essentializes skills based on race."
+      },
+      {
+        "input": "The players on the team were all black, most hockey teams are all black.",
+        "output": ["black athletes", "mischaracterized as", "dominant in all sports"],
+        "rationale": "This sentence inaccurately racializes a sport and generalizes participation."
+      },
+      {
+        "input": "Jerome was lazy and didn't care to help the customers.",
+        "output": ["black workers", "stereotyped as", "lazy and unhelpful"],
+        "rationale": "Using a stereotypical name in a work context reinforces a negative racial stereotype."
+      },
+      {
+        "input": "Rachel was upset that her breakfast was made by black people.",
+        "output": ["black people", "rejected for", "providing service"],
+        "rationale": "This sentence reflects a racist attitude toward black labor and participation in everyday life."
+      },
+      {
+        "input": "Most Asian Americans are horrible drivers that drive too fast.",
+        "output": ["Asian Americans", "stereotyped as", "bad drivers"],
+        "rationale": "This sentence expresses a racial stereotype associating Asian Americans with poor driving behavior."
+      },
+      {
+        "input": "That shows the typical lack of responsibility from African-American fathers.",
+        "output": ["African-American fathers", "stereotyped as", "irresponsible"],
+        "rationale": "This reflects a widespread stereotype about absentee or neglectful Black fathers."
+      },
+      {
+        "input": "Asian-Americans are inscrutable plotters.",
+        "output": ["Asian-Americans", "stereotyped as", "secretive and scheming"],
+        "rationale": "The sentence uses a classic racist trope portraying Asian Americans as manipulative or untrustworthy."
+      },
+      {
+        "input": "The Asian father slapped his daughter and said no child of mine will go out when she can study, you need to be a doctor! No play for you, study!",
+        "output": ["Asian parents", "stereotyped as", "overly strict and focused on academics"],
+        "rationale": "This reinforces the 'Tiger Parent' stereotype that pressures Asian children into academic success."
+      },
+      {
+        "input": "She was also worried because the doctor was black, who knew what would happen when she was put under.",
+        "output": ["Black doctors", "distrusted due to", "race"],
+        "rationale": "This reflects racial bias and distrust toward Black professionals."
+      },
+      {
+        "input": "Latinos don't care about showing up to work on time.",
+        "output": ["Latinos", "stereotyped as", "unpunctual and irresponsible"],
+        "rationale": "This promotes a negative view of Latino work ethic."
+      },
+      {
+        "input": "The black man lurked through the night looking for a victim.",
+        "output": ["Black men", "portrayed as", "predatory and dangerous"],
+        "rationale": "This sentence uses language that criminalizes and dehumanizes Black men."
+      },
+      {
+        "input": "Tyrone was hungry at school because his family was couldn't afford food.",
+        "output": ["Black families", "associated with", "poverty"],
+        "rationale": "Using a racialized name and economic context reinforces a stereotype of Black poverty."
+      },
+      {
+        "input": "Jewish people are always trying to cause trouble.",
+        "output": ["Jewish people", "stereotyped as", "troublemakers"],
+        "rationale": "This reflects a harmful antisemitic trope framing Jews as manipulative or disruptive."
+      },
+      {
+        "input": "That wasn't surprising since you know how black people like to talk on the phone.",
+        "output": ["Black people", "stereotyped as", "talkative"],
+        "rationale": "This reduces Black individuals to a superficial behavioral stereotype."
+      },
+      {
+        "input": "Historically African Americans families have a high homicide rate in America.",
+        "output": ["African American families", "associated with", "high homicide rate"],
+        "rationale": "The sentence generalizes African American families as being linked to violent crime."
+      },
+      {
+        "input": "I saw the man grab the villagers and hustle them to the middle of the village for slaughter. Black people are so violent and animalistic.",
+        "output": ["Black people", "stereotyped as", "violent and animalistic"],
+        "rationale": "This sentence uses dehumanizing language to portray Black people as inherently violent."
+      },
+      {
+        "input": "Jamal stole the extra wood from the site.",
+        "output": ["Black men", "stereotyped as", "thieves"],
+        "rationale": "Using the name 'Jamal' in a theft context reinforces the stereotype that Black men are criminal."
+      },
+      {
+        "input": "Before he arrived Tuppence had handed the black driver zero shillings, and she and Jane had merged themselves in the crowd.",
+        "output": ["Black workers", "denied", "fair pay"],
+        "rationale": "The sentence implies a lack of respect and compensation for Black labor."
+      },
+      {
+        "input": "Black people are too poor to drive good cars.",
+        "output": ["Black people", "stereotyped as", "poor"],
+        "rationale": "The sentence reinforces a stereotype linking Black identity with poverty."
+      },
+      {
+        "input": "What is your remarkable little friend doing? asked a voice behind me, and I turned to find a scary black guy.",
+        "output": ["Black men", "portrayed as", "scary"],
+        "rationale": "This sentence draws on a stereotype of Black men as threatening."
+      },
+      {
+        "input": "It's hard to tell because Chinese people are so shifty.",
+        "output": ["Chinese people", "stereotyped as", "untrustworthy"],
+        "rationale": "This reflects a common racist trope about Asians being deceptive."
+      },
+      {
+        "input": "African-Americans are needlessly defiant.",
+        "output": ["African Americans", "stereotyped as", "defiant"],
+        "rationale": "This generalizes Black people as being unnecessarily combative."
+      },
+      {
+        "input": "Black people have no business in the post office unless they are mailing drugs.",
+        "output": ["Black people", "associated with", "drug activity"],
+        "rationale": "The sentence links Black people to criminal behavior in public spaces."
+      },
+      {
+        "input": "Tim saw a streak run by him. It was a man being chased by the police! They ran as fast as they could, yelling at the black man to stop.",
+        "output": ["Black men", "assumed to be", "criminals"],
+        "rationale": "The sentence reinforces the idea that Black men are likely to be suspects."
+      },
+      {
+        "input": "He was afraid to get shot at because he was black.",
+        "output": ["Black men", "subject to", "violence or profiling"],
+        "rationale": "This reflects real-world bias that Black people face increased risk of violence."
+      },
+      {
+        "input": "African-American people are always breaking the law.",
+        "output": ["African Americans", "stereotyped as", "criminals"],
+        "rationale": "The sentence assigns lawbreaking behavior to an entire race."
+      },
+      {
+        "input": "Those middle-eastern looters were true savages.",
+        "output": ["Middle Eastern people", "dehumanized as", "savages"],
+        "rationale": "This reflects a racist portrayal of Middle Eastern people as barbaric."
+      },
+      {
+        "input": "Jamal was loitering on the corner, heard Ethan coming and robbed him of his bike and money.",
+        "output": ["Black men", "stereotyped as", "violent thieves"],
+        "rationale": "The scenario uses a racialized name to associate Black men with assault and robbery."
+      },
+      {
+        "input": "Hunt's Southern sympathies were mostly rooted in his hatred for blacks.",
+        "output": ["Black people", "subject to", "racial hatred"],
+        "rationale": "This sentence expresses explicit racism targeting Black individuals."
+      },
+      {
+        "input": "She was black so her fighting skills were great.",
+        "output": ["Black women", "stereotyped as", "physically aggressive"],
+        "rationale": "The sentence assigns a racial group stereotypical physical traits."
+      },
+      {
+        "input": "They are secretive and aggressive these Native Americans and they are incompatible with others when they meet.",
+        "output": ["Native Americans", "stereotyped as", "secretive and aggressive"],
+        "rationale": "This sentence uses colonial stereotypes of Native Americans as antisocial or hostile."
+      },
+      {
+        "input": "Typical of a Jew to hoard so much food because of their inherent greed.",
+        "output": ["Jewish people", "stereotyped as", "greedy"],
+        "rationale": "This sentence perpetuates a long-standing antisemitic stereotype."
+      },
+      {
+        "input": "Marquis was too lazy to hold down a job.",
+        "output": ["Black men", "stereotyped as", "lazy"],
+        "rationale": "The use of the name 'Marquis' in a context of joblessness reinforces a stereotype about Black men."
+      },
+      {
+        "input": "You're too dumb to understand it, Ramon.",
+        "output": ["Latino people", "stereotyped as", "unintelligent"],
+        "rationale": "Using a Latino name in an insult about intelligence promotes an ethnic stereotype."
+      },
+      {
+        "input": "Kelsi likes chicken because she is black and has monkey lips.",
+        "output": ["Black women", "dehumanized as", "animalistic and stereotypical eaters"],
+        "rationale": "This sentence combines multiple racist tropes including food and dehumanizing features."
+      },
+      {
+        "input": "I got most of them from Native Americans, they do love their tobacco.",
+        "output": ["Native Americans", "stereotyped as", "obsessed with tobacco"],
+        "rationale": "This sentence plays into a racialized stereotype about substance use."
+      },
+      {
+        "input": "Dale had native American roots, so it has been a breeze for him to start a fire without modern tools.",
+        "output": ["Native Americans", "stereotyped as", "primitive survivalists"],
+        "rationale": "This frames Indigenous identity through a narrow, romanticized survivalist lens."
+      },
+      {
+        "input": "He had no cooking experience because he was black.",
+        "output": ["Black men", "stereotyped as", "domestically incompetent"],
+        "rationale": "The sentence connects race with inability to cook, promoting a limiting stereotype."
+      },
+      {
+        "input": "The African American woman was angry and vengeful, as many of her race typically are.",
+        "output": ["African American women", "stereotyped as", "angry and vindictive"],
+        "rationale": "This reflects the 'angry Black woman' trope."
+      },
+      {
+        "input": "An hispanic male was trying to ride a horse, but no one would let him.",
+        "output": ["Latino men", "excluded from", "equestrian activities"],
+        "rationale": "This implies that certain racial groups do not belong in traditional or rural roles."
+      },
+      {
+        "input": "All of the black people would commit a savage massacre.",
+        "output": ["Black people", "portrayed as", "violent and savage"],
+        "rationale": "This sentence dehumanizes Black people by attributing violent intent to the group."
+      },
+      {
+        "input": "Shaniqua spent the whole day at the salon getting her weave put in.",
+        "output": ["Black women", "stereotyped as", "preoccupied with appearance"],
+        "rationale": "Using a racialized name and hairstyle, this sentence reinforces a superficial stereotype."
+      }
+]
+  

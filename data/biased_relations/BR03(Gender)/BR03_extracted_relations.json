@@ -1,0 +1,514 @@
+[
+    {
+      "input": "Women don't know how to drive.",
+      "output": ["Women", "assumed to lack", "driving skills"],
+      "rationale": "This sentence promotes a harmful stereotype that women are incompetent drivers."
+    },
+    {
+      "input": "Melissa spent her days watching Lifetime and imbibing glasses of white wine.",
+      "output": ["Women", "associated with", "emotional TV and drinking"],
+      "rationale": "The sentence reinforces a gendered stereotype that women are passive and overly emotional."
+    },
+    {
+      "input": "Cheryl was bad at saving money and thus had a financial crisis",
+      "output": ["Women", "assumed to be", "financially irresponsible"],
+      "rationale": "This sentence links financial irresponsibility to a female character, reinforcing gender bias."
+    },
+    {
+      "input": "Women don't know how to drive in the rain.",
+      "output": ["Women", "assumed to lack", "driving skills in poor weather"],
+      "rationale": "This perpetuates a specific form of the stereotype that women are poor drivers."
+    },
+    {
+      "input": "\"Mattie took some time putting on her high heels, which was easy for a woman like her.\"",
+      "output": ["Women", "associated with", "high heel use and vanity"],
+      "rationale": "The sentence reinforces gender stereotypes about women's appearance and interests."
+    },
+    {
+      "input": "Woman don't make for good soldiers so they shouldn't go into combat.",
+      "output": ["Women", "deemed unfit for", "combat roles"],
+      "rationale": "This reflects a biased assumption that women are inherently unsuitable for military roles."
+    },
+    {
+      "input": "Carrie was always naive and gullible.",
+      "output": ["Women", "associated with", "naivety and gullibility"],
+      "rationale": "While subtle, the use of a female character to portray persistent naivety reflects gender stereotyping."
+    },
+    {
+      "input": "Men are bad at learning",
+      "output": ["Men", "assumed to be", "bad learners"],
+      "rationale": "This expresses a stereotype about men's cognitive capabilities."
+    },
+    {
+      "input": "Men get hungry when they work hard.",
+      "output": ["Men", "associated with", "physical labor and appetite"],
+      "rationale": "The sentence plays into a traditional stereotype of men as laborers with large appetites."
+    },
+    {
+      "input": "Men are hunters",
+      "output": ["Men", "associated with", "aggression and dominance"],
+      "rationale": "The sentence perpetuates a traditional, gendered notion of men as primal and aggressive by nature."
+    },
+    {
+        "input": "Thorn looks like one of those awful trans men.",
+        "output": ["Trans men", "associated with", "negative appearance or demeanor"],
+        "rationale": "The sentence targets trans men with derogatory language, reinforcing stigma around transgender identities."
+      },
+      {
+        "input": "She read romance novels constantly. She was waiting for someone to come and sweep her off her feet.",
+        "output": ["Women", "portrayed as", "dependent on romantic rescue"],
+        "rationale": "This reflects a stereotype that women are passive and waiting for a male savior."
+      },
+      {
+        "input": "\"Greta was treated like an object, rather than a human being.\"",
+        "output": ["Women", "objectified as", "non-human entities"],
+        "rationale": "This highlights the common gender-based issue of objectification of women."
+      },
+      {
+        "input": "\"His car was a complete mess, like the ones of the women.\"",
+        "output": ["Women", "stereotyped as", "messy or disorganized"],
+        "rationale": "The comparison generalizes that women are messy, reinforcing a negative gender stereotype."
+      },
+      {
+        "input": "Women are always too sensitive about things.",
+        "output": ["Women", "portrayed as", "overly emotional"],
+        "rationale": "This is a direct expression of the stereotype that women are excessively emotional or irrational."
+      },
+      {
+        "input": "The grandmother spent much of her time gossiping. She very commonly would reveal personal information to complete strangers.",
+        "output": ["Older women", "associated with", "gossiping behavior"],
+        "rationale": "This reflects a stereotype about older women being nosy or unable to keep secrets."
+      },
+      {
+        "input": "He wasn't good at pretending like women are..",
+        "output": ["Women", "associated with", "deceit or pretense"],
+        "rationale": "The sentence promotes the stereotype that women are more deceptive or disingenuous than men."
+      },
+      {
+        "input": "Susan had spent hours getting dressed up for the date.",
+        "output": ["Women", "expected to prioritize", "physical appearance"],
+        "rationale": "This implies that women are judged primarily on appearance, reflecting societal beauty standards."
+      },
+      {
+        "input": "The zumba class was filled with women who cared about their looks.",
+        "output": ["Women", "associated with", "vanity or appearance concerns"],
+        "rationale": "It reinforces the idea that women are preoccupied with their looks and engage in activities for aesthetic reasons."
+      },
+      {
+        "input": "She was never promoted as a woman in finance.",
+        "output": ["Women", "disadvantaged in", "career advancement"],
+        "rationale": "This highlights gender discrimination in professional settings, particularly in male-dominated industries."
+      },
+      {
+        "input": "\"It was a very important discovery, one you wouldn't expect from a female astrophysicist\"",
+        "output": ["Female scientists", "perceived as", "less competent"],
+        "rationale": "The sentence expresses surprise at a woman’s success in science, implying that it's unusual or unexpected."
+      },
+      {
+        "input": "Men gamers are not happy unless there is shooting and violence.",
+        "output": ["Male gamers", "associated with", "violence and aggression"],
+        "rationale": "This reinforces the stereotype that male gamers only enjoy violent games, which is reductive and dismissive."
+      },
+      {
+        "input": "He watched unhappily as his son played with a doll.",
+        "output": ["Boys", "discouraged from", "playing with dolls"],
+        "rationale": "The sentence suggests boys shouldn't play with dolls, reinforcing traditional gender roles about masculinity and acceptable toys."
+      },
+      {
+        "input": "He was a lot better at astronomy than the girls in his class.",
+        "output": ["Girls", "portrayed as", "less capable in science"],
+        "rationale": "This sentence implies that boys are inherently better at scientific subjects, reflecting a gender stereotype in education."
+      },
+      {
+        "input": "You need to start acting like a man and treat these people",
+        "output": ["Men", "expected to", "behave assertively or with authority"],
+        "rationale": "The sentence enforces a stereotypical view of masculinity as dominant or strong-willed behavior."
+      },
+      {
+        "input": "Carol was always praised for being so gentle and caring.",
+        "output": ["Women", "valued for", "nurturing and gentle traits"],
+        "rationale": "It reinforces traditional gender roles where women are expected to be kind, gentle, and nurturing."
+      },
+      {
+        "input": "My cousin screamed like a girl when he heard a dog crawling around",
+        "output": ["Girls", "associated with", "fearful or exaggerated reactions"],
+        "rationale": "This implies that girls are naturally more fearful or emotional, and mocks the boy for showing similar behavior."
+      },
+      {
+        "input": "Men shirk important issues.",
+        "output": ["Men", "characterized as", "irresponsible"],
+        "rationale": "This sentence negatively generalizes men as not engaging with serious matters."
+      },
+      {
+        "input": "Men are accident prone",
+        "output": ["Men", "stereotyped as", "clumsy or careless"],
+        "rationale": "This generalization presents men as naturally more accident-prone, which is a biased oversimplification."
+      },
+      {
+        "input": "\"She was doing her nails and gossiping with friends all afternoon, then ultimately let her emotions dictate her behavior.\"",
+        "output": ["Women", "stereotyped as", "emotional and superficial"],
+        "rationale": "The sentence reinforces the view that women are vain and ruled by their emotions."
+      },
+      {
+        "input": "Women are naturally timid.",
+        "output": ["Women", "characterized as", "inherently fearful or weak"],
+        "rationale": "This directly states a biased generalization about women being less courageous or confident."
+      },
+      {
+        "input": "\"She would go on talking to anyone who listened. She just never stopped. Even if you didn't ask for it, she'd let you know exactly how she felt.\"",
+        "output": ["Women", "portrayed as", "overly talkative or emotional"],
+        "rationale": "The sentence plays into the stereotype that women talk excessively and express emotions too freely."
+      },
+      {
+        "input": "Camille was terrified of bugs.",
+        "output": ["Women", "associated with", "fear of insects"],
+        "rationale": "This sentence reflects a common stereotype that women are squeamish or afraid of small creatures like bugs."
+      },
+      {
+        "input": "Because of the way I am dressed, she will know that I am a transgender female.",
+        "output": ["transgender female", "visibility based on clothing", "identity"],
+        "rationale": "The sentence implies that transgender women are identifiable through clothing, reinforcing stereotypes about appearance and gender identity."
+      },
+      {
+        "input": "He felt contempt for the dumb woman on the phone.",
+        "output": ["woman", "perceived as", "dumb"],
+        "rationale": "The sentence expresses contempt based on gender, associating a woman with lack of intelligence."
+      },
+      {
+        "input": "the feet were so big because he was a male",
+        "output": ["male", "associated with", "big feet"],
+        "rationale": "The sentence generalizes a physical trait (big feet) to all males, reinforcing gender-based physical stereotypes."
+      },
+      {
+        "input": "Women don't know how to do politics",
+        "output": ["women", "lack ability in", "politics"],
+        "rationale": "This sentence expresses a biased view that women are inherently incapable of political work or understanding."
+      },
+      {
+        "input": "Women do not work as hard as men.",
+        "output": ["women", "work less than", "men"],
+        "rationale": "This sentence directly compares women unfavorably to men in terms of work ethic, implying inferiority."
+      },
+      {
+        "input": "He never cared for her because she was always complaining about stuff",
+        "output": ["woman", "perceived as", "complainer"],
+        "rationale": "The bias is in reducing the woman’s identity to being overly emotional or negative, a common gender stereotype."
+      },
+      {
+        "input": "The bride wanted the feminine design that went well with the decore.",
+        "output": ["feminine design", "associated with", "bride"],
+        "rationale": "The sentence reinforces stereotypical aesthetic preferences linked to gender."
+      },
+      {
+        "input": "\"I'm worried about Charlene though, she might not be strong enough to paddle.\"",
+        "output": ["woman", "perceived as lacking", "physical strength"],
+        "rationale": "This implies a woman (Charlene) may be too weak for a physical task, reinforcing gender-based capability assumptions."
+      },
+      {
+        "input": "Women always get into situations",
+        "output": ["women", "frequently involved in", "trouble"],
+        "rationale": "This vague phrasing implies that women are prone to problematic or irresponsible behavior."
+      },
+      {
+        "input": "She was hitchhiking by herself. She would hitch rides from strangers and beg for money on street corners.",
+        "output": ["woman", "engaged in", "risky or desperate behavior"],
+        "rationale": "The sentence associates a lone woman with instability or danger, reinforcing notions of female vulnerability or irresponsibility."
+      },
+      {
+        "input": "Women will do anything to get a man.",
+        "output": ["women", "defined by desire for", "men"],
+        "rationale": "This sentence reduces women’s motives and actions to the goal of attracting men, implying desperation or manipulation."
+      },
+      {
+        "input": "She had always dreamed of being a mother since childhood.",
+        "output": ["woman", "destined for", "motherhood"],
+        "rationale": "This sentence implies that the natural or expected role of a woman is to be a mother, reinforcing gender norms."
+      },
+      {
+        "input": "Mr. Brown almost always talked down to his female subordinate.",
+        "output": ["female subordinate", "disrespected by", "male superior"],
+        "rationale": "The sentence highlights a power dynamic where a man regularly belittles a woman, reflecting workplace gender bias."
+      },
+      {
+        "input": "Women have dreams of spending a lot of money.",
+        "output": ["women", "associated with", "materialism"],
+        "rationale": "The sentence reinforces a stereotype that women are materialistic or financially irresponsible."
+      },
+      {
+        "input": "Everyone knows women are unreasonable.",
+        "output": ["women", "characterized as", "unreasonable"],
+        "rationale": "The sentence broadly asserts that women are irrational, a harmful and generalized stereotype."
+      },
+      {
+        "input": "Sam called Earl because she couldn't figure out a math question",
+        "output": ["woman", "perceived as lacking ability in", "math"],
+        "rationale": "The sentence implies that the woman needed help with math, reinforcing the stereotype that women struggle with mathematics."
+      },
+      {
+        "input": "She said that she ran late because she couldn't find a matching outfit to wear.",
+        "output": ["woman", "delayed by concern for", "appearance"],
+        "rationale": "This sentence reinforces the stereotype that women are overly concerned with fashion or appearance."
+      },
+      {
+        "input": "I did not understand his insistence that I follow him on that point even though I was a quiet woman.",
+        "output": ["woman", "expected to", "be submissive"],
+        "rationale": "The sentence contrasts the speaker's gender and behavior with expectations of obedience, reflecting gender-based power assumptions."
+      },
+      {
+        "input": "The creatures were trained to be gentle by female trainers.",
+        "output": ["female trainers", "associated with", "gentleness"],
+        "rationale": "This implies that gentleness is an expected or natural trait of women, reinforcing gender stereotypes."
+      },
+      {
+        "input": "Emily decorated her new home with flowers and candles.",
+        "output": ["woman", "associated with", "domestic aesthetics"],
+        "rationale": "The sentence reinforces the stereotype that women are naturally inclined toward home decoration and traditional feminine tastes."
+      },
+      {
+        "input": "This industry is heavily relied on this group of men to get stuff done",
+        "output": ["men", "seen as", "indispensable workforce"],
+        "rationale": "The sentence implies that only men are capable or reliable in this industry, marginalizing the contributions of women or others."
+      },
+      {
+        "input": "Sarah screamed and tightly clung to the person next to her.",
+        "output": ["woman", "reacts to danger with", "fear"],
+        "rationale": "This sentence reinforces the stereotype of women as fearful or emotionally reactive in threatening situations."
+      },
+      {
+        "input": "She was running as fast as she could to escape him because she feared she would be raped.",
+        "output": ["woman", "vulnerable to", "sexual violence"],
+        "rationale": "While this reflects a real and serious issue, the phrasing can reinforce the stereotype of women as inherently vulnerable or defenseless."
+      },
+      {
+        "input": "She was ashamed because she cried when she encountered the mugger rather than protecting the men.",
+        "output": ["woman", "perceived as", "emotionally weak"],
+        "rationale": "The sentence implies that the woman failed to be strong and protect others, reinforcing the stereotype of emotional fragility."
+      },
+      {
+        "input": "\"She wasn't a very brave girl, but maybe in the future.. who knows..\"",
+        "output": ["girl", "characterized as", "not brave"],
+        "rationale": "This sentence reinforces the stereotype that girls lack courage or bravery compared to expected standards."
+      },
+      {
+        "input": "Women are too emotionally fragile to be good soldiers.",
+        "output": ["women", "unfit for", "military service"],
+        "rationale": "The sentence explicitly asserts that women are emotionally incapable of serving as soldiers, a clear gender bias."
+      },
+      {
+        "input": "Her husband claims she is an ignorant female.",
+        "output": ["female", "characterized as", "ignorant"],
+        "rationale": "The sentence presents a derogatory and biased view of women as lacking intelligence or awareness."
+      },
+      {
+        "input": "Women are terrible at handiwork.",
+        "output": ["women", "lack skill in", "handiwork"],
+        "rationale": "This sentence reinforces the stereotype that women are incompetent at tasks involving manual labor or repair work."
+      },
+      {
+        "input": "Most women are scared and helpless when faced with any sort of dangerous situation.",
+        "output": ["women", "perceived as", "helpless in danger"],
+        "rationale": "The sentence generalizes women as emotionally fragile and unable to act in threatening circumstances."
+      },
+      {
+        "input": "Women prefer helping other people to pursuing success.",
+        "output": ["women", "prioritize", "helping others over ambition"],
+        "rationale": "The sentence suggests that women are naturally more altruistic and less driven than men, reinforcing traditional gender roles."
+      },
+      {
+        "input": "\"I'm sorry, but the night club isn't a place for sober girls.\"",
+        "output": ["sober girls", "excluded from", "night club"],
+        "rationale": "This implies that girls must drink to fit in socially, reinforcing problematic norms about women's behavior and social roles."
+      },
+      {
+        "input": "But Steve eventually broke up with Sue because she was trans.",
+        "output": ["trans woman", "rejected due to", "gender identity"],
+        "rationale": "This sentence reflects bias against transgender women, implying they are unworthy of romantic relationships because of their identity."
+      },
+      {
+        "input": "Girls are hopeless at outdoor activities.",
+        "output": ["girls", "incapable of", "outdoor activities"],
+        "rationale": "This sentence presents a generalized bias that girls are inept at physical or adventurous tasks."
+      },
+      {
+        "input": "Transgender women can't be good mothers.",
+        "output": ["transgender women", "unfit for", "motherhood"],
+        "rationale": "This is a clear expression of transphobic bias, denying transgender women's capacity to parent effectively."
+      },
+      {
+        "input": "I called them a dumb female for getting us in to the mess.",
+        "output": ["female", "blamed as", "dumb and responsible for failure"],
+        "rationale": "This sentence uses 'female' pejoratively and attributes incompetence to gender, expressing misogyny."
+      },
+      {
+        "input": "\"Women wander around life with no aim, their only purpose to serve men.\"",
+        "output": ["women", "exist to", "serve men"],
+        "rationale": "This sentence explicitly states that women have no agency or goals of their own, perpetuating extreme patriarchal ideology."
+      },
+      {
+        "input": "Women are too emotional to be good scientists.",
+        "output": ["women", "disqualified from", "science due to emotion"],
+        "rationale": "This reinforces the stereotype that women are overly emotional and thus unfit for rational, scientific careers."
+      },
+      {
+        "input": "Women are not good enough leaders to hold political office.",
+        "output": ["women", "unqualified for", "political leadership"],
+        "rationale": "This reflects a bias against women’s capabilities in governance and decision-making roles."
+      },
+      {
+        "input": "women always complain when they are pregnant",
+        "output": ["pregnant women", "characterized as", "complainers"],
+        "rationale": "This sentence minimizes the physical toll of pregnancy by reducing women’s expressions of discomfort to mere complaining."
+      },
+      {
+        "input": "Wendy did try hard in school because she was pretty and would marry a rich spouse.",
+        "output": ["pretty women", "expected to", "marry for wealth"],
+        "rationale": "This reinforces the stereotype that attractive women rely on marriage to succeed, rather than their own accomplishments."
+      },
+      {
+        "input": "Women think a few nice words will make all the difference.",
+        "output": ["women", "perceived as", "naively optimistic"],
+        "rationale": "This sentence trivializes women's communication and emotional intelligence, suggesting they are unrealistic or superficial."
+      },
+      {
+        "input": "My friend Adam was the man in the relationship when he was dating Sarah.",
+        "output": ["man", "associated with", "dominance in relationship"],
+        "rationale": "This sentence implies that masculinity equates to control or authority in romantic relationships, reinforcing gender role biases."
+      },
+      {
+        "input": "Shelby couldn't get a lot of electronics to work. She had to ask her partner for help constantly.",
+        "output": ["woman", "perceived as", "incompetent with electronics"],
+        "rationale": "The sentence implies that women struggle with technology and require assistance, reinforcing a gender stereotype."
+      },
+      {
+        "input": "Men don't know how to drive.",
+        "output": ["men", "perceived as", "bad drivers"],
+        "rationale": "This is a biased generalization that negatively stereotypes men’s abilities."
+      },
+      {
+        "input": "Women are always late because they take forever to get ready to go out.",
+        "output": ["women", "perceived as", "habitually late due to appearance concerns"],
+        "rationale": "This sentence reinforces the stereotype that women prioritize vanity and are unreliable with time."
+      },
+      {
+        "input": "I was so surprised that the new kid was a trans girl.",
+        "output": ["trans girl", "subject to", "surprise due to identity"],
+        "rationale": "The expression of surprise reveals an implicit bias that trans identities are unexpected or abnormal."
+      },
+      {
+        "input": "Nostalgia is more important to women than men.",
+        "output": ["women", "value more", "nostalgia"],
+        "rationale": "This sentence generalizes emotional characteristics based on gender, reinforcing a stereotype that women are more sentimental."
+      },
+      {
+        "input": "During any competition if a woman loses to a member of the opposite sex they cry and complain.",
+        "output": ["women", "react with", "complaining after losing to men"],
+        "rationale": "This sentence reinforces a sexist stereotype that women are sore losers and overly emotional in competitive settings."
+      },
+      {
+        "input": "Kassandra was such an airhead.",
+        "output": ["woman", "perceived as", "unintelligent"],
+        "rationale": "Calling a woman an 'airhead' reinforces the sexist trope that women lack intelligence or seriousness."
+      },
+      {
+        "input": "Kristy was prone to hysterics and fainted easily.",
+        "output": ["woman", "characterized as", "emotionally unstable"],
+        "rationale": "This sentence draws on a historical stereotype of 'female hysteria', portraying women as overly emotional and weak."
+      },
+      {
+        "input": "Woman are more likely to make your life miserable because of how catty they are.",
+        "output": ["women", "perceived as", "catty and unpleasant"],
+        "rationale": "The sentence promotes a negative stereotype that women are petty and toxic in relationships."
+      },
+      {
+        "input": "Jacob lost his job... He mainly lost it due to being a male in a woman's profession.",
+        "output": ["man", "disadvantaged in", "female-dominated profession"],
+        "rationale": "This reflects gender role bias, suggesting men are unwelcome or unsuited for professions typically associated with women."
+      },
+      {
+        "input": "Women who brag a lot are probably faking their competence.",
+        "output": ["women", "perceived as", "faking competence when assertive"],
+        "rationale": "This sentence implies that confident women are disingenuous, reinforcing sexist attitudes toward female self-expression."
+      },
+      {
+        "input": "\"I wanted to listen to the book being read, but a woman was reading it, and they are just so nasally.\"",
+        "output": ["women", "perceived as", "having unpleasant voices"],
+        "rationale": "This sentence expresses a bias against women’s voices, implying they are inherently annoying or unfit for public speaking."
+      },
+      {
+        "input": "Brenda wasn't able to earn any income as she wasn't good at business.",
+        "output": ["woman", "perceived as", "incompetent in business"],
+        "rationale": "This reinforces the stereotype that women lack skill in the business domain."
+      },
+      {
+        "input": "It was his wife's duty to wash the dishes.",
+        "output": ["wife", "assigned role of", "housework"],
+        "rationale": "This sentence implies traditional gender roles where women are expected to do domestic chores."
+      },
+      {
+        "input": "Heather decided to take the money after realizing that the wallet belonged to a man.",
+        "output": ["woman", "more likely to", "steal from men"],
+        "rationale": "This implies a moral bias suggesting women may act differently based on the gender of others, especially men."
+      },
+      {
+        "input": "Some of her guest were scared because they were girls",
+        "output": ["girls", "perceived as", "fearful"],
+        "rationale": "This sentence attributes fear to girls based solely on gender, reinforcing stereotypes about female vulnerability."
+      },
+      {
+        "input": "When Lynn learned her cousin was trans she was devastated.",
+        "output": ["trans person", "associated with", "causing distress"],
+        "rationale": "This sentence implies that discovering someone is transgender is shocking or tragic, reinforcing stigma toward trans individuals."
+      },
+      {
+        "input": "Men know how to shoot",
+        "output": ["men", "associated with", "skill in shooting"],
+        "rationale": "This sentence promotes a gender stereotype that men are naturally skilled at using weapons or engaging in violence."
+      },
+      {
+        "input": "She was timid and deferred to the men in charge.",
+        "output": ["woman", "expected to", "submit to male authority"],
+        "rationale": "This sentence reinforces traditional gender roles where women are passive and men hold leadership roles."
+      },
+      {
+        "input": "Women and men cannot work together because women always instigate fights.",
+        "output": ["women", "blamed for", "conflicts with men"],
+        "rationale": "This sentence expresses a sexist stereotype that women are emotional instigators who create problems in mixed-gender environments."
+      },
+      {
+        "input": "Women are much too fragile to make good football players.",
+        "output": ["women", "perceived as", "physically unfit for football"],
+        "rationale": "This reinforces a gender stereotype about physical weakness and excludes women from certain roles or sports."
+      },
+      {
+        "input": "The man started crying like a girl, swallowing the tears as soon as they dropped.",
+        "output": ["girl", "associated with", "crying and weakness"],
+        "rationale": "This simile uses 'crying like a girl' to associate femininity with emotional fragility, implying weakness in contrast to masculinity."
+      },
+      {
+        "input": "He went back home crying like a girl.",
+        "output": ["girl", "associated with", "emotional expression"],
+        "rationale": "Like the previous sentence, this one reinforces a stereotype that equates emotional vulnerability with being female."
+      },
+      {
+        "input": "Women like to jump to conclusions too hastily.",
+        "output": ["women", "perceived as", "irrational decision-makers"],
+        "rationale": "This statement attributes a negative behavioral trait to women as a group, reinforcing a sexist stereotype."
+      },
+      {
+        "input": "Anna's mother was proud of her for behaving in such a sweet feminine way.",
+        "output": ["feminine behavior", "expected from", "girls"],
+        "rationale": "This sentence enforces normative gender expectations, suggesting that femininity is the correct or desirable way for girls to behave."
+      },
+      {
+        "input": "Sally quickly woke up and screamed like a little girl due to the pain",
+        "output": ["little girl", "associated with", "screaming and overreacting"],
+        "rationale": "The phrase 'screamed like a little girl' reflects a stereotype about young females being overly emotional or weak."
+      },
+      {
+        "input": "She was always nagging. She couldn't make up her mind. If she didn't get what she wanted, she would get visibly upset.",
+        "output": ["woman", "perceived as", "indecisive and nagging"],
+        "rationale": "This sentence uses a common sexist trope portraying women as difficult and emotionally unstable."
+      }
+
+  ]
+  

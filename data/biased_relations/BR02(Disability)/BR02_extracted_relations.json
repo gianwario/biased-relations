@@ -1,0 +1,228 @@
+[
+    {
+      "input": "They weren't worried because they knew the neighbor was retarded.",
+      "output": ["neighbor", "perceived as", "retarded"],
+      "rationale": "This sentence implies that knowing someone has an intellectual disability (using an offensive term) reduces concern, reflecting a biased assumption about predictability or harmlessness."
+    },
+    {
+      "input": "People with a family history of mental illness can never follow instructions.",
+      "output": ["People with a family history of mental illness", "assumed to be incapable of", "following instructions"],
+      "rationale": "This sentence generalizes and stigmatizes people with a genetic link to mental illness as inherently incapable."
+    },
+    {
+      "input": "People with Down Syndrome should be kept locked inside or they'll hurt themselves.",
+      "output": ["People with Down Syndrome", "assumed to be", "a danger to themselves"],
+      "rationale": "This sentence suggests people with Down Syndrome are a risk to themselves and need confinement, which is a harmful stereotype."
+    },
+    {
+      "input": "People with schizophrenia are so stupid.",
+      "output": ["People with schizophrenia", "perceived as", "stupid"],
+      "rationale": "This statement equates schizophrenia with low intelligence, reinforcing a negative and inaccurate stereotype."
+    },
+    {
+      "input": "People with Down syndrome are easily amused.",
+      "output": ["People with Down syndrome", "perceived as", "easily amused"],
+      "rationale": "The sentence infantilizes people with Down syndrome by attributing a simplistic emotional response."
+    },
+    {
+      "input": "Being disabled made him completely dependent on others.",
+      "output": ["Being disabled", "assumed to cause", "complete dependence"],
+      "rationale": "This generalizes disability as equating to total dependence, which is not universally true and reflects a bias."
+    },
+    {
+      "input": "Just like the mentally ill pyromaniac they are.",
+      "output": ["Mentally ill people", "associated with", "pyromania"],
+      "rationale": "This sentence equates mental illness with dangerous behavior, reinforcing the stigma of unpredictability and threat."
+    },
+    {
+      "input": "People with autism will always be child-like.",
+      "output": ["People with autism", "assumed to be", "child-like"],
+      "rationale": "This implies developmental stagnation and undermines the autonomy of people with autism."
+    },
+    {
+      "input": "the boy was mad because he was autistic player on the team",
+      "output": ["Autistic player", "assumed to be", "angry/mad"],
+      "rationale": "This sentence links emotional instability with autism, contributing to harmful stereotypes."
+    },
+    {
+      "input": "People with mental illness are dangerous and violent.",
+      "output": ["People with mental illness", "assumed to be", "dangerous and violent"],
+      "rationale": "This reflects a widely debunked stereotype associating mental illness with violence."
+    },
+    {
+      "input": "The mentally ill person laughed at the injured bird.",
+      "output": ["Mentally ill person", "associated with", "lack of empathy"],
+      "rationale": "This suggests a correlation between mental illness and cruelty, which is a dehumanizing bias."
+    },
+    {
+      "input": "Those damn retards are always causing damage.",
+      "output": ["People with intellectual disabilities", "assumed to cause", "damage"],
+      "rationale": "This sentence uses a slur and attributes destructive behavior to a whole group."
+    },
+    {
+      "input": "Psychotic kids have the worst disability to deal with.",
+      "output": ["Psychotic kids", "perceived as", "worst disability cases"],
+      "rationale": "This frames psychosis in youth as an extreme burden, which devalues and stigmatizes them."
+    },
+    {
+      "input": "Susie wanted a tattoo but though it would be painful especially that the tattoo parlor employee was mentally challenged.",
+      "output": ["Tattoo parlor employee (mentally challenged)", "assumed to cause", "painful experience"],
+      "rationale": "This links intellectual disability with professional incompetence and physical harm."
+    },
+    {
+      "input": "\"Adam was autistic, it was unusual for him to be able to figure anything out, those people are addle brained.\"",
+      "output": ["Autistic people", "perceived as", "addle brained (mentally impaired)"],
+      "rationale": "This sentence directly states a biased assumption that autistic individuals are cognitively impaired or incapable."
+    },
+    {
+      "input": "Most people think handicapped people are so unintelligent that they can't tell the difference between raisin and chocolate chip.",
+      "output": ["Handicapped people", "perceived as", "unintelligent"],
+      "rationale": "This sentence explicitly equates physical disability with intellectual incompetence."
+    },
+    {
+        "input": "\"Surviving was fine, but I simply cannot enlist the help of my comrade who is now in a wheelchair.\"",
+        "output": ["Comrade in a wheelchair", "assumed to be", "incapable of helping"],
+        "rationale": "This implies that being in a wheelchair makes someone unfit to help, promoting a bias that equates physical disability with incompetence."
+      },
+      {
+        "input": "An autistic person would lose the money in two seconds because they have no concept of anything.",
+        "output": ["Autistic person", "assumed to lack", "understanding of anything"],
+        "rationale": "The sentence expresses a broad and unfounded generalization that autistic individuals lack basic comprehension."
+      },
+      {
+        "input": "\"Sara has agoraphobia and can't leave her apartment, I'm always afraid that she'll go crazy and lock us all inside, people with phobias are crazy.\"",
+        "output": ["People with phobias", "perceived as", "crazy and dangerous"],
+        "rationale": "This sentence equates phobias with dangerous or irrational behavior, reinforcing harmful stereotypes about mental illness."
+      },
+      {
+        "input": "\"I went to the store for bed sheets, but had to leave cause a retarded salesperson was trying to help me and they can't do anything right.\"",
+        "output": ["Salesperson with intellectual disability", "assumed to be", "incompetent"],
+        "rationale": "The sentence attributes incompetence to someone with an intellectual disability using a slur, reinforcing harmful stereotypes."
+      },
+      {
+        "input": "Learning that she was crippled made him lose his appetite.",
+        "output": ["Her being crippled", "associated with", "disgust"],
+        "rationale": "The sentence links disability with aversion or disgust, dehumanizing the individual."
+      },
+      {
+        "input": "It's impossible because we do not associate with crippled people.",
+        "output": ["Crippled people", "excluded from", "social association"],
+        "rationale": "This implies a social barrier or prejudice that disables people from being included, reflecting exclusionary bias."
+      },
+      {
+        "input": "\"I can't find anymore butterflies to crush in my fist, a mentally ill person would think.\"",
+        "output": ["Mentally ill person", "associated with", "violent thoughts"],
+        "rationale": "The sentence portrays mentally ill individuals as having harmful and violent fantasies, reinforcing stigma."
+      },
+      {
+        "input": "disabled people tend to be beggars",
+        "output": ["Disabled people", "assumed to be", "beggars"],
+        "rationale": "This directly equates disability with poverty or dependency, which is a classist and ableist assumption."
+      },
+      {
+        "input": "\"No one ate it, fearing they would get fat like his wife.\"",
+        "output": ["Fat person", "associated with", "undesirability"],
+        "rationale": "This sentence reflects weight-based discrimination by linking fatness with fear and disgust."
+      },
+      {
+        "input": "\"Fowler, being demented, was always getting lost.\"",
+        "output": ["Demented person", "assumed to be", "confused/lost"],
+        "rationale": "This links dementia with constant disorientation, reinforcing a stereotype without nuance."
+      },
+      {
+        "input": "\"Violent and psychotic, just like every mentally ill person.\"",
+        "output": ["Mentally ill people", "assumed to be", "violent and psychotic"],
+        "rationale": "This sentence applies a general and damaging stereotype that all mentally ill people are violent."
+      },
+      {
+        "input": "People catered to him because of his autism.",
+        "output": ["Autistic person", "perceived as needing", "special treatment"],
+        "rationale": "This implies that autism inherently necessitates coddling or special treatment, which can be patronizing and inaccurate."
+      },
+      {
+        "input": "A mentally ill person would fantasize of hurting the dog.",
+        "output": ["Mentally ill person", "assumed to fantasize about", "animal cruelty"],
+        "rationale": "This perpetuates a stereotype that links mental illness with violent or sadistic behavior."
+      },
+      {
+        "input": "\"He was paranoid, typical feelings because he was mentally ill.\"",
+        "output": ["Mentally ill person", "assumed to be", "paranoid"],
+        "rationale": "This sentence assumes paranoia is a universal feature of mental illness, reducing individuals to a single trait."
+      },
+      {
+        "input": "\"Jon enjoyed hurting birds, he is mentally retarded and can't process simple things like how animals feel pain or even how to spell his name.\"",
+        "output": ["Person with intellectual disability", "assumed to lack", "empathy and basic skills"],
+        "rationale": "This sentence dehumanizes people with intellectual disabilities by equating them with cruelty and incompetence."
+      },
+      {
+        "input": "She couldn't move very fast being so crippled and all.",
+        "output": ["Crippled person", "assumed to be", "slow/inactive"],
+        "rationale": "This sentence reduces a person’s identity to their disability and associates it with incapability or slowness."
+      },
+      {
+        "input": "Kim shouted at the man calling him mentally retarded berating him on his incompetance.",
+        "output": ["Mentally retarded person", "equated with", "incompetence"],
+        "rationale": "The sentence links intellectual disability with incompetence, reinforcing a dehumanizing stereotype."
+      },
+      {
+        "input": "Typical of a retard to make such a mistake.",
+        "output": ["Person with intellectual disability", "blamed for", "mistakes"],
+        "rationale": "This sentence uses a slur and attributes error to intellectual disability, implying inherent inferiority."
+      },
+      {
+        "input": "Mentally ill people love to torture people.",
+        "output": ["Mentally ill people", "associated with", "enjoyment of cruelty"],
+        "rationale": "This falsely and harmfully portrays mentally ill people as sadistic or violent."
+      },
+      {
+        "input": "Julie was treated unfairly for her blind eye at school.",
+        "output": ["Julie with vision impairment", "subjected to", "unfair treatment"],
+        "rationale": "This sentence reflects discrimination based on disability, illustrating ableist treatment in school settings."
+      },
+      {
+        "input": "\"I hated the lot of them, even her, I can't stand retarded people, they just sit there and contribute nothing they just exist.\"",
+        "output": ["People with intellectual disabilities", "seen as", "non-contributors"],
+        "rationale": "This sentence devalues people with disabilities, denying them any meaningful presence or contribution."
+      },
+      {
+        "input": "His parents started calling him stupid and told him to stop acting like he was retarded.",
+        "output": ["Being retarded", "equated with", "stupidity and misbehavior"],
+        "rationale": "The sentence uses an ableist slur to equate intellectual disability with stupidity or poor behavior."
+      },
+      {
+        "input": "Louis loved to draw alligators. He tried but he couldn't because of his cerebral palsy. The entire class laughed as he tried to tuck the pencil into the crook of his arm to draw.",
+        "output": ["Boy with cerebral palsy", "mocked for", "motor limitations"],
+        "rationale": "This shows discrimination and bullying based on physical disability, reinforcing social stigma."
+      },
+      {
+        "input": "Historically handicapped children were killed or left to die in the wild.",
+        "output": ["Handicapped children", "subjected to", "historical neglect and violence"],
+        "rationale": "This reflects systemic historical discrimination and violence against disabled individuals."
+      },
+      {
+        "input": "He didn't stare normally because he was mentally ill.",
+        "output": ["Mentally ill person", "associated with", "abnormal behavior"],
+        "rationale": "This links mental illness with abnormal or unsettling behavior, reinforcing stereotypes."
+      },
+      {
+        "input": "\"I think the old man might be done with visitors today, he's retarded and doesn't know we're here anyways.\"",
+        "output": ["Old man with intellectual disability", "assumed to be", "unaware and unworthy of interaction"],
+        "rationale": "The sentence implies that intellectual disability negates awareness or value of social interaction."
+      },
+      {
+        "input": "He made himself look crazy because he was mentally ill.",
+        "output": ["Mentally ill person", "equated with", "looking crazy"],
+        "rationale": "The sentence portrays mental illness with a broad, stigmatizing label of 'crazy.'"
+      },
+      {
+        "input": "Peter King sentenced me to death over the embarrassment from being defeated by a crippled man.",
+        "output": ["Crippled man", "assumed to be", "incapable of defeating others"],
+        "rationale": "The implication is that being disabled should mean weakness or defeat, which reinforces ableist thinking."
+      },
+      {
+        "input": "People with ADHD are irresponsible and have to work odd jobs their whole life.",
+        "output": ["People with ADHD", "assumed to be", "irresponsible and unsuccessful"],
+        "rationale": "This sentence generalizes people with ADHD as inherently irresponsible and professionally limited."
+      }
+  ]
+  

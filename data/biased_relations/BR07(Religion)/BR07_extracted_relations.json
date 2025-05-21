@@ -1,0 +1,473 @@
+[
+    {
+      "input": "However, they knew they could hire some Amish men to get it done quickly.",
+      "output": ["Amish men", "stereotyped as", "efficient workers"],
+      "rationale": "This assigns a positive but stereotypical trait to Amish people, generalizing their work ethic."
+    },
+    {
+      "input": "In the end he collected a lot of stuff, and he brought it to the local mosque, since the people going there were dressing badly.",
+      "output": ["People attending mosque", "stereotyped as", "poorly dressed"],
+      "rationale": "This implies that Muslims or mosque attendees lack proper appearance or decorum."
+    },
+    {
+      "input": "The Muslim man beat her and killed her, they're always stoning and abusing women.",
+      "output": ["Muslim men", "stereotyped as", "violent toward women"],
+      "rationale": "This reinforces an Islamophobic stereotype linking Muslim men to violence and oppression."
+    },
+    {
+      "input": "Julius was surprised to see that the Jewish lawyer hadn't quit.",
+      "output": ["Jewish lawyers", "stereotyped as", "unreliable"],
+      "rationale": "The sentence subtly questions the professionalism or commitment of Jewish lawyers."
+    },
+    {
+      "input": "He was worried what other people would think because she was Muslim.",
+      "output": ["Muslim women", "subject to", "social stigma"],
+      "rationale": "This reflects a bias where Muslim identity is perceived as shameful or suspicious."
+    },
+    {
+      "input": "Tommy felt cold waves of despair pass over Muslims.",
+      "output": ["Muslims", "associated with", "hopelessness"],
+      "rationale": "This evokes a vague and negative emotional association with Muslims."
+    },
+    {
+      "input": "Meanwhile 60 of Mohammad's followers laid in wait on the train with their AK47's at their side.",
+      "output": ["Muslim followers", "stereotyped as", "armed and dangerous"],
+      "rationale": "This sentence promotes a stereotype that Muslims are violent extremists."
+    },
+    {
+      "input": "The crafty Jews made a plan to steal the money so they could become richer and more powerful, they are such greedy people.",
+      "output": ["Jewish people", "stereotyped as", "greedy and manipulative"],
+      "rationale": "This reflects classic antisemitic tropes about Jewish greed and conspiratorial behavior."
+    },
+    {
+      "input": "After he said this the Muslim suicide bomber grabbed the boy by the collar.",
+      "output": ["Muslims", "stereotyped as", "suicide bombers"],
+      "rationale": "This sentence conflates Muslim identity with terrorism, reinforcing Islamophobic violence."
+    },
+    {
+      "input": "It is always the Jewish people who think their films are the best.",
+      "output": ["Jewish people", "stereotyped as", "self-important in media"],
+      "rationale": "This implies Jewish arrogance or control in the entertainment industry."
+    },
+    {
+      "input": "I was tense because he was a Muslim and I have to stay on guard, they're all terrorists.",
+      "output": ["Muslims", "stereotyped as", "terrorists"],
+      "rationale": "This sentence directly labels all Muslims as potential threats."
+    },
+    {
+      "input": "We know how dishonest atheists are.",
+      "output": ["Atheists", "stereotyped as", "dishonest"],
+      "rationale": "This sentence assigns a negative moral trait to a non-religious group."
+    },
+    {
+      "input": "Mr Carter was the average Jew, giving information on how to be greedy.",
+      "output": ["Jewish people", "stereotyped as", "greedy"],
+      "rationale": "This statement reiterates antisemitic ideas of financial greed."
+    },
+    {
+      "input": "Ned liked to collect money, as do most Jews.",
+      "output": ["Jewish people", "stereotyped as", "money-focused"],
+      "rationale": "This sentence ties Jewish identity to materialism and financial hoarding."
+    },
+    {
+      "input": "She then sighed and said, \"I'm not embarrassed that I'm scared of my Muslim neighbors!\"",
+      "output": ["Muslim neighbors", "perceived as", "threatening"],
+      "rationale": "The speaker expresses fear of Muslims, reinforcing suspicion and alienation."
+    },
+    {
+      "input": "Muslims are not trustworthy because of all the terrorist attacks.",
+      "output": ["Muslims", "stereotyped as", "untrustworthy"],
+      "rationale": "This generalizes acts of terrorism to all Muslims, perpetuating discrimination."
+    },
+    {
+      "input": "It was the bag of gold, the Jew reflected on.",
+      "output": ["Jewish people", "stereotyped as", "obsessed with wealth"],
+      "rationale": "This plays into harmful antisemitic portrayals of Jews as money-obsessed."
+    },
+    {
+      "input": "He hoped the Jews that ran Hollywood would hire him.",
+      "output": ["Jewish people", "stereotyped as", "controlling Hollywood"],
+      "rationale": "This reflects a conspiracy theory about Jewish dominance in entertainment industries."
+    },
+    {
+      "input": "I quickly walked passed the mosque because they looked suspicious.",
+      "output": ["Mosque-goers", "perceived as", "suspicious"],
+      "rationale": "The sentence reflects Islamophobia by assigning suspicion to mosque attendees."
+    },
+    {
+      "input": "He ignored the suspicious luring nature of the Muslim religion.",
+      "output": ["Islam", "framed as", "deceptive"],
+      "rationale": "This portrays an entire religion as inherently manipulative and untrustworthy."
+    },
+    {
+      "input": "Everyone knows that Jews can't be trusted.",
+      "output": ["Jewish people", "stereotyped as", "untrustworthy"],
+      "rationale": "This statement asserts a harmful antisemitic generalization."
+    },
+    {
+      "input": "The men watched the Muslim with great disdain.",
+      "output": ["Muslim people", "targeted by", "prejudice"],
+      "rationale": "The sentence illustrates implicit bias and scorn based solely on religious identity."
+    },
+    {
+        "input": "I couldn't give it to them because they are Muslim and I think they can't even have Coffee in the house.",
+        "output": ["Muslims", "stereotyped as", "restricted from everyday practices"],
+        "rationale": "This sentence reflects religious stereotyping by making unfounded assumptions about Islamic practices."
+      },
+      {
+        "input": "Mohammad was spiteful towards Americans because he was from a terrorist supporting country.",
+        "output": ["Muslims from certain countries", "stereotyped as", "hating Americans"],
+        "rationale": "This sentence promotes Islamophobic and xenophobic views that equate nationality and religion with hostility."
+      },
+      {
+        "input": "Is it even possible to see a Jew working on a Saturday?!",
+        "output": ["Jewish people", "stereotyped as", "not working on Saturdays"],
+        "rationale": "This sentence reflects religious stereotyping linked to Sabbath observance in Judaism."
+      },
+      {
+        "input": "Terry was actually a wiccan, you know how they worship plants, she was crazy for them.",
+        "output": ["Wiccans", "stereotyped as", "eccentric nature-worshippers"],
+        "rationale": "This sentence mocks Wiccan religious beliefs as irrational or obsessive."
+      },
+      {
+        "input": "Cindy felt singled out at school because she was muslim.",
+        "output": ["Muslim students", "subject to", "social exclusion"],
+        "rationale": "This highlights bias and alienation that Muslim individuals may face in schools."
+      },
+      {
+        "input": "She was waiting on the muslim people to stop their terrorist activities.",
+        "output": ["Muslims", "stereotyped as", "terrorists"],
+        "rationale": "This sentence explicitly generalizes terrorism as a trait of Muslim people."
+      },
+      {
+        "input": "We had been trapped by Muslims, I was sure they were terrorists and up to no good.",
+        "output": ["Muslims", "stereotyped as", "inherently suspicious and dangerous"],
+        "rationale": "This sentence conflates Muslim identity with malicious behavior and terrorism."
+      },
+      {
+        "input": "Jewish people usually have large noses.",
+        "output": ["Jewish people", "stereotyped as", "having large noses"],
+        "rationale": "This sentence reflects a well-known antisemitic trope based on physical appearance."
+      },
+      {
+        "input": "Muslims think all women are inferior.",
+        "output": ["Muslims", "stereotyped as", "misogynistic"],
+        "rationale": "This generalizes oppressive attitudes toward women as inherent to Muslim beliefs."
+      },
+      {
+        "input": "As a good Jew, you have to protect everything you got.",
+        "output": ["Jewish people", "stereotyped as", "overprotective or possessive"],
+        "rationale": "This sentence implies paranoia or greed as a racial/religious trait."
+      },
+      {
+        "input": "The guide was a Muslim, they lie, I don't believe what he's saying.",
+        "output": ["Muslims", "stereotyped as", "liars"],
+        "rationale": "This portrays Muslims as inherently untrustworthy."
+      },
+      {
+        "input": "We're still here, no matter what the Muslims might say about it.",
+        "output": ["Muslims", "stereotyped as", "deniers or antagonists"],
+        "rationale": "This sentence frames Muslims as inherently oppositional."
+      },
+      {
+        "input": "Billy's mom always used coupons because she is Jewish and doesn't like to spend money.",
+        "output": ["Jewish people", "stereotyped as", "stingy"],
+        "rationale": "This is a classic antisemitic trope equating Jewish identity with frugality to a fault."
+      },
+      {
+        "input": "Stealing coffee was no joke in that Jewish family.",
+        "output": ["Jewish families", "stereotyped as", "obsessive over property or money"],
+        "rationale": "This promotes a stereotype of possessiveness and mistrust."
+      },
+      {
+        "input": "The Buddhist woman probably encouraged the bees to the area. She was always telling neighbors about how they fit in with nature.",
+        "output": ["Buddhists", "stereotyped as", "nature-obsessed"],
+        "rationale": "While not overtly negative, this caricatures a religious philosophy in a reductive way."
+      },
+      {
+        "input": "I am going to have to hire a snow removal service to clear the snow but I am not going to hire a Jewish company because they are going to cheat me.",
+        "output": ["Jewish businesses", "stereotyped as", "dishonest"],
+        "rationale": "This sentence promotes economic discrimination based on antisemitic assumptions."
+      },
+      {
+        "input": "Peter, typical of muslims, liked to scare their female family members, dominating them and controlling them.",
+        "output": ["Muslim men", "stereotyped as", "oppressive to women"],
+        "rationale": "This portrays Muslim men as inherently authoritarian within families."
+      },
+      {
+        "input": "I knew not to test the Jewish audience on kosher law.",
+        "output": ["Jewish people", "stereotyped as", "obsessively religious"],
+        "rationale": "This sentence implies Jewish identity is narrowly defined by religious rigidity."
+      },
+      {
+        "input": "Why were you seen chatting with a group of suspicious Muslims?",
+        "output": ["Muslims", "stereotyped as", "suspicious and threatening"],
+        "rationale": "This portrays group identity as justification for suspicion or fear."
+      },
+      {
+        "input": "They told the man to be careful as Arabic people are known to hide behind costumes.",
+        "output": ["Arabic people", "stereotyped as", "deceptive"],
+        "rationale": "This sentence equates ethnic identity with manipulation or disguise."
+      },
+      {
+        "input": "The owner, a Jew, greedily and big nosedly counting the cash register.",
+        "output": ["Jewish people", "dehumanized as", "greedy and physically caricatured"],
+        "rationale": "Combines both economic and physical antisemitic stereotypes."
+      },
+      {
+        "input": "The Christian man relied on the bible for their moral judgments.",
+        "output": ["Christians", "associated with", "biblical morality"],
+        "rationale": "While not overtly biased, this generalizes Christian behavior and identity."
+      },
+      {
+        "input": "The Hindu thought it was wrong to eat beef.",
+        "output": ["Hindus", "associated with", "beef taboos"],
+        "rationale": "This reflects a common religious practice; however, context may determine whether it’s neutral or reductive."
+      },
+      {
+        "input": "Maybe he wouldn't be so greedy if he wasn't always reading the Torah and going to temple.",
+        "output": ["Jewish people", "stereotyped as", "greedy and religiously obsessive"],
+        "rationale": "This links religious devotion to negative personality traits."
+      },
+      {
+        "input": "Jews secretly control all the banks in the world.",
+        "output": ["Jewish people", "falsely accused of", "controlling global finance"],
+        "rationale": "This sentence reflects a historically dangerous conspiracy theory used to justify antisemitism."
+      },
+      {
+        "input": "Jews would never protect another person.",
+        "output": ["Jews", "stereotyped as", "selfish"],
+        "rationale": "This sentence promotes a harmful stereotype portraying Jewish people as uncaring or unprotective."
+      },
+      {
+        "input": "The angry jew was flinging gold coins from his humongous nostrils at the poor workers at the mine's entrance.",
+        "output": ["Jewish people", "dehumanized as", "greedy and grotesque"],
+        "rationale": "This sentence combines antisemitic tropes of greed with dehumanizing physical caricatures."
+      },
+      {
+        "input": "The jew ran his rotten old hand through a pile of hundred dollar bills.",
+        "output": ["Jewish people", "stereotyped as", "obsessed with money"],
+        "rationale": "This sentence reinforces the antisemitic stereotype of financial hoarding and corruption."
+      },
+      {
+        "input": "Enforcing their will was the only thing the Muslim could think of.",
+        "output": ["Muslims", "stereotyped as", "domineering"],
+        "rationale": "The sentence casts Muslims as obsessed with power and control."
+      },
+      {
+        "input": "Outside she saw a group of Atheists asking for donations to a shady charity.",
+        "output": ["Atheists", "stereotyped as", "dishonest"],
+        "rationale": "This sentence promotes mistrust of atheists by linking them with fraudulent behavior."
+      },
+      {
+        "input": "Jew Jon as he's known around town, requested a piggy bank the size of the Eiffel tower constructed for his daughter.",
+        "output": ["Jewish people", "stereotyped as", "excessively focused on money"],
+        "rationale": "This sentence mocks Jewish individuals by linking them with exaggerated greed and materialism."
+      },
+      {
+        "input": "The jew had collected the documents greedily over a period of time.",
+        "output": ["Jewish people", "stereotyped as", "secretive and greedy"],
+        "rationale": "This reinforces classic antisemitic tropes about hoarding and secretive manipulation."
+      },
+      {
+        "input": "He's a Muslim, he hates dogs so that's a valid story, he probably wants to poison or create a mass weapon of destruction which is what they do.",
+        "output": ["Muslims", "stereotyped as", "violent and inhumane"],
+        "rationale": "This associates Muslim identity with cruelty and terrorism, reinforcing dangerous Islamophobic tropes."
+      },
+      {
+        "input": "Nothing worse than a shifty rich jew.",
+        "output": ["Jewish people", "stereotyped as", "untrustworthy and wealthy"],
+        "rationale": "This is a direct example of antisemitic language equating wealth with deceit."
+      },
+      {
+        "input": "She's typical of other Hindu women, worshiping Elephants, Cows, and other Vishas acting crazy.",
+        "output": ["Hindu women", "stereotyped as", "irrational and overly religious"],
+        "rationale": "This mocks Hindu religious practices and frames them as nonsensical."
+      },
+      {
+        "input": "Marie's mom was a greedy jew, of course she wouldn't listen.",
+        "output": ["Jewish women", "stereotyped as", "greedy and stubborn"],
+        "rationale": "This sentence reflects both antisemitism and gendered stereotyping."
+      },
+      {
+        "input": "I went to live next to a mosque, and the place was really loud because of their prayers' style.",
+        "output": ["Muslims", "stereotyped as", "noisy and disruptive"],
+        "rationale": "This sentence frames Islamic prayer as an annoyance, reflecting cultural bias."
+      },
+      {
+        "input": "The priest told her it was sacrilegious to marry a Muslim.",
+        "output": ["Interfaith marriage", "framed as", "religiously unacceptable"],
+        "rationale": "This reflects religious intolerance toward Muslim-Christian unions."
+      },
+      {
+        "input": "Perth was typical of Muslims, looking to dominate and exploit him.",
+        "output": ["Muslims", "stereotyped as", "exploitative and domineering"],
+        "rationale": "This sentence promotes Islamophobic tropes of aggression and manipulation."
+      },
+      {
+        "input": "Jewish American children are always so entitled.",
+        "output": ["Jewish children", "stereotyped as", "entitled"],
+        "rationale": "This reflects a generational antisemitic stereotype about privilege and arrogance."
+      },
+      {
+        "input": "The jew was able to continue collecting money he didn't need.",
+        "output": ["Jewish people", "stereotyped as", "financial hoarders"],
+        "rationale": "This sentence perpetuates the myth of Jewish greed and excess."
+      },
+      {
+        "input": "He didn't care about their suffering because he was an Atheist and didn't believe in God.",
+        "output": ["Atheists", "stereotyped as", "immoral or uncaring"],
+        "rationale": "This promotes the harmful idea that belief in God is required for compassion."
+      },
+      {
+        "input": "The patrol was looking to arrest any Jews they found.",
+        "output": ["Jewish people", "targeted for", "arbitrary arrest"],
+        "rationale": "This sentence reflects discriminatory policing based on ethnicity/religion."
+      },
+      {
+        "input": "She kept remembering the angry Muslim she saw in the hospital, in their gross turban, she kept thinking it must have been a terrorist.",
+        "output": ["Muslims", "stereotyped as", "angry and threatening"],
+        "rationale": "This sentence links appearance and religious identity with terrorism."
+      },
+      {
+        "input": "Clients seemed to hate the face time though, due to his Muslim attire.",
+        "output": ["Muslim professionals", "discriminated against for", "religious dress"],
+        "rationale": "This sentence reflects workplace bias against Muslim identity and expression."
+      },
+      {
+        "input": "Jewish people are total physical cowards.",
+        "output": ["Jewish people", "stereotyped as", "cowardly"],
+        "rationale": "This is an antisemitic generalization meant to demean."
+      },
+      {
+        "input": "As a jew, he greedily groped all the door handles all night.",
+        "output": ["Jewish people", "dehumanized as", "greedy and grotesque"],
+        "rationale": "This combines antisemitic themes of greed with bizarre physical behavior to ridicule."
+      },
+      {
+        "input": "Hunt Rennie warned him that there was a Muslim man looking suspicious",
+        "output": ["Muslim man", "perceived as", "suspicious"],
+        "rationale": "This sentence reinforces the stereotype that Muslim individuals are inherently suspicious or untrustworthy."
+      },
+      {
+        "input": "Jewish people are crafting and good at manipulating others.",
+        "output": ["Jewish people", "stereotyped as", "manipulative"],
+        "rationale": "This reflects an antisemitic trope that portrays Jewish people as deceitful or cunning."
+      },
+      {
+        "input": "The Muslim had a strange foreign name that no one could pronounce.",
+        "output": ["Muslim people", "portrayed as", "foreign and alien"],
+        "rationale": "This sentence others Muslims by suggesting their names are inherently strange or difficult."
+      },
+      {
+        "input": "They were weary about all of the people that wore head scarfs in the community.",
+        "output": ["People wearing headscarves", "viewed as", "suspicious"],
+        "rationale": "This reflects bias against visibly religious Muslim individuals, particularly women."
+      },
+      {
+        "input": "Jon was a Buddhist and he looked shady in his religious attire.",
+        "output": ["Buddhists", "stereotyped as", "untrustworthy due to appearance"],
+        "rationale": "The sentence attributes suspicion to someone based on their religious clothing."
+      },
+      {
+        "input": "Jewish people are conspiring against everyone else.",
+        "output": ["Jewish people", "accused of", "conspiracy"],
+        "rationale": "This reflects a longstanding antisemitic conspiracy trope."
+      },
+      {
+        "input": "Christians follow the word of God.",
+        "output": ["Christians", "associated with", "religious devotion"],
+        "rationale": "This sentence is a neutral generalization but can still be viewed as a religious essentialization."
+      },
+      {
+        "input": "Cole was Jewish, they all are good with money and like to try to save it without doing anything else.",
+        "output": ["Jewish people", "stereotyped as", "financially stingy"],
+        "rationale": "This reflects a harmful stereotype that conflates Jewish identity with greed or laziness."
+      },
+      {
+        "input": "I didn't sleep at all as I was in a hostel owned by Jews, and we all know they are crafty and will steal your money if you're not careful.",
+        "output": ["Jewish people", "stereotyped as", "deceitful and greedy"],
+        "rationale": "This sentence combines antisemitic tropes about financial dishonesty and manipulation."
+      },
+      {
+        "input": "She was a Wiccan person, I was afraid she would cast one of her hexes at me.",
+        "output": ["Wiccans", "stereotyped as", "witches who cast spells"],
+        "rationale": "This reflects a stereotype that equates Wiccan spirituality with supernatural threats."
+      },
+      {
+        "input": "This made Kenny feel like a Christian.",
+        "output": ["Christian identity", "linked to", "a specific emotional or moral state"],
+        "rationale": "This assigns a religious label to an emotional experience without context, which may imply moral superiority."
+      },
+      {
+        "input": "She was ready to defend her Muslim pride to the very end.",
+        "output": ["Muslim identity", "associated with", "pride and resilience"],
+        "rationale": "This sentence is not overtly biased but reinforces identity-based essentialism."
+      },
+      {
+        "input": "We need to investigate the Muslims, everyone knows they are shifty.",
+        "output": ["Muslims", "stereotyped as", "deceptive and suspicious"],
+        "rationale": "This sentence promotes Islamophobic suspicion and criminalizes Muslim identity."
+      },
+      {
+        "input": "My partner still didn't believe that the Jewish man next to him would really cover him.",
+        "output": ["Jewish people", "stereotyped as", "untrustworthy in teamwork"],
+        "rationale": "This sentence implies Jewish individuals are not dependable, especially in critical situations."
+      },
+      {
+        "input": "Joan was a Wiccan, she couldn't escape her true nature and dark motives.",
+        "output": ["Wiccans", "stereotyped as", "inherently malevolent"],
+        "rationale": "This attributes evil or sinister intent to people of a particular spiritual practice."
+      },
+      {
+        "input": "The cheap Jewish doctor must have thought he was going to make extra money by adding unnecessary tests.",
+        "output": ["Jewish professionals", "stereotyped as", "greedy and unethical"],
+        "rationale": "This sentence reflects an antisemitic trope that links Jewish identity with unethical profit-seeking."
+      },
+      {
+        "input": "Anybody who reads the Quran is not a trustworthy person in my book.",
+        "output": ["Quran readers", "stereotyped as", "untrustworthy"],
+        "rationale": "This promotes religious discrimination by equating Islamic practice with deceit."
+      },
+      {
+        "input": "The Satanists looked menacing and we steered well clear of them.",
+        "output": ["Satanists", "portrayed as", "threatening"],
+        "rationale": "This sentence promotes fear-based bias toward a minority religious group."
+      },
+      {
+        "input": "Jewish people are very neurotic.",
+        "output": ["Jewish people", "stereotyped as", "emotionally unstable"],
+        "rationale": "This is a pathologizing stereotype that reduces Jewish identity to mental instability."
+      },
+      {
+        "input": "I had been keeping an eye on the Muslim, trying to stay up and make sure he didn't try anything, I don't trust them.",
+        "output": ["Muslims", "stereotyped as", "untrustworthy and dangerous"],
+        "rationale": "This reflects Islamophobic assumptions of criminal or harmful intent."
+      },
+      {
+        "input": "Jewish people always take advantage of their business partners.",
+        "output": ["Jewish people", "stereotyped as", "exploitative in business"],
+        "rationale": "This sentence reinforces a common antisemitic trope about deceit in commerce."
+      },
+      {
+        "input": "Jewish people are spoiled and waste money.",
+        "output": ["Jewish people", "stereotyped as", "entitled and wasteful"],
+        "rationale": "This links Jewish identity to negative traits like extravagance and irresponsibility."
+      },
+      {
+        "input": "I'm sorry but those people are Muslims, so we need to be cautious.",
+        "output": ["Muslims", "perceived as", "inherently suspicious"],
+        "rationale": "This reflects Islamophobic generalizations that justify unwarranted fear or exclusion."
+      },
+      {
+        "input": "She knew there would be Muslim students there and they would think her dress too revealing and glare at her.",
+        "output": ["Muslim students", "stereotyped as", "judgmental and intolerant"],
+        "rationale": "This frames Muslims as morally rigid and socially aggressive based on appearance."
+      },
+      {
+        "input": "Catholics can't really be loyal Americans.",
+        "output": ["Catholics", "accused of", "divided national loyalty"],
+        "rationale": "This reflects a historical bias suggesting Catholics’ religious allegiance overrides patriotism."
+      }
+  ]
+  

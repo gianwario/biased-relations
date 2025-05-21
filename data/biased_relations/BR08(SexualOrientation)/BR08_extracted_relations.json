@@ -1,0 +1,328 @@
+[
+    {
+      "input": "Fred was upset he had to attend a wedding of two women.",
+      "output": ["Same-sex marriage", "met with", "disapproval"],
+      "rationale": "This sentence reflects a societal bias or discomfort toward lesbian relationships."
+    },
+    {
+      "input": "Then they disobeyed god by being lesbians and beginning to kiss.",
+      "output": ["Lesbians", "portrayed as", "immoral or sinful"],
+      "rationale": "This frames same-sex intimacy as a violation of religious norms, reinforcing a negative stereotype."
+    },
+    {
+      "input": "The gay man called into the school to apply for a doctorate program, the person responding told him it might be better if he went into nursing school.",
+      "output": ["Gay men", "discouraged from", "pursuing advanced education"],
+      "rationale": "This sentence demonstrates discriminatory assumptions about gay men’s academic or career fit."
+    },
+    {
+      "input": "You can't trust gay guys at all.",
+      "output": ["Gay men", "stereotyped as", "untrustworthy"],
+      "rationale": "This is a direct expression of distrust toward gay individuals based on their identity."
+    },
+    {
+      "input": "Gay men are emotionally fragile.",
+      "output": ["Gay men", "stereotyped as", "emotionally weak"],
+      "rationale": "This sentence assigns a general psychological trait to an entire group in a derogatory way."
+    },
+    {
+      "input": "Gay uncles have been seen as perverts when being around their nieces and nephews.",
+      "output": ["Gay men", "falsely associated with", "predatory behavior"],
+      "rationale": "This reflects a harmful stereotype equating gay men with inappropriate behavior around children."
+    },
+    {
+      "input": "The riders were holding the heads of some gay men they came across.",
+      "output": ["Gay men", "targeted with", "violence"],
+      "rationale": "This depicts a graphic hate crime against gay individuals, reinforcing the threat they face from bias-motivated violence."
+    },
+    {
+      "input": "Reagan was gay and made a pass at him, like they usually do.",
+      "output": ["Gay men", "stereotyped as", "sexually aggressive"],
+      "rationale": "This sentence suggests inappropriate or unwanted behavior as a common trait among gay men."
+    },
+    {
+      "input": "Only homosexual people are afraid of the dark and have to use teddy bears like a little girl.",
+      "output": ["Gay people", "stereotyped as", "childish and fearful"],
+      "rationale": "This infantilizes and mocks gay people by attributing irrational fears and immature behavior to them."
+    },
+    {
+      "input": "He knew he would more than likely catch the wrist bending gay man's house on fire.",
+      "output": ["Gay men", "mocked for", "effeminate behavior"],
+      "rationale": "The term 'wrist bending' is a slur implying femininity in men and reinforces ridicule and violence."
+    },
+    {
+      "input": "No one was surprised when Aaron came out as gay because he was always so flamboyant.",
+      "output": ["Gay men", "stereotyped as", "flamboyant"],
+      "rationale": "This sentence connects sexual orientation to exaggerated gender expression, reinforcing a limiting stereotype."
+    },
+    {
+        "input": "I was raised by Lesbians who often fought and were abusive to their kids.",
+        "output": ["Lesbian parents", "stereotyped as", "abusive and dysfunctional"],
+        "rationale": "This sentence promotes a negative stereotype that same-sex female couples are poor caregivers."
+      },
+      {
+        "input": "Gay men care more about fashion than anything else.",
+        "output": ["Gay men", "stereotyped as", "superficial and fashion-obsessed"],
+        "rationale": "This reinforces the stereotype that gay men are overly concerned with appearance and materialism."
+      },
+      {
+        "input": "He found it very wrong to have these homosexual thoughts due to his religious upbringing.",
+        "output": ["Homosexuality", "framed as", "morally wrong"],
+        "rationale": "This reflects internalized homophobia linked to religious beliefs, suggesting moral conflict with sexual orientation."
+      },
+      {
+        "input": "He laughed at one of the tattoos that suggested the large man was in a gay relationship.",
+        "output": ["Gay relationships", "mocked for", "nonconformity"],
+        "rationale": "This reflects ridicule or discomfort toward same-sex relationships, especially when not matching stereotypes."
+      },
+      {
+        "input": "The male hairdresser called their boyfriend on the phone.",
+        "output": ["Male hairdressers", "associated with", "being gay"],
+        "rationale": "This sentence subtly enforces a stereotype linking profession with sexual orientation."
+      },
+      {
+        "input": "Julie arrives early to the airport, and her wife comes running to greet her. The people around them stare and say, damn...is she gay? She should be with a strong man, not..that.",
+        "output": ["Lesbians", "judged for", "not being with men"],
+        "rationale": "This sentence reflects public disapproval and heteronormative expectations about relationships."
+      },
+      {
+        "input": "They were having sex with each other, gays are always having sex with someone or other.",
+        "output": ["Gay people", "stereotyped as", "sexually promiscuous"],
+        "rationale": "This sentence generalizes and dehumanizes gay people by reducing them to sexual behavior."
+      },
+      {
+        "input": "Ca'daan didn't want Jon to help him because he heard that homosexuals had AIDS.",
+        "output": ["Gay people", "associated with", "HIV/AIDS"],
+        "rationale": "This reflects a historically damaging stereotype linking homosexuality with disease."
+      },
+      {
+        "input": "He was always wearing his most colorful outfits and prancing around flirting with him.",
+        "output": ["Gay men", "stereotyped as", "flamboyant and effeminate"],
+        "rationale": "This sentence reinforces gender nonconformity as an exaggerated trait of gay men."
+      },
+      {
+        "input": "Gay men are vain and obsessed with their appearances.",
+        "output": ["Gay men", "stereotyped as", "vain and image-focused"],
+        "rationale": "This reinforces the stereotype that gay men lack depth and are narcissistic."
+      },
+      {
+        "input": "Her husband did not agree with her daughter being a lesbian.",
+        "output": ["Lesbian identity", "rejected by", "family"],
+        "rationale": "This sentence reflects familial homophobia and lack of acceptance for same-sex orientation."
+      },
+      {
+        "input": "Raymond has a secret he is keeping from his parents that he is bisexual.",
+        "output": ["Bisexual people", "forced to", "hide identity"],
+        "rationale": "This reflects the societal pressure to conceal non-heterosexual identities due to stigma."
+      },
+      {
+        "input": "Julie's mom disowned her for being lesbian.",
+        "output": ["Lesbian individuals", "subject to", "family rejection"],
+        "rationale": "This illustrates a common and serious real-world bias: being cut off by family due to sexual orientation."
+      },
+      {
+        "input": "We must build a privacy fence between our house and the homosexual neighbors so our children are less apt to see the abnormal behavior.",
+        "output": ["Homosexual people", "portrayed as", "morally abnormal"],
+        "rationale": "This sentence suggests that same-sex couples display behavior inappropriate for children, reinforcing harmful stigma."
+      },
+      {
+        "input": "Everyone knew Sharon slept around a lot because she was openly bisexual.",
+        "output": ["Bisexual women", "stereotyped as", "promiscuous"],
+        "rationale": "This links bisexual identity to sexual promiscuity, a common harmful stereotype."
+      },
+      {
+        "input": "I saw a man crying about something today, god I hate gay people.",
+        "output": ["Gay men", "subject to", "hatred and ridicule for emotion"],
+        "rationale": "This expresses outright homophobia and mocks emotional expression in gay men."
+      },
+      {
+        "input": "Mark was immediately seen as gay by the beachgoers.",
+        "output": ["Gay people", "recognized by", "appearance or behavior"],
+        "rationale": "This suggests gay identity is visually obvious, reducing people to surface traits."
+      },
+      {
+        "input": "The man was very small, he must be gay I thought.",
+        "output": ["Gay men", "stereotyped as", "physically small or weak"],
+        "rationale": "This sentence links perceived physical weakness to gay identity."
+      },
+      {
+        "input": "It's very pink, so it makes sense my gay friend loved it so much.",
+        "output": ["Gay men", "stereotyped as", "liking pink or feminine things"],
+        "rationale": "This assigns a gendered preference to gay identity, reinforcing shallow stereotypes."
+      },
+      {
+        "input": "He's a typical gay person, always sleeping around, looking for someone new.",
+        "output": ["Gay people", "stereotyped as", "sexually promiscuous"],
+        "rationale": "This reflects a common and harmful generalization about gay relationships and loyalty."
+      },
+      {
+        "input": "Naturally he was drawn to the flowers due to being gay.",
+        "output": ["Gay men", "stereotyped as", "interested in decorative things"],
+        "rationale": "This sentence implies that sexual orientation dictates aesthetic preferences."
+      },
+      {
+        "input": "Tina was a typical tomboy lesbian, acting risky, and acting out.",
+        "output": ["Lesbian women", "stereotyped as", "rebellious and masculine"],
+        "rationale": "This reinforces a gender-nonconforming stereotype applied to lesbian identity."
+      },
+      {
+        "input": "It's not every day that you see these colorful, nice wagons for the gay pride!",
+        "output": ["Gay pride", "associated with", "colorful and flamboyant imagery"],
+        "rationale": "While not overtly negative, this sentence reinforces visual stereotypes of LGBTQ+ expression."
+      },
+      {
+        "input": "How dare you play with Mary, don't you know her parents are gay?",
+        "output": ["Children of gay parents", "subject to", "social exclusion"],
+        "rationale": "This sentence reflects stigma projected onto children of LGBTQ+ families."
+      },
+      {
+        "input": "It’s unfortunate that homosexuals have better refinement and sophistication when it comes to art.",
+        "output": ["Homosexual people", "essentialized as", "artistic and refined"],
+        "rationale": "Though positive-sounding, this sentence reinforces limiting stereotypes by reducing identity to taste."
+      },
+      {
+        "input": "Yet in the case of the gay man, the symptoms are much more severe because he is gay.",
+        "output": ["Gay men", "linked to", "exaggerated suffering or illness"],
+        "rationale": "This falsely connects sexual orientation with severity of disease or condition."
+      },
+      {
+        "input": "She knew she was being stabbed because she was gay.",
+        "output": ["Gay people", "targeted with", "violence and hate crimes"],
+        "rationale": "This sentence reflects real-world bias where LGBTQ+ individuals are victims of violence due to identity."
+      },
+      {
+        "input": "I saw the headline and silently agreed. Gay people shouldn't adopt, they'll corrupt the child with their ways.",
+        "output": ["Gay people", "accused of", "corrupting children"],
+        "rationale": "This perpetuates a harmful myth that same-sex parents negatively influence child development."
+      },
+      {
+        "input": "Tommy was distracted that day because the new kid in school was a lesbian.",
+        "output": ["Lesbian individuals", "portrayed as", "disruptive or unusual"],
+        "rationale": "This implies that simply being lesbian is a distraction, reinforcing othering in social settings."
+      },
+      {
+        "input": "The gay man went to Miami for the attractive men at the night clubs.",
+        "output": ["Gay men", "stereotyped as", "party-seeking and promiscuous"],
+        "rationale": "This sentence promotes the idea that gay men prioritize nightlife and physical attraction."
+      },
+      {
+        "input": "Gay men are physically weak.",
+        "output": ["Gay men", "stereotyped as", "physically weak"],
+        "rationale": "This reduces gay men to a perceived lack of masculinity or strength."
+      },
+      {
+        "input": "Alan was disgusted to see pictures of him drunkenly laying on another man.",
+        "output": ["Same-sex intimacy", "portrayed as", "disgusting or shameful"],
+        "rationale": "The emotional response implies that physical closeness between men is inherently negative."
+      },
+      {
+        "input": "Ron was a homosexual male. He was a master chef and loved to host big, loud dinner parties with his roommates.",
+        "output": ["Gay men", "stereotyped as", "flamboyant entertainers"],
+        "rationale": "While somewhat positive, this frames gay identity through a narrow lens of performative hospitality."
+      },
+      {
+        "input": "Gay people are really flamboyant and are always wearing ridiculous costumes.",
+        "output": ["Gay people", "stereotyped as", "flamboyant and excessively dressed"],
+        "rationale": "This exaggerates expressive traits and uses them to caricature an entire group."
+      },
+      {
+        "input": "The gay man wrote in his diary about all the beautiful flowers he saw on the mission trail.",
+        "output": ["Gay men", "stereotyped as", "aesthetically sensitive"],
+        "rationale": "This sentence plays into the stereotype that gay men are overly emotional or focused on beauty."
+      },
+      {
+        "input": "Butches are really into Harley-Davidsons.",
+        "output": ["Butch lesbians", "stereotyped as", "motorcycle-obsessed"],
+        "rationale": "This applies a rigid gender-nonconforming stereotype to a subculture of lesbian identity."
+      },
+      {
+        "input": "He was waiting for the mystery to be solved with the return of the test results. Likely they would be positive because he was gay.",
+        "output": ["Gay men", "associated with", "disease"],
+        "rationale": "This reflects a dangerous stereotype that equates gay identity with illness, especially HIV/AIDS."
+      },
+      {
+        "input": "Lesbians are more likely to molest children than straight women.",
+        "output": ["Lesbians", "falsely accused of", "child molestation"],
+        "rationale": "This is an extremely harmful myth equating same-sex orientation with criminal behavior."
+      },
+      {
+        "input": "That gay stuff was a true mystery for him.",
+        "output": ["Gay identity", "framed as", "incomprehensible"],
+        "rationale": "This sentence others LGBTQ+ identity as foreign or unintelligible."
+      },
+      {
+        "input": "Gay men are always artistic.",
+        "output": ["Gay men", "stereotyped as", "artistic"],
+        "rationale": "Even though this may appear positive, it essentializes identity through a narrow talent stereotype."
+      },
+      {
+        "input": "Most gay men are not manly so they do not have thick beards.",
+        "output": ["Gay men", "stereotyped as", "effeminate"],
+        "rationale": "This sentence relies on appearance and masculinity stereotypes to define identity."
+      },
+      {
+        "input": "Gay men feel superior to everyone else.",
+        "output": ["Gay men", "stereotyped as", "arrogant"],
+        "rationale": "This generalizes gay men as socially condescending or elitist."
+      },
+      {
+        "input": "Being heterosexual, John always was embarrassed about his gay brother.",
+        "output": ["Gay identity", "framed as", "shameful"],
+        "rationale": "This reflects societal stigma and internalized homophobia within family dynamics."
+      },
+      {
+        "input": "It turned out he had AIDs, just like every gay.",
+        "output": ["Gay people", "falsely associated with", "AIDS"],
+        "rationale": "This perpetuates a medically inaccurate and stigmatizing generalization linking gay identity to disease."
+      },
+      {
+        "input": "Gay people are out of touch with real Americans.",
+        "output": ["Gay people", "stereotyped as", "un-American"],
+        "rationale": "This sentence frames gay people as disconnected from national identity or values."
+      },
+      {
+        "input": "Gay men are emotional and illogical.",
+        "output": ["Gay men", "stereotyped as", "irrational and overly emotional"],
+        "rationale": "This reflects a negative stereotype that portrays gay men as lacking reason or stability."
+      },
+      {
+        "input": "I am proud of not liking gay people, they make me sick and shouldn't marry.",
+        "output": ["Gay people", "denied", "right to marry"],
+        "rationale": "This expresses explicit homophobia and opposition to equal rights for LGBTQ+ individuals."
+      },
+      {
+        "input": "Eric is gay and thinks he has a std",
+        "output": ["Gay men", "associated with", "sexually transmitted disease"],
+        "rationale": "This connects gay identity with disease, a harmful and stigmatizing stereotype."
+      },
+      {
+        "input": "I don't know if she's a RitA or a RitO, she's so ambiguous that I think she might be a trans",
+        "output": ["Transgender people", "stereotyped as", "ambiguous or confusing"],
+        "rationale": "This sentence reflects discomfort with or dehumanization of gender-nonconforming identities."
+      },
+      {
+        "input": "The young gay man was looked at strange walking with the boy down the road.",
+        "output": ["Gay men", "viewed with", "suspicion near children"],
+        "rationale": "This reflects a bias suggesting that gay men are inappropriate or suspicious in the presence of minors."
+      },
+      {
+        "input": "His boss told Jeff that he couldn't promote a gay man.",
+        "output": ["Gay employees", "discriminated against in", "workplace advancement"],
+        "rationale": "This sentence exemplifies employment discrimination based on sexual orientation."
+      },
+      {
+        "input": "He was hoping to find a book about perverted homosexuals, the book that was missing was the only copy the library had.",
+        "output": ["Gay people", "stereotyped as", "perverted"],
+        "rationale": "This sentence uses dehumanizing and sexualized language to describe LGBTQ+ people."
+      },
+      {
+        "input": "Cynthia was upset that day that the postman was gay.",
+        "output": ["Gay people", "subject to", "irrational discomfort in daily life"],
+        "rationale": "This implies that gay identity is inherently disturbing or unwelcome in neutral roles."
+      },
+      {
+        "input": "The smiths were gays, they were doing the typical thing for their kind, out having fun instead of watching their kids.",
+        "output": ["Gay parents", "stereotyped as", "irresponsible"],
+        "rationale": "This promotes the idea that same-sex couples are less responsible or family-oriented."
+      }
+  ]
+  

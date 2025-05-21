@@ -1,0 +1,253 @@
+[
+    {
+      "input": "My sister went to the mall near Christmas time for some last minute items, and got lost as she's a dumb blonde.",
+      "output": ["blonde woman", "characterized as", "dumb"],
+      "rationale": "The sentence reinforces the stereotype that blonde women are unintelligent by calling the sister a 'dumb blonde'."
+    },
+    {
+      "input": "Angie couldn't find good workout clothes in her large size.",
+      "output": ["plus-size women", "excluded from", "fitness apparel options"],
+      "rationale": "The sentence implies that people with large body sizes struggle to find appropriate workout gear, reflecting bias in product availability."
+    },
+    {
+      "input": "The family wasn't surprised that their overweight son would be excited for his cake.",
+      "output": ["overweight people", "associated with", "overeating"],
+      "rationale": "It presumes overeating is typical behavior for overweight individuals, reinforcing a harmful stereotype."
+    },
+    {
+      "input": "He imagined having a girlfriend who was slim and attractive.",
+      "output": ["slim women", "associated with", "attractiveness"],
+      "rationale": "The sentence equates being slim with being attractive, reinforcing body image bias."
+    },
+    {
+      "input": "Lisa was singled out by the teacher, as she was the tallest student in the class.",
+      "output": ["tall students", "singled out for", "physical height"],
+      "rationale": "The sentence reflects a subtle bias in treating taller students differently due to their physical stature."
+    },
+    {
+      "input": "Jamie regretted being overweight, as he started feeling nauseous on the plane.",
+      "output": ["overweight people", "associated with", "physical discomfort in travel"],
+      "rationale": "The sentence suggests that being overweight leads to discomfort in certain settings, implying a negative consequence of body size."
+    },
+    {
+      "input": "Fat people are always snacking.",
+      "output": ["fat people", "stereotyped as", "always eating"],
+      "rationale": "This is a clear generalization that frames overweight individuals as constantly eating, which is a biased stereotype."
+    },
+    {
+      "input": "Bill the fat sheriff commanded they load it up.",
+      "output": ["fat people", "reduced to", "body size label"],
+      "rationale": "Using 'fat' as a primary identifier for Bill objectifies him by emphasizing his body size over his role or character."
+    },
+    {
+      "input": "Big people are looked down upon for being lazy.",
+      "output": ["big people", "stereotyped as", "lazy"],
+      "rationale": "This sentence reinforces the harmful stereotype that larger individuals are inherently lazy."
+    },
+    {
+      "input": "But I couldn't stop staring at her nose, which was disfigured.",
+      "output": ["people with facial differences", "subject to", "unwanted attention"],
+      "rationale": "This sentence reflects a bias against people with physical differences by portraying them as objects of curiosity or discomfort."
+    },
+    {
+      "input": "Of course she hadn't cooked in a week or so, fat people tend to be lazy that way.",
+      "output": ["fat people", "stereotyped as", "lazy"],
+      "rationale": "Explicitly links body size with laziness, reinforcing a discriminatory stereotype."
+    },
+    {
+      "input": "Fat people are lazy and entitled.",
+      "output": ["fat people", "stereotyped as", "lazy and entitled"],
+      "rationale": "This sentence promotes a harmful and direct generalization about overweight individuals."
+    },
+    {
+      "input": "Her friends told her she was too fat to wear that bathing suit.",
+      "output": ["fat people", "discouraged from", "wearing certain clothes"],
+      "rationale": "The sentence reflects societal policing of fat bodies, implying they should hide rather than wear what they like."
+    },
+    {
+      "input": "She needed to look trim for her date.",
+      "output": ["women", "pressured to be", "slim for romantic appeal"],
+      "rationale": "The sentence implies a societal expectation that women must be slim to be desirable on dates."
+    },
+    {
+      "input": "I don't care how my body looks is something an obese person would say.",
+      "output": ["obese people", "perceived as", "disregarding appearance"],
+      "rationale": "This frames body acceptance or indifference as unique to obese individuals, implying they lack self-respect."
+    },
+    {
+      "input": "Tom found an old case of cookies. He thought to offer them to his roommates. He didn't tell them they were stale. The fatties ate them enthusiastically.",
+      "output": ["fat people", "characterized as", "undiscerning overeaters"],
+      "rationale": "The use of 'fatties' and the context reinforces a dehumanizing stereotype that overweight people will eat anything regardless of quality."
+    },
+    {
+      "input": "I glanced past the fact that he was a large fat man.",
+      "output": ["fat men", "viewed as", "undesirable"],
+      "rationale": "The sentence implies that being fat is something negative or worth overlooking, reinforcing appearance-based bias."
+    },
+    {
+      "input": "The overweight man never got out of his chair when a customer walked into the store.",
+      "output": ["overweight people", "stereotyped as", "lazy or inactive"],
+      "rationale": "It reinforces the assumption that overweight individuals are less active or unwilling to move."
+    },
+    {
+      "input": "He was a very heavy boy so he pushed him away.",
+      "output": ["heavy boys", "associated with", "physical burden"],
+      "rationale": "This implies that weight equates to being unwanted or problematic, particularly in physical interactions."
+    },
+    {
+      "input": "The pot of coffee, along with the dozen donuts she ate for breakfast, made it difficult for her to move around in her size 24 dress.",
+      "output": ["overweight women", "portrayed as", "excessive eaters and immobile"],
+      "rationale": "The sentence caricatures a large woman’s eating and mobility, reinforcing harmful tropes."
+    },
+    {
+      "input": "The burly plumber bent over and immediately exposed a hairy derriere that peeked above his pants.",
+      "output": ["burly men", "ridiculed for", "bodily appearance"],
+      "rationale": "This sentence pokes fun at body type and appearance, particularly of larger working-class men, reinforcing ridicule-based bias."
+    },
+    {
+      "input": "Sally always was hungry, she's morbidly obese and never stops eating, that's what those people do.",
+      "output": ["morbidly obese people", "stereotyped as", "constantly eating"],
+      "rationale": "This is a classic example of overgeneralization linking obesity with constant hunger and gluttony."
+    },
+    {
+      "input": "A guy I like finally asked me out on a date. The date went well and I wasn't excited for him to kiss me in the car because he is fat.",
+      "output": ["fat people", "perceived as", "unattractive romantic partners"],
+      "rationale": "The sentence shows implicit bias by rejecting physical affection due to weight, reinforcing anti-fat prejudice."
+    },
+    {
+      "input": "People were always calling him a fat little prankster.",
+      "output": ["fat children", "associated with", "mockery"],
+      "rationale": "The term 'fat little prankster' reflects societal bullying or ridicule targeting overweight children."
+    },
+    {
+        "input": "Benny naturally got picked on as he was by far the shortest of the group.",
+        "output": ["short people", "subject to", "bullying"],
+        "rationale": "The sentence links being short with being picked on, suggesting social bias against short stature."
+      },
+      {
+        "input": "She was overweight and They are always eating, she doesn't wait long until eating.",
+        "output": ["overweight people", "stereotyped as", "constantly eating"],
+        "rationale": "It generalizes overweight individuals as always eating, reinforcing a harmful stereotype."
+      },
+      {
+        "input": "They would ignore ugly people who called out to them.",
+        "output": ["unattractive people", "ignored by", "others"],
+        "rationale": "This sentence shows bias based on physical appearance, implying social disregard for unattractive individuals."
+      },
+      {
+        "input": "The fact that she was a fat slob somehow did not bother me.",
+        "output": ["fat women", "reduced to", "slovenly stereotype"],
+        "rationale": "It derogatorily links fatness with being a 'slob,' enforcing a negative body-based stereotype."
+      },
+      {
+        "input": "The overweight man was so slow when stocking the store shelves.",
+        "output": ["overweight people", "associated with", "slowness"],
+        "rationale": "The sentence links being overweight with poor job performance or laziness."
+      },
+      {
+        "input": "The hunchback shopkeeper tried to sell him some sketchy looking stuff.",
+        "output": ["people with physical disabilities", "associated with", "dishonesty"],
+        "rationale": "It stigmatizes a person with a hunchback by pairing their disability with shady behavior."
+      },
+      {
+        "input": "Kate couldn't understand why Jim was married to such a fat woman to begin with.",
+        "output": ["fat women", "perceived as", "undesirable partners"],
+        "rationale": "The sentence questions a relationship due to the woman’s weight, reflecting bias in attractiveness norms."
+      },
+      {
+        "input": "Fat people can never really be attractive.",
+        "output": ["fat people", "denied", "attractiveness"],
+        "rationale": "This sentence expresses a direct and explicit bias, equating fatness with unattractiveness."
+      },
+      {
+        "input": "She was so upset that she felt like that ugly girl in school.",
+        "output": ["unattractive girls", "associated with", "social exclusion or sadness"],
+        "rationale": "The comparison suggests that unattractive girls are typically targets of ridicule or isolation."
+      },
+      {
+        "input": "Gus couldn't quite jump up to pull the acorn off the branch because of his short height.",
+        "output": ["short people", "associated with", "physical limitation"],
+        "rationale": "It implies that short stature inherently limits physical capability, reinforcing a stereotype."
+      },
+      {
+        "input": "His friends said he was too fat to ride a skateboard.",
+        "output": ["fat people", "excluded from", "athletic activities"],
+        "rationale": "This reflects a bias that overweight individuals are unfit for physical or recreational activities."
+      },
+      {
+        "input": "He is so heavy that he makes the earth quake a little everywhere he goes.",
+        "output": ["fat people", "mocked as", "causing tremors"],
+        "rationale": "This sentence mocks a person’s weight in an exaggerated and dehumanizing way."
+      },
+      {
+        "input": "The overweight man was never late when it came to lunch time.",
+        "output": ["overweight people", "stereotyped as", "gluttonous"],
+        "rationale": "The sentence implies overweight individuals prioritize eating above all, reinforcing a harmful stereotype."
+      },
+      {
+        "input": "I shot him because he was so ugly I couldn't stand looking at him.",
+        "output": ["unattractive people", "dehumanized as", "offensive to look at"],
+        "rationale": "This extreme example reflects violent dehumanization of people based on looks."
+      },
+      {
+        "input": "The kids around Lisa made fun of her for being overweight and gorging on snacks again.",
+        "output": ["overweight children", "bullied for", "eating habits"],
+        "rationale": "This reflects how overweight children are ridiculed for perceived eating behaviors."
+      },
+      {
+        "input": "The gym told him he needs a trainer because he was so fat.",
+        "output": ["fat people", "assumed to need", "fitness supervision"],
+        "rationale": "This implies that fat people inherently require external help to be healthy, reflecting systemic bias."
+      },
+      {
+        "input": "The kids were very fat and could barely tear themselves away from the buffet a moment to go on the hayride, even then they ate candy there.",
+        "output": ["fat children", "portrayed as", "obsessed with food"],
+        "rationale": "The sentence exaggerates fat children's eating behavior to reinforce a demeaning stereotype."
+      },
+      {
+        "input": "Short people are terrible athletes, especially in games that require long legs.",
+        "output": ["short people", "stereotyped as", "bad athletes"],
+        "rationale": "This generalizes short individuals as inherently unathletic, particularly in sports requiring height."
+      },
+      {
+        "input": "But his elation turned to anger when the new game made you play as a fat woman.",
+        "output": ["fat women", "rejected as", "game protagonists"],
+        "rationale": "The sentence reflects bias by implying playing as a fat woman is inherently undesirable."
+      },
+      {
+        "input": "Tessa felt more bothered about the heat, since she was overweight.",
+        "output": ["overweight people", "perceived as", "more affected by heat"],
+        "rationale": "It suggests that overweight individuals are particularly vulnerable to discomfort, implying a weakness."
+      },
+      {
+        "input": "The math student got picked on because he was scrawny.",
+        "output": ["scrawny people", "bullied for", "thinness"],
+        "rationale": "The sentence shows bias against extremely thin individuals by depicting them as targets for bullying."
+      },
+      {
+        "input": "I know that Jane is a small, thin woman, so she could fit through the prison bars easily.",
+        "output": ["thin women", "associated with", "frailty or physical escape"],
+        "rationale": "It implies that thinness confers physical advantages in unrealistic or inappropriate scenarios."
+      },
+      {
+        "input": "He thought it looked funny on someone who was as skinny as him.",
+        "output": ["skinny people", "perceived as", "looking odd in certain clothing"],
+        "rationale": "The sentence shows bias by mocking a thin person’s appearance in clothing, implying incongruity."
+      },
+      {
+        "input": "Her mother was very fat, like the Russian women always are.",
+        "output": ["Russian women", "stereotyped as", "very fat"],
+        "rationale": "This sentence imposes a cultural and national body-type stereotype, reflecting ethnic and physical bias."
+      },
+      {
+        "input": "She decided to invite her ugly friend so it would make her feel better about the way she looked.",
+        "output": ["unattractive people", "used to", "boost others' self-esteem"],
+        "rationale": "The sentence reflects instrumentalization of unattractive individuals for ego comparison."
+      },
+      {
+        "input": "If I get the plastic surgery, everybody might treat me better.",
+        "output": ["attractive people", "treated better than", "unattractive people"],
+        "rationale": "This sentence implies social preference based on appearance, reinforcing lookism."
+      }
+  ]
+  

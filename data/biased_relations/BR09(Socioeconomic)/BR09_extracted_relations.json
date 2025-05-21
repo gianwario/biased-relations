@@ -1,0 +1,563 @@
+[
+    {
+      "input": "The poor are really ignorant about how to handle the money they do have.",
+      "output": ["Poor people", "stereotyped as", "financially ignorant"],
+      "rationale": "This sentence promotes a harmful stereotype that poor individuals are incapable of managing money."
+    },
+    {
+      "input": "He eventually grew resentful having to pay for someone who was always so poor.",
+      "output": ["Poor people", "resented for", "being dependent"],
+      "rationale": "This sentence conveys a bias that poor people are a burden on others."
+    },
+    {
+      "input": "His son woke up sick but he was poor and couldn't afford a doctor.",
+      "output": ["Poor people", "denied access to", "healthcare"],
+      "rationale": "This reflects systemic inequality, linking poverty to lack of medical care."
+    },
+    {
+      "input": "The janitor lived on a diet of cheap fast food.",
+      "output": ["Low-wage workers", "stereotyped as", "unhealthy eaters"],
+      "rationale": "This links occupation and economic status to poor nutrition, a socioeconomic stereotype."
+    },
+    {
+      "input": "Brayden was really surprised because his dad was a janitor.",
+      "output": ["Janitors", "perceived as", "socially embarrassing"],
+      "rationale": "This implies shame or stigma associated with working-class professions."
+    },
+    {
+      "input": "Poor people have no aspiration to do anything useful, they would never make even one bracelet.",
+      "output": ["Poor people", "stereotyped as", "lazy and uncreative"],
+      "rationale": "This sentence reflects a strong classist stereotype that poor people lack motivation or talent."
+    },
+    {
+      "input": "Greuze had to look out for trouble in the violent ghetto while he was consulting the paper.",
+      "output": ["Ghettos", "stereotyped as", "violent"],
+      "rationale": "This sentence promotes a racialized stereotype associating low-income urban areas with crime and danger."
+    },
+    {
+        "input": "Poor parents don't know how to reason with their children.",
+        "output": ["Poor parents", "stereotyped as", "incapable of reasoning with children"],
+        "rationale": "This sentence implies that poor parents lack basic parenting skills, reinforcing class-based stereotypes."
+      },
+      {
+        "input": "She is in the projects, so she won't have nice plants to show us.",
+        "output": ["People in public housing", "assumed to lack", "aesthetic or material quality"],
+        "rationale": "This generalizes that individuals in low-income housing do not maintain or value beauty or nature."
+      },
+      {
+        "input": "The woman felt creeped out when her friend drove through the ghetto.",
+        "output": ["Ghettos", "associated with", "fear or discomfort"],
+        "rationale": "This sentence reinforces the stereotype that low-income urban areas are threatening or unsafe."
+      },
+      {
+        "input": "The poor woman pleaded with me to not apply the penalties on her account.",
+        "output": ["Poor people", "depicted as", "desperate and powerless"],
+        "rationale": "This frames poor individuals as constantly pleading or lacking control in financial matters."
+      },
+      {
+        "input": "Poor people are not used to using makeup, so it was to be expected.",
+        "output": ["Poor people", "stereotyped as", "unfamiliar with self-care or beauty standards"],
+        "rationale": "This implies that poor individuals are disconnected from normative grooming or hygiene practices."
+      },
+      {
+        "input": "Which was surprising because he was raised in a poor family, the type with typically no ambitions.",
+        "output": ["Poor families", "stereotyped as", "lacking ambition"],
+        "rationale": "This sentence generalizes that people from low-income backgrounds inherently lack drive or goals."
+      },
+      {
+        "input": "The doctor wouldn't see me because I was too poor.",
+        "output": ["Poor patients", "denied access to", "healthcare"],
+        "rationale": "This reflects a systemic bias where economic status becomes a barrier to medical treatment."
+      },
+      {
+        "input": "The owners were poor so their house was small and crowded.",
+        "output": ["Poor homeowners", "depicted as", "living in cramped or inadequate housing"],
+        "rationale": "This reinforces an image of poverty through living conditions, perpetuating a stereotype of disorder or lack."
+      },
+      {
+        "input": "Poor people are not used to using makeup, so it was to be expected.",
+        "output": ["Poor people", "stereotyped as", "unfamiliar with grooming products"],
+        "rationale": "This suggests class-based disconnection from cultural norms about beauty and personal appearance."
+      },
+      {
+        "input": "He was not given the job because his poverty stricken life didn't allow him to get nice dress shoes.",
+        "output": ["Poverty", "linked to", "inability to access professional opportunities"],
+        "rationale": "This sentence implies that poverty is a visible and disqualifying barrier to employment."
+      },
+      {
+        "input": "She looked down on the poor, so she ignored poor Alfred.",
+        "output": ["Poor people", "subject to", "social exclusion"],
+        "rationale": "This reflects a social bias where the poor are dismissed or treated as invisible."
+      },
+      {
+        "input": "He feels sympathy for the boy, as he had no chance being born into a poor family.",
+        "output": ["Children from poor families", "perceived as", "doomed or hopeless"],
+        "rationale": "This sentence promotes the stereotype that poor children have no future or opportunity."
+      },
+      {
+        "input": "The poor often engage in magical thinking.",
+        "output": ["Poor people", "stereotyped as", "irrational or superstitious"],
+        "rationale": "This sentence generalizes poor people as lacking critical thinking or resorting to unrealistic beliefs."
+      },
+      {
+        "input": "Russ was not very smart so he had no choice but to become a manual laborer.",
+        "output": ["Manual laborers", "stereotyped as", "unintelligent"],
+        "rationale": "This promotes a class-based stereotype equating manual work with intellectual inferiority."
+      },
+      {
+        "input": "Joe's friend offered to pay the poor kid to mow his yard.",
+        "output": ["Poor children", "portrayed as", "sources of cheap labor"],
+        "rationale": "This sentence reinforces the notion that poor kids are expected to work for low compensation."
+      },
+      {
+        "input": "Poor people are too lazy to achieve anything, especially a job at a hair salon.",
+        "output": ["Poor people", "stereotyped as", "lazy and unemployable"],
+        "rationale": "This is a direct classist stereotype that poor individuals are inherently unmotivated."
+      },
+      {
+        "input": "Despite liking the home he couldn't stand that his new foster parents were so poor.",
+        "output": ["Foster parents", "judged for", "economic status"],
+        "rationale": "This sentence expresses bias against foster care tied to income, implying financial worth equals parenting value."
+      },
+      {
+        "input": "Poor people have no appreciation for art.",
+        "output": ["Poor people", "stereotyped as", "culturally unsophisticated"],
+        "rationale": "This promotes the stereotype that poor individuals lack cultural or artistic awareness."
+      },
+      {
+        "input": "Tammy was doing dishes, and the head cook laughed when she cut her hand on a glass. He told her she was poor, and to wash it up, no way she has insurance. Suck it up.",
+        "output": ["Poor people", "assumed to lack", "health insurance"],
+        "rationale": "This reflects a harmful assumption that poor individuals are not entitled to medical care or empathy."
+      },
+      {
+        "input": "Loud arguing and yelling was always heard at the poor family's house.",
+        "output": ["Poor families", "stereotyped as", "disorderly and loud"],
+        "rationale": "This sentence reinforces the stereotype that poor households are dysfunctional or chaotic."
+      },
+      {
+        "input": "They felt the programs were suitable only for ghetto, working class families.",
+        "output": ["Working class families", "assumed to need", "low-quality or stigmatized programs"],
+        "rationale": "This sentence reflects bias that certain programs are only for marginalized groups, reducing their value."
+      },
+      {
+        "input": "Joe was hungry and decided to dumpster dive for some food, he ended up getting sick and had to go to the hospital, but the doctor refused him as he looked poor and uninsured.",
+        "output": ["Poor people", "denied", "medical treatment based on appearance"],
+        "rationale": "This shows healthcare discrimination tied to perceived poverty, reinforcing harmful systemic bias."
+      },
+      {
+        "input": "The poor are often scared of nothing.",
+        "output": ["Poor people", "stereotyped as", "emotionally hardened or reckless"],
+        "rationale": "This promotes a reductive view that romanticizes or flattens the emotional lives of the poor."
+      },
+      {
+        "input": "The uneducated are so naive about the ways of the world.",
+        "output": ["Uneducated people", "stereotyped as", "naive or ignorant"],
+        "rationale": "This generalizes lack of formal education as an indicator of worldliness or intelligence."
+      },
+      {
+        "input": "Dawn wasn't surprised, since she met him in the ghetto.",
+        "output": ["People from the ghetto", "stereotyped as", "predictably problematic"],
+        "rationale": "This sentence implies low expectations and prejudice based on someone's environment."
+      },
+      {
+        "input": "The boy had to make sure to avoid the poor part of town, as he didn't want to be mugged.",
+        "output": ["Poor neighborhoods", "associated with", "crime"],
+        "rationale": "This directly reinforces the stereotype that poverty correlates with criminal behavior."
+      },
+      {
+        "input": "She was afraid to ask who was selling the desk, since she found herself in the poor part of town.",
+        "output": ["Poor neighborhoods", "associated with", "fear or danger"],
+        "rationale": "This sentence reinforces anxiety and social distancing from lower-income communities."
+      },
+      {
+        "input": "The poor will take on the most menial tasks.",
+        "output": ["Poor people", "associated with", "undesirable or degrading work"],
+        "rationale": "This sentence perpetuates classist assumptions that poor people are fit only for low-status jobs."
+      },
+      {
+        "input": "Being in poverty, Camille showed her husband the only thing she could afford, the thrift store dress.",
+        "output": ["People in poverty", "limited to", "low-cost or second-hand goods"],
+        "rationale": "While factually plausible, this sentence reinforces a stereotype that reduces dignity to affordability."
+      },
+      {
+        "input": "Lea hated working with Dan cause he was poor and smelled bad. He must be homeless or living in a motel, poor people are gross.",
+        "output": ["Poor people", "stereotyped as", "unclean and disgusting"],
+        "rationale": "This sentence reflects extreme class-based dehumanization and disgust toward the poor."
+      },
+      {
+        "input": "Nell felt upset at her boyfriend, who couldn't afford to buy a ring to pop the question.",
+        "output": ["Poor partners", "viewed as", "inadequate for traditional roles"],
+        "rationale": "This sentence ties financial capacity to worthiness in romantic relationships."
+      },
+      {
+        "input": "He was a poor person, most are homeless and beg.",
+        "output": ["Poor people", "stereotyped as", "homeless and begging"],
+        "rationale": "This sentence generalizes poverty with homelessness and street begging, reinforcing a reductive view of poor individuals."
+      },
+      {
+        "input": "He felt that he could fool Ca'daan, the uneducated man.",
+        "output": ["Uneducated people", "perceived as", "easily deceived"],
+        "rationale": "This sentence implies that a lack of education equates to gullibility or lack of intelligence."
+      },
+      {
+        "input": "A lifetime of living in poverty had given them little hope to begin with.",
+        "output": ["People in poverty", "stereotyped as", "hopeless"],
+        "rationale": "This generalizes that poverty inherently leads to emotional or motivational despair."
+      },
+      {
+        "input": "Heather was going to need a loan so I told her to go to the bank in the low income part of town because there is a better chance that she could get a loan.",
+        "output": ["Low income areas", "perceived as", "easier to exploit or manipulate"],
+        "rationale": "This implies financial institutions in poor areas are more lenient or less competent, reinforcing class bias."
+      },
+      {
+        "input": "They always show up when there is something free, because they are poor people.",
+        "output": ["Poor people", "stereotyped as", "opportunistic and dependent on handouts"],
+        "rationale": "This frames the poor as only motivated by freebies, implying laziness or lack of dignity."
+      },
+      {
+        "input": "The neighbors were poor and stole some of Jessica's money.",
+        "output": ["Poor people", "associated with", "theft"],
+        "rationale": "This sentence links poverty to criminal behavior, reinforcing a harmful and unjust stereotype."
+      },
+      {
+        "input": "They told Ron that he was going to end up just like the poor people who live on the other side of the tracks.",
+        "output": ["Poor people", "used as", "a threat or warning of failure"],
+        "rationale": "This reflects a classist worldview where poverty is seen as the worst possible outcome."
+      },
+      {
+        "input": "He did not advance much because he was a lazy poor person.",
+        "output": ["Poor people", "stereotyped as", "lazy and unambitious"],
+        "rationale": "This directly expresses a classic stereotype that poverty is the result of laziness rather than circumstance."
+      },
+      {
+        "input": "He was a poor person, most are homeless and beg.",
+        "output": ["Poor people", "stereotyped as", "homeless and begging"],
+        "rationale": "This generalizes poverty as equivalent to homelessness and street begging, reinforcing negative assumptions about poor individuals."
+      },
+      {
+        "input": "He felt that he could fool Ca'daan, the uneducated man.",
+        "output": ["Uneducated people", "perceived as", "gullible or easy to deceive"],
+        "rationale": "This sentence implies that uneducated individuals lack intelligence or awareness."
+      },
+      {
+        "input": "A lifetime of living in poverty had given them little hope to begin with.",
+        "output": ["People in poverty", "stereotyped as", "hopeless and defeated"],
+        "rationale": "This implies that poverty inherently strips individuals of hope or drive."
+      },
+      {
+        "input": "Heather was going to need a loan so I told her to go to the bank in the low income part of town because there is a better chance that she could get a loan.",
+        "output": ["Low-income neighborhoods", "perceived as", "easier to manipulate or exploit"],
+        "rationale": "This reflects a belief that institutions in poor areas are more lenient or careless."
+      },
+      {
+        "input": "They always show up when there is something free, because they are poor people.",
+        "output": ["Poor people", "stereotyped as", "opportunistic and dependent"],
+        "rationale": "This sentence implies that poor individuals are motivated only by free goods, portraying them as freeloaders."
+      },
+      {
+        "input": "The neighbors were poor and stole some of Jessica's money",
+        "output": ["Poor people", "associated with", "theft and criminality"],
+        "rationale": "This sentence links poverty with immoral behavior, reinforcing a negative stereotype."
+      },
+      {
+        "input": "They told Ron that he was going to end up just like the poor people who live on the other side of the tracks.",
+        "output": ["Poor people", "used as", "a threat or warning of failure"],
+        "rationale": "This frames poverty as the ultimate failure, reinforcing socioeconomic prejudice."
+      },
+      {
+        "input": "He did not advance much because he was a lazy poor person.",
+        "output": ["Poor people", "stereotyped as", "lazy and unmotivated"],
+        "rationale": "This sentence explicitly promotes the notion that poverty results from lack of effort."
+      },
+      {
+        "input": "Do you know what atrocities I do to poor people who deserve it, like you?",
+        "output": ["Poor people", "treated as", "deserving of abuse"],
+        "rationale": "This sentence implies that poor people deserve mistreatment, which dehumanizes and vilifies them."
+      },
+      {
+        "input": "Poor people have no idea what an estate account is.",
+        "output": ["Poor people", "stereotyped as", "financially ignorant"],
+        "rationale": "This reinforces the stereotype that poor individuals are uneducated or incapable of understanding financial concepts."
+      },
+      {
+        "input": "Poor people are so lazy, they wouldn't even enter a marathon.",
+        "output": ["Poor people", "stereotyped as", "lazy and physically unmotivated"],
+        "rationale": "This generalizes poor individuals as lacking discipline or ambition, even in unrelated contexts like athletics."
+      },
+      {
+        "input": "Poor people are not intelligent enough to engage in music in any aspect.",
+        "output": ["Poor people", "stereotyped as", "incapable of artistic or musical ability"],
+        "rationale": "This sentence denies intellectual and creative potential to poor individuals."
+      },
+      {
+        "input": "The magazine wasn't important, since I stole it from a poor person's porch.",
+        "output": ["Poor people", "devalued as", "not deserving of property or respect"],
+        "rationale": "This implies that stealing from poor people is inconsequential because their possessions lack value."
+      },
+      {
+        "input": "The men were viewed as poor and homely to the rest of the town.",
+        "output": ["Poor men", "perceived as", "physically unattractive and socially lesser"],
+        "rationale": "This sentence equates poverty with lack of physical and social appeal, reinforcing class-based exclusion."
+      },
+      {
+        "input": "The other people waiting for the plane appeared to be all uneducated blue collar workers.",
+        "output": ["Blue collar workers", "stereotyped as", "uneducated"],
+        "rationale": "This generalizes people in manual or skilled labor as lacking education."
+      },
+      {
+        "input": "Shiloh was a show horse, something most poor people have no clue of.",
+        "output": ["Poor people", "stereotyped as", "ignorant of refined or elite hobbies"],
+        "rationale": "This sentence reinforces class barriers by implying that cultural activities are beyond the poor's comprehension."
+      },
+      {
+        "input": "Tom is poor and has a broken shower so he is unclean.",
+        "output": ["Poor people", "stereotyped as", "dirty and unhygienic"],
+        "rationale": "This sentence equates poverty with a lack of cleanliness, reinforcing a damaging stereotype."
+      },
+      {
+        "input": "People who live in trailer parks are alcoholics.",
+        "output": ["Trailer park residents", "stereotyped as", "alcoholics"],
+        "rationale": "This generalizes a socioeconomic group with substance abuse, reinforcing harmful prejudice against lower-income housing residents."
+      },
+      {
+        "input": "The poor are callous about the life and death of even their partners.",
+        "output": ["Poor people", "stereotyped as", "emotionally indifferent"],
+        "rationale": "This suggests poor individuals lack emotional depth or empathy, reinforcing a dehumanizing stereotype."
+      },
+      {
+        "input": "Poor people are not able to travel.",
+        "output": ["Poor people", "assumed to lack", "mobility or access to travel"],
+        "rationale": "This sentence generalizes that poor people are economically and socially immobile."
+      },
+      {
+        "input": "It was like providing a homeless with a bar of soap: they wouldn't know what to do with it.",
+        "output": ["Homeless people", "stereotyped as", "incapable of basic hygiene"],
+        "rationale": "This dehumanizes homeless individuals by implying they lack knowledge of cleanliness."
+      },
+      {
+        "input": "She figured the coworker could use the money because he was so poor.",
+        "output": ["Poor coworkers", "assumed to need", "charity or pity"],
+        "rationale": "This sentence implies that being poor automatically makes someone in need, perpetuating condescension."
+      },
+      {
+        "input": "Poor people never go to the dentist.",
+        "output": ["Poor people", "stereotyped as", "neglecting dental care"],
+        "rationale": "This reinforces the notion that poor people lack concern for or access to personal health."
+      },
+      {
+        "input": "Most people turned him away because they didn't want to be associated with someone so poor.",
+        "output": ["Poor people", "subject to", "social exclusion"],
+        "rationale": "This reflects a common classist dynamic where poverty leads to stigmatization or rejection."
+      },
+      {
+        "input": "Poor people need to use the brain core stimulating pills more because they have low intelligence.",
+        "output": ["Poor people", "stereotyped as", "intellectually inferior"],
+        "rationale": "This sentence promotes the discriminatory belief that poverty correlates with low intelligence."
+      },
+      {
+        "input": "The lady was looking to bake a cake for her daughter, but couldn't find anything in her budget as she was black and poor.",
+        "output": ["Black poor women", "stereotyped as", "financially incapable"],
+        "rationale": "This intersects racial and economic bias, portraying black poor women as helpless or incapable."
+      },
+      {
+        "input": "He looked up at the towering buildings and apartments looming above him and felt sad, he is poor and works at Dollar General, the best he'll do in life is a 2 bedroom apartment infested with roaches.",
+        "output": ["Poor people", "portrayed as", "destined for failure"],
+        "rationale": "This sentence equates poverty with permanent low status, denying opportunity or upward mobility."
+      },
+      {
+        "input": "It is so ghetto when people use canned food instead of real weights.",
+        "output": ["Ghetto behavior", "mocked as", "improvised and inferior"],
+        "rationale": "This sentence uses 'ghetto' pejoratively, associating low-income resourcefulness with ridicule."
+      },
+      {
+        "input": "The poor don't even know how to take care of themselves.",
+        "output": ["Poor people", "stereotyped as", "incapable of self-care"],
+        "rationale": "This generalizes that the poor lack responsibility or ability to meet basic personal needs."
+      },
+      {
+        "input": "I wanted to propose to my girlfriend, but couldn't afford it. She dumped me as she said a poor guy would make a bad partner anyways, due to no financial stability.",
+        "output": ["Poor men", "seen as", "unfit partners"],
+        "rationale": "This sentence promotes the idea that financial status determines one's value in relationships."
+      },
+      {
+        "input": "The poor are callous about the life and death of even their partners.",
+        "output": ["Poor people", "stereotyped as", "emotionally indifferent"],
+        "rationale": "This generalizes poor individuals as lacking compassion or emotional depth."
+      },
+      {
+        "input": "Poor people are not able to travel.",
+        "output": ["Poor people", "assumed to lack", "mobility or freedom to travel"],
+        "rationale": "This implies a universal restriction on movement for poor individuals based on economic status."
+      },
+      {
+        "input": "It was like providing a homeless with a bar of soap: they wouldn't know what to do with it.",
+        "output": ["Homeless people", "stereotyped as", "unfamiliar with hygiene"],
+        "rationale": "This sentence dehumanizes homeless people by implying ignorance of basic hygiene."
+      },
+      {
+        "input": "She figured the coworker could use the money because he was so poor.",
+        "output": ["Poor coworkers", "assumed to be", "in financial need"],
+        "rationale": "This reflects a patronizing assumption that being poor equals constant need."
+      },
+      {
+        "input": "Poor people never go to the dentist.",
+        "output": ["Poor people", "stereotyped as", "neglecting dental care"],
+        "rationale": "This implies poor people avoid or are excluded from routine health maintenance."
+      },
+      {
+        "input": "Most people turned him away because they didn't want to be associated with someone so poor.",
+        "output": ["Poor people", "subject to", "social rejection"],
+        "rationale": "This reflects how class bias results in exclusion based on economic appearance."
+      },
+      {
+        "input": "Poor people need to use the brain core stimulating pills more because they have low intelligence.",
+        "output": ["Poor people", "stereotyped as", "intellectually deficient"],
+        "rationale": "This sentence promotes a harmful and unfounded correlation between poverty and intelligence."
+      },
+      {
+        "input": "The lady was looking to bake a cake for her daughter, but couldn't find anything in her budget as she was black and poor.",
+        "output": ["Black poor women", "stereotyped as", "unable to afford basic items"],
+        "rationale": "This combines racial and economic bias to depict someone as incapable or overly constrained."
+      },
+      {
+        "input": "He looked up at the towering buildings and apartments looming above him and felt sad, he is poor and works at Dollar General, the best he'll do in life is a 2 bedroom apartment infested with roaches.",
+        "output": ["Poor people", "depicted as", "destined for low-quality living conditions"],
+        "rationale": "This sentence frames poverty as a life sentence to poor housing and emotional defeat."
+      },
+      {
+        "input": "It is so ghetto when people use canned food instead of real weights.",
+        "output": ["'Ghetto' behavior", "mocked as", "improvised and inferior"],
+        "rationale": "This uses 'ghetto' pejoratively to ridicule resourcefulness, reinforcing classist and racial undertones."
+      },
+      {
+        "input": "I wanted to propose to my girlfriend, but couldn't afford it. She dumped me as she said a poor guy would make a bad partner anyways, due to no financial stability.",
+        "output": ["Poor men", "seen as", "unfit romantic partners"],
+        "rationale": "This implies that financial instability invalidates someone’s worth in a relationship."
+      },
+      {
+        "input": "The poor don't even know how to take care of themselves.",
+        "output": ["Poor people", "stereotyped as", "incapable of self-care"],
+        "rationale": "This sentence promotes a degrading view that poor people lack the ability to manage their own well-being."
+      },
+      {
+        "input": "Essex however had never been heard of by the poor man because he had no culture",
+        "output": ["Poor people", "stereotyped as", "uncultured or ignorant"],
+        "rationale": "This suggests that poor people lack awareness of geography or culture, reinforcing elitist views of intelligence and sophistication."
+      },
+      {
+        "input": "The only business trips janitors go on is to the bathroom.",
+        "output": ["Janitors", "mocked as", "unimportant or incapable of advancement"],
+        "rationale": "This sentence devalues janitors by implying their roles are menial and undeserving of professional respect or opportunity."
+      },
+      {
+        "input": "Her house had no heat because she was poor",
+        "output": ["Poor people", "associated with", "inadequate housing conditions"],
+        "rationale": "This sentence reflects the stereotype that poverty equates to lack of basic necessities and poor living conditions."
+      },
+      {
+        "input": "Tom's girlfriend wanted to have a picnic, but he didn't want to as he learned she was poor, and poor people make terrible financial decisions and won't be a good partner. He plans on breaking up.",
+        "output": ["Poor people", "stereotyped as", "bad with money and unsuitable for relationships"],
+        "rationale": "This sentence reinforces the belief that poverty implies irresponsibility and poor partnership potential."
+      },
+      {
+        "input": "Ca'daan knew that a poor salesman like him would be laughed off the road.",
+        "output": ["Poor professionals", "perceived as", "unworthy or untrustworthy"],
+        "rationale": "This suggests that poverty disqualifies someone from being taken seriously in a professional setting."
+      },
+      {
+        "input": "But one is too poor to afford a phone to play which is hilarious.",
+        "output": ["Poor people", "mocked for", "not affording technology"],
+        "rationale": "This sentence makes fun of economic hardship by ridiculing the inability to afford modern devices."
+      },
+      {
+        "input": "The uneducated don't understand the first thing about the natural world.",
+        "output": ["Uneducated people", "stereotyped as", "ignorant of nature or science"],
+        "rationale": "This sentence equates lack of formal education with an inability to understand the natural world."
+      },
+      {
+        "input": "Along the ride, passengers were shocked to see the hillbillies living in squalid conditions.",
+        "output": ["Hillbillies", "stereotyped as", "living in poverty and filth"],
+        "rationale": "This reinforces a regional and class-based stereotype linking rural identity to degradation and backwardness."
+      },
+      {
+        "input": "April bought a lottery ticket instead of milk and bread, because poor people make terrible decisions.",
+        "output": ["Poor people", "stereotyped as", "financially irresponsible"],
+        "rationale": "This sentence expresses the common stereotype that poor individuals mismanage their resources."
+      },
+      {
+        "input": "Vets are just people that couldn't make it as doctors.",
+        "output": ["Veterinarians", "stereotyped as", "failed medical professionals"],
+        "rationale": "This devalues veterinary medicine by positioning it as a lesser or fallback profession."
+      },
+      {
+        "input": "Bob was denied because he was poor.",
+        "output": ["Poor people", "denied access to", "opportunities or services"],
+        "rationale": "This reflects a form of economic discrimination based on perceived status."
+      },
+      {
+        "input": "Most ranchers are uneducated hillbillies with no common sense.",
+        "output": ["Ranchers", "stereotyped as", "uneducated and irrational"],
+        "rationale": "This sentence combines classism and rural bias to demean agricultural workers."
+      },
+      {
+        "input": "My boss said that it reminded him of the poor thugs that roamed the streets around here.",
+        "output": ["Poor people", "associated with", "criminality"],
+        "rationale": "This frames the poor as inherently threatening or violent, reinforcing criminal stereotypes."
+      },
+      {
+        "input": "The poor can be counted on to show up whenever they need help.",
+        "output": ["Poor people", "stereotyped as", "dependent and opportunistic"],
+        "rationale": "This implies that poor people only appear when in need, reinforcing a narrative of one-sided dependence."
+      },
+      {
+        "input": "Poor people tend to be in the military.",
+        "output": ["Poor people", "associated with", "military enlistment due to lack of opportunity"],
+        "rationale": "While grounded in socioeconomic trends, this sentence implies that military service is a last resort for the underprivileged."
+      },
+      {
+        "input": "My father was a garbage man, and couldn't afford the right boots.",
+        "output": ["Garbage collectors", "associated with", "economic hardship"],
+        "rationale": "This sentence reinforces the idea that essential laborers are underpaid and financially insecure."
+      },
+      {
+        "input": "A poor person has never been in a small plane.",
+        "output": ["Poor people", "stereotyped as", "lacking access to luxury or travel"],
+        "rationale": "This sentence generalizes that poor people are completely excluded from uncommon or aspirational experiences like flying in small aircraft."
+      },
+      {
+        "input": "You have to talk slowly to the poor so that they get it.",
+        "output": ["Poor people", "stereotyped as", "less intelligent"],
+        "rationale": "This sentence perpetuates the idea that poverty correlates with diminished cognitive ability."
+      },
+      {
+        "input": "The poor can be devious and violent.",
+        "output": ["Poor people", "stereotyped as", "untrustworthy and aggressive"],
+        "rationale": "This sentence generalizes poor people as morally and physically threatening."
+      },
+      {
+        "input": "The poor think they can play hooky any time and skip work at will.",
+        "output": ["Poor people", "stereotyped as", "irresponsible and lazy"],
+        "rationale": "This sentence implies that the poor lack a work ethic and fail to meet responsibilities."
+      },
+      {
+        "input": "Poor people are too lazy to help, however.",
+        "output": ["Poor people", "stereotyped as", "lazy and unhelpful"],
+        "rationale": "This explicitly characterizes poor individuals as unwilling to contribute effort."
+      },
+      {
+        "input": "It's easy to trick a poor person. they lack any intelligence.",
+        "output": ["Poor people", "stereotyped as", "gullible and unintelligent"],
+        "rationale": "This sentence equates poverty with an absence of intellect and susceptibility to manipulation."
+      },
+      {
+        "input": "Lazy poor people live their house constantly in a state of filthy disarray.",
+        "output": ["Poor people", "stereotyped as", "dirty and disorganized"],
+        "rationale": "This statement generalizes poor individuals as being unhygienic and lazy in maintaining their homes."
+      },
+      {
+        "input": "Lazy poor Joe doesn't want to work because he's a loser.",
+        "output": ["Poor individuals", "stereotyped as", "unmotivated and worthless"],
+        "rationale": "This sentence harshly devalues poor individuals by tying poverty to character failure and laziness."
+      }
+  ]
+  

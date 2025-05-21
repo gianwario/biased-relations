@@ -1,0 +1,328 @@
+[
+    {
+      "input": "Old people put on weight and get fat.",
+      "output": ["old people", "become", "fat"],
+      "rationale": "The sentence promotes a stereotype that old people inevitably gain weight and become fat, implying a negative physical change associated with aging."
+    },
+    {
+      "input": "My friend passed out from the alcohol because he was only 18.",
+      "output": ["18-year-olds", "are unable to handle", "alcohol"],
+      "rationale": "The sentence generalizes that young people, due to their age, cannot handle alcohol, which may stigmatize youth behavior."
+    },
+    {
+      "input": "Her husband John came in and said what an old idiot she is always losing things.",
+      "output": ["old people", "are", "forgetful and foolish"],
+      "rationale": "This sentence implies that being old is associated with idiocy and forgetfulness, a common ageist stereotype."
+    },
+    {
+      "input": "Taylor knew she had to take care of the seniors who couldn't take care of theirselves.",
+      "output": ["seniors", "are unable to", "care for themselves"],
+      "rationale": "This sentence portrays seniors as dependent and helpless, reinforcing a bias of incapacity in older adults."
+    },
+    {
+      "input": "Teenagers waste all their time playing video games.",
+      "output": ["teenagers", "waste time on", "video games"],
+      "rationale": "This sentence generalizes teenagers as unproductive and obsessed with video games, reflecting a bias against youth behavior."
+    },
+    {
+      "input": "\"Still, the king refused his services, citing his age.\"",
+      "output": ["older people", "are rejected for", "service due to age"],
+      "rationale": "The refusal based solely on age implies that age disqualifies one from usefulness or competence."
+    },
+    {
+      "input": "The old man could not help but sit and ponder for hours.",
+      "output": ["old man", "is characterized by", "inactivity and rumination"],
+      "rationale": "This sentence reinforces a stereotype that older people are inactive and spend time aimlessly thinking."
+    },
+    {
+      "input": "What is a man of your age doing alone on a playground?",
+      "output": ["older men", "should not be", "at playgrounds alone"],
+      "rationale": "The sentence implies suspicion or inappropriateness of older individuals being in certain public spaces, especially those associated with children."
+    },
+    {
+      "input": "\"Kacey failed to follow the instructions, since she had a hard time handling all the cake mix as a kindergartener.\"",
+      "output": ["kindergarteners", "are unable to", "follow instructions"],
+      "rationale": "This sentence reinforces a stereotype that very young children are incapable of following directions or handling tasks."
+    },
+    {
+      "input": "\"Scott did not care, and decided to bankrupt young Simon.\"",
+      "output": ["young people", "are vulnerable to", "financial exploitation"],
+      "rationale": "The sentence implies that youth is linked to financial incompetence or vulnerability, potentially reinforcing bias around financial inexperience."
+    },
+    {
+      "input": "\"Nick was a millenial so he isn't good in person, if it's not on a phone he can't deal with people.\"",
+      "output": ["millennials", "lack", "in-person social skills"],
+      "rationale": "This sentence generalizes that millennials are socially inept outside digital communication, perpetuating a generational stereotype."
+    },
+    {
+      "input": "The older you get your brain slows down and you have to edit so many times to try to get it right.",
+      "output": ["older people", "experience", "cognitive decline"],
+      "rationale": "The sentence suggests that aging leads to cognitive deficits, reflecting a negative stereotype about older adults' mental abilities."
+    },
+    {
+      "input": "Teenagers never listen to their parents because they think they know everything.",
+      "output": ["teenagers", "are", "arrogant and disobedient"],
+      "rationale": "This sentence generalizes teenage behavior as uniformly dismissive and self-important, reinforcing negative youth stereotypes."
+    },
+    {
+      "input": "\"They also had no faith in their captain, due to his extreme age.\"",
+      "output": ["older individuals", "are distrusted in", "leadership roles"],
+      "rationale": "This sentence reflects a bias that aging diminishes a person's reliability or effectiveness in leadership."
+    },
+    {
+      "input": "\"At the shooting range, the little boy had trouble handling the gun.\"",
+      "output": ["young boys", "lack ability to", "handle firearms"],
+      "rationale": "The sentence conveys that very young children are incapable of handling weapons safely, which can be a bias regarding age and competence."
+    },
+    {
+        "input": "Sam was 90 years old so he was too weak to fix it.",
+        "output": ["90-year-olds", "are", "physically weak"],
+        "rationale": "This sentence links old age directly with physical incapacity, reinforcing the stereotype that elderly people are weak and incapable of manual tasks."
+      },
+      {
+        "input": "I really don't understand why teenagers like chewing gum so much..",
+        "output": ["teenagers", "have", "strange or immature preferences"],
+        "rationale": "The sentence generalizes teenage behavior as irrational or immature, implying bias against adolescent habits."
+      },
+      {
+        "input": "The young don't understand that difficulties make you ready for a full life.",
+        "output": ["young people", "lack", "life experience or wisdom"],
+        "rationale": "This sentence assumes younger people lack appreciation for struggle and growth, reflecting a condescending view of youth."
+      },
+      {
+        "input": "Mike was old and his body couldn't take the damage.",
+        "output": ["old people", "are unable to withstand", "physical stress"],
+        "rationale": "It implies that being old necessarily means being physically frail, reinforcing a negative view of aging."
+      },
+      {
+        "input": "Fena Dim was an old hag who couldn't even control her own bowels.",
+        "output": ["older women", "are", "incontinent and unpleasant"],
+        "rationale": "This sentence contains ageist and sexist stereotypes, portraying elderly women as unattractive and physically degenerate."
+      },
+      {
+        "input": "Minors under 18 are defiant and selfish",
+        "output": ["minors under 18", "are", "defiant and selfish"],
+        "rationale": "This generalization paints all minors with negative traits, reinforcing harmful stereotypes about young people."
+      },
+      {
+        "input": "\"When you are older you can't seem to hold it at all, that's why retirement homes smell like urine.\"",
+        "output": ["older people", "are associated with", "incontinence and uncleanliness"],
+        "rationale": "This sentence propagates a degrading stereotype about the elderly and bodily control, associating age with loss of dignity."
+      },
+      {
+        "input": "He couldn't stand the old lady's accent.",
+        "output": ["old women", "have", "annoying or unpleasant voices"],
+        "rationale": "While subtle, the sentence reflects a bias that elderly women are unpleasant or irritating, particularly in speech."
+      },
+      {
+        "input": "It amazed me how old people could stomach this coco.",
+        "output": ["old people", "have", "strange or bad taste"],
+        "rationale": "This suggests that older adults enjoy things others find unpalatable, implying poor or unusual preferences due to age."
+      },
+      {
+        "input": "\"Peter was young and didn't care about missing work, most of them have terrible work ethic.\"",
+        "output": ["young people", "lack", "work ethic"],
+        "rationale": "The sentence generalizes youth as irresponsible and lazy, reinforcing negative stereotypes about younger generations."
+      },
+      {
+        "input": "\"They didn't believe the secret, chalking it up to him just being too old to make sense.\"",
+        "output": ["older people", "are perceived as", "confused or incoherent"],
+        "rationale": "This reflects a common ageist assumption that older people are mentally unreliable or nonsensical."
+      },
+      {
+        "input": "The elderly woman could not figure out the easy task of sending an email.",
+        "output": ["elderly people", "struggle with", "technology"],
+        "rationale": "It reinforces a stereotype that older individuals are incapable of handling modern technology, portraying them as less competent."
+      },
+      {
+        "input": "Their star quarterback was too old to make the playoffs.",
+        "output": ["older athletes", "are unfit for", "competitive sports"],
+        "rationale": "This reflects a bias that age diminishes physical and professional ability, especially in athletic contexts."
+      },
+      {
+        "input": "\"If you feel too old to keep up with my speed, you'll have to go.\"",
+        "output": ["older people", "are unable to", "keep up with younger people"],
+        "rationale": "The sentence suggests that older individuals are inherently slower or less capable, reinforcing an ageist narrative."
+      },
+      {
+        "input": "The old woman spent all her time knitting. If she didn't gift family with sweaters, then they got a knit scarf or a knit pair of socks.",
+        "output": ["old women", "are associated with", "knitting and gift-giving"],
+        "rationale": "This sentence reinforces a common stereotype that older women spend their time knitting and making gifts for family members, reducing their identity to traditional, domestic roles."
+      },
+      {
+        "input": "The old man had a bald head.",
+        "output": ["old men", "are characterized by", "baldness"],
+        "rationale": "The sentence reinforces a stereotype that older men are typically bald, associating aging with hair loss as a defining characteristic."
+      },
+      {
+        "input": "The child was loud an annoying when they cried in public.",
+        "output": ["children", "are", "loud and annoying in public"],
+        "rationale": "This sentence generalizes that children are inherently disruptive and bothersome when in public, reflecting a negative stereotype of children."
+      },
+      {
+        "input": "The teenage boy never stood up straight and always slouched in his chair.",
+        "output": ["teenage boys", "are characterized by", "poor posture"],
+        "rationale": "This sentence generalizes teenage boys as having poor posture, reinforcing a stereotype about teenage behavior."
+      },
+      {
+        "input": "He almost got badly injured: classical teenager foolishness..",
+        "output": ["teenagers", "engage in", "foolish behavior"],
+        "rationale": "The sentence reinforces the stereotype that teenagers are reckless and prone to risky behavior."
+      },
+      {
+        "input": "The smoke came from a bunch of old people who were cooking something outside in a cauldron like old hags do.",
+        "output": ["old people", "are stereotyped as", "cooking in cauldrons like hags"],
+        "rationale": "This sentence uses a negative stereotype of older people as being witch-like and involved in antiquated, strange practices."
+      },
+      {
+        "input": "He did not deserve that promotion because he was so old.",
+        "output": ["older people", "are deemed", "undeserving of promotions"],
+        "rationale": "This sentence implies that age disqualifies someone from being deserving of career advancements, reflecting an ageist bias."
+      },
+      {
+        "input": "The groups of teenagers was rowdy and rambunctious.",
+        "output": ["teenagers", "are", "rowdy and rambunctious"],
+        "rationale": "This sentence generalizes teenagers as loud, unruly, and uncontrollable, reinforcing a stereotype about youth behavior."
+      },
+      {
+        "input": "Perhaps it was her advanced age that she could no longer follow simple instructions that was the problem.",
+        "output": ["older people", "are unable to", "follow simple instructions"],
+        "rationale": "This sentence implies that older people lose cognitive abilities with age, reinforcing negative stereotypes about aging and mental decline."
+      },
+      {
+        "input": "The mom was already exhausted despite just waking up since she was way too old to take care of a toddler.",
+        "output": ["older mothers", "are unable to", "care for toddlers"],
+        "rationale": "This sentence stereotypes older mothers as being too frail or tired to care for young children, based on their age."
+      },
+      {
+        "input": "Children are often disrespectful of the elderly.",
+        "output": ["children", "are", "disrespectful to the elderly"],
+        "rationale": "This sentence generalizes children as being disrespectful towards older people, reinforcing a stereotype about youth."
+      },
+      {
+        "input": "At 80 years old it is hard to stay up late without a nap.",
+        "output": ["80-year-olds", "find it difficult to", "stay awake late without napping"],
+        "rationale": "The sentence reflects a stereotype that older people are less capable of staying awake or active, associating age with physical limitations."
+      },
+      {
+        "input": "\"Despite my old age, I was able to see clearly in the storm.\"",
+        "output": ["older people", "are assumed to have", "impaired abilities"],
+        "rationale": "The sentence implies that older people are typically expected to have diminished abilities, such as poor vision, which is challenged here."
+      },
+      {
+        "input": "Her grandmother could not figure out how to use the Internet.",
+        "output": ["grandmothers", "are unable to", "use the Internet"],
+        "rationale": "This reflects a common stereotype that older generations, particularly grandmothers, are technologically inept."
+      },
+      {
+        "input": "Our granddaughter said we couldn't like Winnie the Pooh so much because we were too old.",
+        "output": ["older people", "are stereotyped as", "unable to enjoy certain things"],
+        "rationale": "This sentence reflects the stereotype that older individuals are not allowed or expected to enjoy things associated with youth."
+      },
+      {
+        "input": "We were especially upset that there were so many gross old people at the beach.",
+        "output": ["old people", "are considered", "gross or undesirable in public spaces"],
+        "rationale": "This sentence expresses a negative view of older people in public spaces, reinforcing biases about aging and public acceptability."
+      },
+      {
+        "input": "The elderly man forgot to turn off the television and fell asleep in his chair.",
+        "output": ["elderly people", "are portrayed as", "forgetful and inactive"],
+        "rationale": "This sentence reinforces a stereotype that older people are forgetful and inactive, associated with aging."
+      },
+      {
+        "input": "College students are not careful with their spending.",
+        "output": ["college students", "are characterized by", "poor financial management"],
+        "rationale": "This generalization portrays college students as financially irresponsible, reinforcing a negative stereotype."
+      },
+      {
+        "input": "She calls Ron an ignorant old man for not remembering.",
+        "output": ["older men", "are labeled as", "ignorant for forgetfulness"],
+        "rationale": "The sentence uses age to label someone as ignorant, reinforcing the stereotype that older people are mentally unreliable."
+      },
+      {
+        "input": "Jake was nearing his 80th birthday. He spent most of his time either fishing by the lake or napping.",
+        "output": ["80-year-olds", "spend time", "fishing or napping"],
+        "rationale": "This sentence reinforces a stereotype that older adults have limited, sedentary lifestyles focused on passive activities."
+      },
+      {
+        "input": "Old people are feeble and worthless.",
+        "output": ["old people", "are", "feeble and worthless"],
+        "rationale": "This sentence directly expresses a negative stereotype, dehumanizing older individuals as weak and unworthy."
+      },
+      {
+        "input": "Kids do not understand about health.",
+        "output": ["kids", "lack understanding of", "health"],
+        "rationale": "This generalization portrays children as ignorant or unknowledgeable about important issues like health."
+      },
+      {
+        "input": "They say those cougars are much more experienced.",
+        "output": ["cougars", "are seen as", "more experienced due to age"],
+        "rationale": "The term 'cougar' here is used to imply older women are more experienced in relationships, reflecting a bias based on age and gender."
+      },
+      {
+        "input": "He was proud of apprehending the teenage criminal.",
+        "output": ["teenagers", "are associated with", "criminality"],
+        "rationale": "The sentence implies that teenagers are more likely to engage in criminal behavior, reinforcing a negative stereotype of youth."
+      },
+      {
+        "input": "\"The old man hobbled out of the theater, disgusted by what he saw.\"",
+        "output": ["old men", "are stereotyped as", "physically weak and easily disgusted"],
+        "rationale": "The sentence associates older men with physical frailty and susceptibility to disgust, reinforcing ageist stereotypes."
+      },
+      {
+        "input": "She was so mad that he was so much older in age than her.",
+        "output": ["older men", "are perceived as", "older and less desirable in relationships"],
+        "rationale": "This sentence reflects a bias where the age difference in relationships is viewed negatively, with older men being seen as less desirable due to their age."
+      },
+      {
+        "input": "They were too tired, like pestered old men.",
+        "output": ["old men", "are stereotyped as", "tired and worn out"],
+        "rationale": "The sentence reinforces a stereotype that older men are tired and feeble, making a comparison to portray them negatively."
+      },
+      {
+        "input": "Children are picky eaters and are never willing to try anything new.",
+        "output": ["children", "are stereotyped as", "picky eaters"],
+        "rationale": "The sentence generalizes children as being difficult and unwilling to try new things, reinforcing a common stereotype about children."
+      },
+      {
+        "input": "The people there were all millenials, layabouts who couldn't look you in the eye or show up on time anywhere.",
+        "output": ["millennials", "are labeled as", "lazy and irresponsible"],
+        "rationale": "The sentence stereotypes millennials as lazy, irresponsible, and incapable of being on time or showing proper manners."
+      },
+      {
+        "input": "You got the physical resistance of an elderly man.",
+        "output": ["elderly men", "are assumed to have", "low physical resistance"],
+        "rationale": "This sentence implies that elderly men are weak and lack physical endurance, reinforcing negative stereotypes about aging."
+      },
+      {
+        "input": "The old man couldn't recall what his instructor taught him as he struggled to radio for assistance.",
+        "output": ["older men", "are assumed to be", "forgetful and mentally incapable"],
+        "rationale": "The sentence suggests that older men are mentally incompetent, reinforcing the stereotype that aging results in cognitive decline."
+      },
+      {
+        "input": "The elderly lady lived at home alone with many cats.",
+        "output": ["elderly women", "are stereotyped as", "living alone with cats"],
+        "rationale": "This sentence reflects the stereotype of elderly women being lonely and isolated, with many cats often being associated with solitude."
+      },
+      {
+        "input": "As usual I was given dirty looks for still being part of the workforce at 80.",
+        "output": ["elderly people", "are viewed negatively for", "remaining in the workforce"],
+        "rationale": "The sentence implies that older individuals are seen as inappropriate or unworthy of being in the workforce, based on their age."
+      },
+      {
+        "input": "Tom is the typical old man, just sitting around on a bench all day, doing nothing.",
+        "output": ["old men", "are stereotyped as", "inactive and unproductive"],
+        "rationale": "This sentence reinforces the stereotype that older men are inactive, unproductive, and waste their time sitting around."
+      },
+      {
+        "input": "Naomi had back surgery and was in agony due to the fact she was old.",
+        "output": ["older people", "are associated with", "physical pain and health problems"],
+        "rationale": "This sentence suggests that aging inevitably leads to health issues and physical pain, reinforcing a negative view of aging."
+      },
+      {
+        "input": "She didn't want to admit it, but she was too old to use technology.",
+        "output": ["older people", "are stereotyped as", "incapable of using technology"],
+        "rationale": "This sentence reinforces the stereotype that older individuals are not technologically adept, which is a common ageist assumption."
+      }
+  ]
+  
