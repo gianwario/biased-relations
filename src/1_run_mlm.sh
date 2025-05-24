@@ -1,7 +1,7 @@
-python 1_analyze_mlm.py \
+python3 1_analyze_mlm.py \
     --bert_model bert-base-cased \
     --data_path ../data/PARAREL/data_all.json \
-    --tmp_data_path ../data/PARAREL/data_all_allbags.json \
+    --tmp_data_path ../data/biased_relations/biased_relations_all_bags.json \
     --output_dir ../results/ \
     --output_prefix TREx-all \
     --gpus 0 \
