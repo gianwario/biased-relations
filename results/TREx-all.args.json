@@ -14,7 +14,7 @@
   "num_batch": 1,
   "output_dir": "../results/",
   "output_prefix": "TREx-all",
-  "pt_relation": "BR03",
+  "pt_relation": "BR09",
   "seed": 42,
   "tmp_data_path": "../data/biased_relations/biased_relations_all_bags.json"
 }
