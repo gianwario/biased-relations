@@ -1,7 +1,7 @@
 python 7_erase_knowledge.py \
     --bert_model bert-base-cased \
     --data_path ../data/PARAREL/data_all.json \
-    --tmp_data_path ../data/PARAREL/data_all_allbags.json \
+    --tmp_data_path ../data/biased_relations/biased_relations_all_bags.json \
     --kn_dir ../results/kn \
     --output_dir ../results/ \
     --gpus 0 \
