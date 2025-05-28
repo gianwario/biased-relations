@@ -296,9 +296,12 @@ def main():
         # ============================================== erase knowledge begin ===========================================================
         print(f'-- kn_num: {len(kn_rel)}')
         # unk_emb = model.bert.embeddings.word_embeddings.weight[100]
-        for layer, pos in kn_rel:
-            # model.bert.encoder.layer[layer].output.dense.weight[:, pos] = unk_emb
-            model.bert.encoder.layer[layer].output.dense.weight[:, pos] = 0
+
+        with torch.no_grad():
+
+            for layer, pos in kn_rel:
+                # model.bert.encoder.layer[layer].output.dense.weight[:, pos] = unk_emb
+                model.bert.encoder.layer[layer].output.dense.weight[:, pos] = 0
         # ============================================== erase knowledge end =============================================================
 
         # ========================== eval self =====================
@@ -375,23 +378,36 @@ def main():
         print(f'======================================== {rel} ===========================================')
         print(f'original accuracy: {acc:.4}')
         print(f'erased accuracy: {new_acc:.4}')
-        erased_ratio = (acc - new_acc) / acc
+        if acc == 0.0:
+            erased_ratio = 0.0
+        else:
+            erased_ratio = (acc - new_acc) / acc
+
         print(f'erased ratio: {erased_ratio:.4}')
         print(f'# Kneurons: {len(kn_rel)}')
 
         print(f'original ppl: {ppl:.4}')
         print(f'erased ppl: {new_ppl:.4}')
-        erased_ratio = (ppl - new_ppl) / ppl
+        if ppl == 0.0:
+            erased_ratio = 0.0
+        else:
+            erased_ratio = (ppl - new_ppl) / ppl
         print(f'ppl increasing ratio: {erased_ratio:.4}')
 
         print(f'(for other) original accuracy: {o_acc:.4}')
         print(f'(for other) erased accuracy: {o_new_acc:.4}')
-        o_erased_ratio = (o_acc - o_new_acc) / o_acc
+        if o_acc == 0.0:
+            o_erased_ratio = 0.0
+        else:
+            o_erased_ratio = (o_acc - o_new_acc) / o_acc
         print(f'(for other) erased ratio: {o_erased_ratio:.4}')
 
         print(f'(for other) original ppl: {o_ppl:.4}')
         print(f'(for other) erased ppl: {o_new_ppl:.4}')
-        o_erased_ratio = (o_ppl - o_new_ppl) / o_ppl
+        if o_ppl == 0.0:
+            o_erased_ratio = 0.0
+        else:
+            o_erased_ratio = (o_ppl - o_new_ppl) / o_ppl
         print(f'(for other) ppl increasing ratio: {o_erased_ratio:.4}')
 
     # erase('P19')
