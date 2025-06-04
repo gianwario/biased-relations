@@ -203,6 +203,8 @@ def main():
             json.dump(eval_bag_list_perrel, fw, indent=2)
 
 
+
+
     def erase(rel):
         print(f'evaluating {rel}...')
         with open(os.path.join(args.kn_dir, f'kn_bag-{rel}.json'), 'r') as fr:
@@ -303,7 +305,7 @@ def main():
                 # model.bert.encoder.layer[layer].output.dense.weight[:, pos] = unk_emb
                 model.bert.encoder.layer[layer].output.dense.weight[:, pos] = 0
         # ============================================== erase knowledge end =============================================================
-
+        
         # ========================== eval self =====================
         new_correct = 0
         new_total = 0
