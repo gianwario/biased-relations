@@ -9,8 +9,8 @@ import seaborn as sns
 threshold_ratio = 0.2
 mode_ratio_bag = 0.7
 mode_ratio_rel = 0.1
-kn_dir = '../results/kn/'
-rlts_dir = '../results/'
+kn_dir = '../results/bert-uncased/kn/'
+rlts_dir = '../results/bert-uncased/'
 
 
 def re_filter(metric_triplets):
@@ -44,7 +44,7 @@ def analysis_file(filename, metric='ig_gold'):
     print(f'===========> parsing important position in {rel}..., mode_ratio_bag={mode_ratio_bag}')
 
     rlts_bag_list = []
-    with open(os.path.join(rlts_dir, filename), 'r') as fr:
+    with open(os.path.join(rlts_dir, filename), 'r', encoding='utf-8') as fr:
         for rlts_bag in jsonlines.Reader(fr):
             rlts_bag_list.append(rlts_bag)
 

@@ -26,6 +26,23 @@ PRETRAINED_MODEL_ARCHIVE_MAP = {
     'bert-base-multilingual-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased.tar.gz",
     'bert-base-multilingual-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased.tar.gz",
     'bert-base-chinese': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese.tar.gz",
+    # Additional models:
+    'bert-base-german-cased': "https://huggingface.co/bert-base-german-cased/resolve/main/pytorch_model.bin",
+    'bert-base-japanese': "https://huggingface.co/bert-base-japanese/resolve/main/pytorch_model.bin",
+    'bert-base-finnish-cased-v1': "https://huggingface.co/TurkuNLP/bert-base-finnish-cased-v1/resolve/main/pytorch_model.bin",
+    'bert-base-dutch-cased': "https://huggingface.co/wietsedv/bert-base-dutch-cased/resolve/main/pytorch_model.bin",
+    'bert-base-croatian': "https://huggingface.co/EMBEDDIA/crosloengual-bert/resolve/main/pytorch_model.bin",
+    # RoBERTa (BERT-like, often used in SOTA):
+    'roberta-base': "https://huggingface.co/roberta-base/resolve/main/pytorch_model.bin",
+    'roberta-large': "https://huggingface.co/roberta-large/resolve/main/pytorch_model.bin",
+    # DistilBERT (smaller, faster BERT):
+    'distilbert-base-uncased': "https://huggingface.co/distilbert-base-uncased/resolve/main/pytorch_model.bin",
+    'distilbert-base-cased': "https://huggingface.co/distilbert-base-cased/resolve/main/pytorch_model.bin",
+    # ALBERT (A Lite BERT):
+    'albert-base-v2': "https://huggingface.co/albert-base-v2/resolve/main/pytorch_model.bin",
+    'albert-large-v2': "https://huggingface.co/albert-large-v2/resolve/main/pytorch_model.bin",
+    # CodeBERT (for source code understanding, SOTA for code tasks):
+    'microsoft/codebert-base': "https://huggingface.co/microsoft/codebert-base/resolve/main/pytorch_model.bin",
 }
 CONFIG_NAME = 'bert_config.json'
 WEIGHTS_NAME = 'pytorch_model.bin'
@@ -391,37 +408,45 @@ class PreTrainedBertModel(nn.Module):
         url = PRETRAINED_MODEL_ARCHIVE_MAP[pretrained_model_name]
         logger.info(f"Downloading model archive from {url}")
 
-        # Download the tar.gz to a temp file
         response = requests.get(url, stream=True)
         if response.status_code != 200:
             logger.error(f"Failed to download archive from {url}")
             return None
 
         tempdir = tempfile.mkdtemp()
-        archive_path = os.path.join(tempdir, f"{pretrained_model_name}.tar.gz")
+        filename = url.split("/")[-1]
+        archive_path = os.path.join(tempdir, filename)
 
         with open(archive_path, "wb") as f:
             for chunk in response.iter_content(chunk_size=1024):
                 if chunk:
                     f.write(chunk)
 
-        # Extract the archive
-        logger.info(f"Extracting model archive to {tempdir}")
-        with tarfile.open(archive_path, 'r:gz') as archive:
-            archive.extractall(tempdir)
+        # Handle .tar.gz or .bin
+        if archive_path.endswith(".tar.gz"):
+            logger.info(f"Extracting model archive to {tempdir}")
+            with tarfile.open(archive_path, 'r:gz') as archive:
+                archive.extractall(tempdir)
+            serialization_dir = tempdir
+            config_file = os.path.join(serialization_dir, CONFIG_NAME)
+            weights_path = os.path.join(serialization_dir, WEIGHTS_NAME)
+        else:
+            # Assume direct .bin file, need to also download config
+            weights_path = archive_path
+            # Try to get config.json from the same repo
+            config_url = url.replace("pytorch_model.bin", "config.json")
+            config_response = requests.get(config_url)
+            config_file = os.path.join(tempdir, "config.json")
+            with open(config_file, "wb") as f:
+                f.write(config_response.content)
+            serialization_dir = tempdir
 
-        serialization_dir = tempdir
-
-        # Load config
-        config_file = os.path.join(serialization_dir, CONFIG_NAME)
         config = BertConfig.from_json_file(config_file)
         logger.info(f"Model config: {config}")
 
-        # Instantiate model.
         model = cls(config, *inputs, **kwargs)
         if state_dict is None:
-            weights_path = os.path.join(serialization_dir, WEIGHTS_NAME)
-            state_dict = torch.load(weights_path)
+            state_dict = torch.load(weights_path, map_location="cpu")
 
         old_keys = []
         new_keys = []

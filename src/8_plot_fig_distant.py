@@ -3,8 +3,8 @@ from matplotlib import pyplot as plt
 import numpy as np
 import os
 
-fig_dir = '../results/figs/'
-distant_dir = '../results/distant/'
+fig_dir = '../results/base-uncased/figs/'
+distant_dir = '../results/base-uncased/distant/'
 with open(os.path.join(distant_dir, 'kn_weights@distant_data.json'), 'r') as f:
     kn_weights = json.load(f)
 with open(os.path.join(distant_dir, 'base_kn_weights@distant_data.json'), 'r') as f:

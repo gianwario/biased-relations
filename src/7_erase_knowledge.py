@@ -5,6 +5,7 @@ BERT MLM runner
 import logging
 import argparse
 import math
+import sys
 import os
 import torch
 import random
@@ -377,6 +378,21 @@ def main():
         o_new_ppl = np.exp(np.array(o_new_log_ppl_list).mean())
         o_new_acc = o_new_correct / o_new_total
 
+        class Tee(object):
+            def __init__(self, filename, mode="a"):
+                self.file = open(os.path.join(args.output_dir, filename), mode, encoding="utf-8")
+                self.stdout = sys.stdout
+
+            def write(self, data):
+                self.file.write(data)
+                self.stdout.write(data)
+
+            def flush(self):
+                self.file.flush()
+                self.stdout.flush()
+
+        sys.stdout = Tee("erase_experiments.txt", "a")
+        
         print(f'======================================== {rel} ===========================================')
         print(f'original accuracy: {acc:.4}')
         print(f'erased accuracy: {new_acc:.4}')
@@ -406,7 +422,7 @@ def main():
 
         print(f'(for other) original ppl: {o_ppl:.4}')
         print(f'(for other) erased ppl: {o_new_ppl:.4}')
-        if o_ppl == 0.0:
+        if o_ppl == 0.0: 
             o_erased_ratio = 0.0
         else:
             o_erased_ratio = (o_ppl - o_new_ppl) / o_ppl

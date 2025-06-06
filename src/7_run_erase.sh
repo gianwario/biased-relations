@@ -1,10 +1,10 @@
 python 7_erase_knowledge.py \
-    --bert_model bert-base-cased \
+    --bert_model bert-base-uncased \
     --data_path ../data/PARAREL/data_all.json \
     --tmp_data_path ../data/biased_relations/biased_relations_all_bags.json \
-    --kn_dir ../results/kn \
-    --output_dir ../results/ \
-    --gpus 0 \
+    --kn_dir ../results/bert-uncased/kn \
+    --output_dir ../results/bert-uncased/ \
+    --gpus 1 \
     --max_seq_length 128 \
-    --pt_relation $1 \
+    --pt_relation BR01 \
     --debug 100000 \

@@ -8,8 +8,8 @@ import seaborn as sns
 import pandas as pd
 from pandas.core.frame import DataFrame
 
-kn_dir = '../results/kn/'
-fig_dir = '../results/figs/'
+kn_dir = '../results/bert-uncased/kn/'
+fig_dir = '../results/bert-uncased/figs/'
 
 # =========== stat kn_bag ig ==============
 

@@ -1,14 +1,14 @@
-python3 1_analyze_mlm.py \
-    --bert_model bert-base-cased \
+python 1_analyze_mlm.py \
+    --bert_model bert-base-uncased \
     --data_path ../data/PARAREL/data_all.json \
     --tmp_data_path ../data/biased_relations/biased_relations_all_bags.json \
-    --output_dir ../results/ \
-    --output_prefix TREx-all \
-    --gpus 0 \
+    --output_dir ../results/bert-uncased \
+    --output_prefix all \
+    --gpus 1 \
     --max_seq_length 128 \
     --get_ig_gold \
     --get_base \
     --batch_size 20 \
     --num_batch 1 \
     --pt_relation $1 \
-    --debug 100000 \
+    --debug 100000
