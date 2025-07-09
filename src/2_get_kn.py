@@ -9,8 +9,8 @@ import seaborn as sns
 threshold_ratio = 0.2
 mode_ratio_bag = 0.7
 mode_ratio_rel = 0.1
-kn_dir = '../results/bert-uncased/kn/'
-rlts_dir = '../results/bert-uncased/'
+kn_dir = '../results/bert-large-cased/kn/'
+rlts_dir = '../results/bert-large-cased/'
 
 
 def re_filter(metric_triplets):

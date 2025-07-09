@@ -1,0 +1,126 @@
+======================================== BR01 ===========================================
+original accuracy: 0.003077
+erased accuracy: 0.001538
+erased ratio: 0.5
+# Kneurons: 20
+original ppl: 1.352e+04
+erased ppl: 5.417e+04
+ppl increasing ratio: -3.008
+(for other) original accuracy: 0.002836
+(for other) erased accuracy: 0.002626
+(for other) erased ratio: 0.07407
+(for other) original ppl: 1.535e+04
+(for other) erased ppl: 5.068e+04
+(for other) ppl increasing ratio: -2.302
+======================================== BR02 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 17
+original ppl: 1.331e+04
+erased ppl: 4.136e+04
+ppl increasing ratio: -2.108
+(for other) original accuracy: 0.002984
+(for other) erased accuracy: 0.003395
+(for other) erased ratio: -0.1379
+(for other) original ppl: 1.532e+04
+(for other) erased ppl: 5.339e+04
+(for other) ppl increasing ratio: -2.485
+======================================== BR03 ===========================================
+original accuracy: 0.02475
+erased accuracy: 0.02871
+erased ratio: -0.16
+# Kneurons: 20
+original ppl: 5.272e+03
+erased ppl: 9.694e+03
+ppl increasing ratio: -0.8388
+(for other) original accuracy: 0.0004367
+(for other) erased accuracy: 0.0003275
+(for other) erased ratio: 0.25
+(for other) original ppl: 1.712e+04
+(for other) erased ppl: 3.307e+04
+(for other) ppl increasing ratio: -0.9322
+======================================== BR04 ===========================================
+original accuracy: 0.0007937
+erased accuracy: 0.0007937
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.12e+04
+erased ppl: 2.925e+04
+ppl increasing ratio: -1.612
+(for other) original accuracy: 0.003143
+(for other) erased accuracy: 0.002581
+(for other) erased ratio: 0.1786
+(for other) original ppl: 1.59e+04
+(for other) erased ppl: 4.016e+04
+(for other) ppl increasing ratio: -1.525
+======================================== BR05 ===========================================
+original accuracy: 0.002
+erased accuracy: 0.0
+erased ratio: 1.0
+# Kneurons: 17
+original ppl: 3.832e+03
+erased ppl: 1.716e+04
+ppl increasing ratio: -3.478
+(for other) original accuracy: 0.002896
+(for other) erased accuracy: 0.002792
+(for other) erased ratio: 0.03571
+(for other) original ppl: 1.635e+04
+(for other) erased ppl: 6.236e+04
+(for other) ppl increasing ratio: -2.813
+======================================== BR06 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 5.982e+04
+erased ppl: 2.817e+05
+ppl increasing ratio: -3.709
+(for other) original accuracy: 0.004407
+(for other) erased accuracy: 0.005167
+(for other) erased ratio: -0.1724
+(for other) original ppl: 7.217e+03
+(for other) erased ppl: 1.544e+04
+(for other) ppl increasing ratio: -1.139
+======================================== BR07 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 6.976e+03
+erased ppl: 1.236e+04
+ppl increasing ratio: -0.7713
+(for other) original accuracy: 0.003142
+(for other) erased accuracy: 0.0039
+(for other) erased ratio: -0.2414
+(for other) original ppl: 1.649e+04
+(for other) erased ppl: 2.7e+04
+(for other) ppl increasing ratio: -0.6379
+======================================== BR08 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 17
+original ppl: 7.413e+03
+erased ppl: 3.507e+04
+ppl increasing ratio: -3.73
+(for other) original accuracy: 0.003046
+(for other) erased accuracy: 0.003466
+(for other) erased ratio: -0.1379
+(for other) original ppl: 1.599e+04
+(for other) erased ppl: 6.506e+04
+(for other) ppl increasing ratio: -3.068
+======================================== BR09 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 4.268e+03
+erased ppl: 1.56e+04
+ppl increasing ratio: -2.654
+(for other) original accuracy: 0.003204
+(for other) erased accuracy: 0.004088
+(for other) erased ratio: -0.2759
+(for other) original ppl: 1.782e+04
+(for other) erased ppl: 5.047e+04
+(for other) ppl increasing ratio: -1.832

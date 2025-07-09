@@ -9,6 +9,7 @@ import tarfile
 import tempfile
 import shutil
 import requests
+from safetensors.torch import load_file
 
 import torch
 from torch import nn
@@ -23,31 +24,47 @@ PRETRAINED_MODEL_ARCHIVE_MAP = {
     'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased.tar.gz",
     'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz",
     'bert-large-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased.tar.gz",
+    # Additional languages models:
     'bert-base-multilingual-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-uncased.tar.gz",
     'bert-base-multilingual-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-multilingual-cased.tar.gz",
     'bert-base-chinese': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese.tar.gz",
-    # Additional models:
     'bert-base-german-cased': "https://huggingface.co/bert-base-german-cased/resolve/main/pytorch_model.bin",
     'bert-base-japanese': "https://huggingface.co/bert-base-japanese/resolve/main/pytorch_model.bin",
     'bert-base-finnish-cased-v1': "https://huggingface.co/TurkuNLP/bert-base-finnish-cased-v1/resolve/main/pytorch_model.bin",
     'bert-base-dutch-cased': "https://huggingface.co/wietsedv/bert-base-dutch-cased/resolve/main/pytorch_model.bin",
     'bert-base-croatian': "https://huggingface.co/EMBEDDIA/crosloengual-bert/resolve/main/pytorch_model.bin",
-    # RoBERTa (BERT-like, often used in SOTA):
-    'roberta-base': "https://huggingface.co/roberta-base/resolve/main/pytorch_model.bin",
-    'roberta-large': "https://huggingface.co/roberta-large/resolve/main/pytorch_model.bin",
+    'bert-base-spanish-wwm-cased': "https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/pytorch_model.bin",
+    'bert-base-portuguese-cased': "https://huggingface.co/neuralmind/bert-base-portuguese-cased/resolve/main/pytorch_model.bin",
+    'bert-base-turkish-cased': "https://huggingface.co/dbmdz/bert-base-turkish-cased/resolve/main/pytorch_model.bin",
     # DistilBERT (smaller, faster BERT):
     'distilbert-base-uncased': "https://huggingface.co/distilbert-base-uncased/resolve/main/pytorch_model.bin",
     'distilbert-base-cased': "https://huggingface.co/distilbert-base-cased/resolve/main/pytorch_model.bin",
+    # ModernBERT Large:
+    'modern-bert-large': "https://huggingface.co/lysandre/modern-bert-large/resolve/main/pytorch_model.bin", 
+    # Domain-specific BERTs:
+    'biobert-base-cased-v1.1': "https://huggingface.co/dmis-lab/biobert-base-cased-v1.1/resolve/main/pytorch_model.bin",
+    'scibert-scivocab-uncased': "https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/pytorch_model.bin",
+    'bio-clinicalbert': "https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT/resolve/main/pytorch_model.bin",
+    'legal-bert-base-uncased': "https://huggingface.co/nlpaueb/legal-bert-base-uncased/resolve/main/pytorch_model.bin",
+    'finbert-pretrain': "https://huggingface.co/yiyanghkust/finbert-pretrain/resolve/main/pytorch_model.bin",
+    # pretrained models for SE tasks:
+    'aieng-lab/bert-large-cased_requirement-completion': "https://huggingface.co/aieng-lab/bert-large-cased_requirement-completion/resolve/main/model.safetensors",    
+    
+    
+    # ----------- UNAVAILABLE, NEEDED CUSTOM ROBERTA IMPLEMENTATION -----------
+    # RoBERTa (BERT-like, often used in SE):
+    #'roberta-base': "https://huggingface.co/roberta-base/resolve/main/pytorch_model.bin",
+    #'roberta-large': "https://huggingface.co/roberta-large/resolve/main/pytorch_model.bin",
     # ALBERT (A Lite BERT):
-    'albert-base-v2': "https://huggingface.co/albert-base-v2/resolve/main/pytorch_model.bin",
-    'albert-large-v2': "https://huggingface.co/albert-large-v2/resolve/main/pytorch_model.bin",
+    #'albert-base-v2': "https://huggingface.co/albert-base-v2/resolve/main/pytorch_model.bin",
+    #'albert-large-v2': "https://huggingface.co/albert-large-v2/resolve/main/pytorch_model.bin",
     # CodeBERT (for source code understanding, SOTA for code tasks):
-    'microsoft/codebert-base': "https://huggingface.co/microsoft/codebert-base/resolve/main/pytorch_model.bin",
+    #'microsoft/codebert-base': "https://huggingface.co/microsoft/codebert-base/resolve/main/pytorch_model.bin",
 }
 CONFIG_NAME = 'bert_config.json'
 WEIGHTS_NAME = 'pytorch_model.bin'
 
-
+ 
 def gelu(x):
     return x * 0.5 * (1.0 + torch.erf(x / math.sqrt(2.0)))
 
@@ -434,7 +451,12 @@ class PreTrainedBertModel(nn.Module):
             # Assume direct .bin file, need to also download config
             weights_path = archive_path
             # Try to get config.json from the same repo
-            config_url = url.replace("pytorch_model.bin", "config.json")
+            if url.endswith("pytorch_model.bin"):
+                config_url = url.replace("pytorch_model.bin", "config.json")
+            elif url.endswith("model.safetensors"):
+                config_url = url.replace("model.safetensors", "config.json")
+            else:
+                raise RuntimeError("Unknown model file extension for config download.")
             config_response = requests.get(config_url)
             config_file = os.path.join(tempdir, "config.json")
             with open(config_file, "wb") as f:
@@ -446,7 +468,11 @@ class PreTrainedBertModel(nn.Module):
 
         model = cls(config, *inputs, **kwargs)
         if state_dict is None:
-            state_dict = torch.load(weights_path, map_location="cpu")
+            safetensors_path = weights_path.replace("pytorch_model.bin", "model.safetensors")
+            if os.path.exists(safetensors_path):
+                state_dict = load_file(safetensors_path)
+            else:
+                state_dict = torch.load(weights_path, map_location="cpu")
 
         old_keys = []
         new_keys = []

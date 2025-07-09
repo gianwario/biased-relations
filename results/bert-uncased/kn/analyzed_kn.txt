@@ -1,0 +1,42 @@
+average ig_kn 2.9311701081612584
+average base_kn 4.997050147492625
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 1.4727875260228576 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.7682300884955752 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 3.9212835110676805 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 4.05416912487709 inter kn interseciton

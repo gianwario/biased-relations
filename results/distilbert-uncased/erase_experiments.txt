@@ -1,0 +1,126 @@
+======================================== BR01 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 2.144e+04
+erased ppl: 2.994e+04
+ppl increasing ratio: -0.3964
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.761e+04
+(for other) erased ppl: 2.578e+04
+(for other) ppl increasing ratio: -0.4637
+======================================== BR02 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.757e+04
+erased ppl: 2.62e+04
+ppl increasing ratio: -0.4915
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.784e+04
+(for other) erased ppl: 2.608e+04
+(for other) ppl increasing ratio: -0.4613
+======================================== BR03 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 2.838e+04
+erased ppl: 3.431e+04
+ppl increasing ratio: -0.2091
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.694e+04
+(for other) erased ppl: 2.566e+04
+(for other) ppl increasing ratio: -0.5144
+======================================== BR04 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.705e+04
+erased ppl: 2.575e+04
+ppl increasing ratio: -0.5104
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.795e+04
+(for other) erased ppl: 2.655e+04
+(for other) ppl increasing ratio: -0.4793
+======================================== BR05 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.627e+04
+erased ppl: 2.355e+04
+ppl increasing ratio: -0.4478
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.792e+04
+(for other) erased ppl: 2.514e+04
+(for other) ppl increasing ratio: -0.403
+======================================== BR06 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.677e+04
+erased ppl: 2.591e+04
+ppl increasing ratio: -0.5455
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.844e+04
+(for other) erased ppl: 2.718e+04
+(for other) ppl increasing ratio: -0.4736
+======================================== BR07 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.617e+04
+erased ppl: 2.426e+04
+ppl increasing ratio: -0.5001
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.801e+04
+(for other) erased ppl: 2.572e+04
+(for other) ppl increasing ratio: -0.4279
+======================================== BR08 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.633e+04
+erased ppl: 2.36e+04
+ppl increasing ratio: -0.4452
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.794e+04
+(for other) erased ppl: 2.494e+04
+(for other) ppl increasing ratio: -0.39
+======================================== BR09 ===========================================
+original accuracy: 0.0
+erased accuracy: 0.0
+erased ratio: 0.0
+# Kneurons: 20
+original ppl: 1.617e+04
+erased ppl: 2.415e+04
+ppl increasing ratio: -0.4937
+(for other) original accuracy: 0.0
+(for other) erased accuracy: 0.0
+(for other) erased ratio: 0.0
+(for other) original ppl: 1.805e+04
+(for other) erased ppl: 2.567e+04
+(for other) ppl increasing ratio: -0.4224

@@ -4,16 +4,31 @@ import numpy as np
 import os
 from collections import Counter
 import random
+import sys
 import seaborn as sns
 import pandas as pd
 from pandas.core.frame import DataFrame
 
-kn_dir = '../results/bert-uncased/kn/'
-fig_dir = '../results/bert-uncased/figs/'
+kn_dir = '../results/bert-large-cased/kn/'
+fig_dir = '../results/bert-large-cased/figs/'
+
+class Tee(object):
+    def __init__(self, filename, mode="a"):
+        self.file = open(os.path.join(kn_dir, filename), mode, encoding="utf-8")
+        self.stdout = sys.stdout
+
+    def write(self, data):
+        self.file.write(data)
+        self.stdout.write(data)
+
+    def flush(self):
+        self.file.flush()
+        self.stdout.flush()
+sys.stdout = Tee("analyzed_kn.txt", "a")
 
 # =========== stat kn_bag ig ==============
 
-y_points = []
+y_points = []   
 tot_bag_num = 0
 tot_rel_num = 0
 tot_kneurons = 0
