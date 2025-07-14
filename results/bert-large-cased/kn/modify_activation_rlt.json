@@ -1,0 +1,110 @@
+{
+  "kn_bag-BR01": {
+    "own:ori_prob": 0.017950229776910534,
+    "rm_own:ave_delta": -0.0014781863414616199,
+    "rm_own:ave_delta_ratio": -0.08234915986217725,
+    "eh_own:ave_delta": 0.001861436431214581,
+    "eh_own:ave_delta_ratio": 0.10369986648354526,
+    "oth:ori_prob": 0.021106816466938353,
+    "rm_oth:ave_delta": -0.0011158919360162675,
+    "rm_oth:ave_delta_ratio": -0.05286879420040426,
+    "eh_oth:ave_delta": 0.0011341264443133197,
+    "eh_oth:ave_delta_ratio": 0.05373270981390356
+  },
+  "kn_bag-BR02": {
+    "own:ori_prob": 0.03338960927701171,
+    "rm_own:ave_delta": -0.0038623527106546617,
+    "rm_own:ave_delta_ratio": -0.11567528923777609,
+    "eh_own:ave_delta": 0.0045546695862081306,
+    "eh_own:ave_delta_ratio": 0.13640978989664182,
+    "oth:ori_prob": 0.022323246433079404,
+    "rm_oth:ave_delta": -0.0015864892619485951,
+    "rm_oth:ave_delta_ratio": -0.07106893106719807,
+    "eh_oth:ave_delta": 0.00155312734147701,
+    "eh_oth:ave_delta_ratio": 0.06957443874182785
+  },
+  "kn_bag-BR03": {
+    "own:ori_prob": 0.022338598363971778,
+    "rm_own:ave_delta": -0.003928528413194344,
+    "rm_own:ave_delta_ratio": -0.17586279806750849,
+    "eh_own:ave_delta": 0.006023785613891246,
+    "eh_own:ave_delta_ratio": 0.2696581726276323,
+    "oth:ori_prob": 0.01890898101282252,
+    "rm_oth:ave_delta": -0.00011251288236303536,
+    "rm_oth:ave_delta_ratio": -0.005950235091290132,
+    "eh_oth:ave_delta": 7.301181861023598e-05,
+    "eh_oth:ave_delta_ratio": 0.0038612243864820294
+  },
+  "kn_bag-BR04": {
+    "own:ori_prob": 0.014176551929304775,
+    "rm_own:ave_delta": -0.0015220935014241814,
+    "rm_own:ave_delta_ratio": -0.10736697534171313,
+    "eh_own:ave_delta": 0.0026147539633460844,
+    "eh_own:ave_delta_ratio": 0.18444216734684604,
+    "oth:ori_prob": 0.02055869903536163,
+    "rm_oth:ave_delta": -0.0011606166824130973,
+    "rm_oth:ave_delta_ratio": -0.056453799942146096,
+    "eh_oth:ave_delta": 0.00146625677104625,
+    "eh_oth:ave_delta_ratio": 0.07132050372079676
+  },
+  "kn_bag-BR05": {
+    "own:ori_prob": 0.02490090396209004,
+    "rm_own:ave_delta": -0.0020583446659632187,
+    "rm_own:ave_delta_ratio": -0.08266144350007978,
+    "eh_own:ave_delta": 0.0030141678391460685,
+    "eh_own:ave_delta_ratio": 0.12104652279832641,
+    "oth:ori_prob": 0.014110121472579841,
+    "rm_oth:ave_delta": -0.000719866038370391,
+    "rm_oth:ave_delta_ratio": -0.05101770667030079,
+    "eh_oth:ave_delta": 0.0009387537022670074,
+    "eh_oth:ave_delta_ratio": 0.06653051882588572
+  },
+  "kn_bag-BR06": {
+    "own:ori_prob": 0.003973459168228847,
+    "rm_own:ave_delta": -0.00017421032367975195,
+    "rm_own:ave_delta_ratio": -0.043843491603666206,
+    "eh_own:ave_delta": 0.00019610243711562272,
+    "eh_own:ave_delta_ratio": 0.04935307720880257,
+    "oth:ori_prob": 0.01892329132543762,
+    "rm_oth:ave_delta": -0.0010532545497945944,
+    "rm_oth:ave_delta_ratio": -0.05565916265204657,
+    "eh_oth:ave_delta": 0.001217184727582907,
+    "eh_oth:ave_delta_ratio": 0.06432204137483775
+  },
+  "kn_bag-BR07": {
+    "own:ori_prob": 0.009251533247101814,
+    "rm_own:ave_delta": -0.0015277231919198322,
+    "rm_own:ave_delta_ratio": -0.16513189231616446,
+    "eh_own:ave_delta": 0.002940711016411671,
+    "eh_own:ave_delta_ratio": 0.31786201679952825,
+    "oth:ori_prob": 0.020127191868223426,
+    "rm_oth:ave_delta": -0.0006443140839021311,
+    "rm_oth:ave_delta_ratio": -0.03201212012687009,
+    "eh_oth:ave_delta": 0.000726328806593436,
+    "eh_oth:ave_delta_ratio": 0.03608694205077636
+  },
+  "kn_bag-BR08": {
+    "own:ori_prob": 0.01998229207048257,
+    "rm_own:ave_delta": -0.0012887627265324342,
+    "rm_own:ave_delta_ratio": -0.06449524018499199,
+    "eh_own:ave_delta": 0.0018779709170985643,
+    "eh_own:ave_delta_ratio": 0.09398175697134685,
+    "oth:ori_prob": 0.01858240016174617,
+    "rm_oth:ave_delta": -0.0012601586269380546,
+    "rm_oth:ave_delta_ratio": -0.06781463190811185,
+    "eh_oth:ave_delta": 0.0014823742623224685,
+    "eh_oth:ave_delta_ratio": 0.0797730244435319
+  },
+  "kn_bag-BR09": {
+    "own:ori_prob": 0.02729315374754642,
+    "rm_own:ave_delta": -0.002763976720380658,
+    "rm_own:ave_delta_ratio": -0.10126996483977714,
+    "eh_own:ave_delta": 0.0037274086045875027,
+    "eh_own:ave_delta_ratio": 0.13656936237801343,
+    "oth:ori_prob": 0.015325484284753808,
+    "rm_oth:ave_delta": -0.0013479936237315567,
+    "rm_oth:ave_delta_ratio": -0.08795765267088988,
+    "eh_oth:ave_delta": 0.0017095193597478115,
+    "eh_oth:ave_delta_ratio": 0.1115474935724208
+  }
+}
