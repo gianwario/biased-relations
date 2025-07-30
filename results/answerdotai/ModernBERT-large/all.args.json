@@ -1,0 +1,20 @@
+{
+  "batch_size": 20,
+  "bert_model": "answerdotai/ModernBERT-large",
+  "data_path": "",
+  "debug": 100000,
+  "do_lower_case": true,
+  "get_base": false,
+  "get_ig_gold": false,
+  "get_ig_pred": false,
+  "get_pred": true,
+  "gpus": "1",
+  "max_seq_length": 128,
+  "no_cuda": false,
+  "num_batch": 1,
+  "output_dir": "../results/answerdotai/ModernBERT-large",
+  "output_prefix": "all",
+  "pt_relation": null,
+  "seed": 42,
+  "tmp_data_path": "../data/biased_relations/biased_relations_all_bags.json"
+}

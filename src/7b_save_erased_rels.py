@@ -216,9 +216,8 @@ def main():
         for kn_bag in kn_bag_list:
             for kn in kn_bag:
                 kn_counter.update([pos_list2str(kn)])
-        most_common_kn = kn_counter.most_common(20)
-        print(most_common_kn)
-        kn_rel = [pos_str2list(kn_str[0]) for kn_str in most_common_kn]
+        # kn_counter = kn_counter.most_common(20)
+        kn_rel = [pos_str2list(kn_str[0]) for kn_str in kn_counter.most_common()] # we erase all relations rather than the top 20 as in the original paper
 
         # ======================== load model =================================
         model = BertForMaskedLM.from_pretrained(args.bert_model)

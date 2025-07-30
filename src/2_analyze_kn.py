@@ -9,8 +9,8 @@ import seaborn as sns
 import pandas as pd
 from pandas.core.frame import DataFrame
 
-kn_dir = '../results/bert-large-cased/kn/'
-fig_dir = '../results/bert-large-cased/figs/'
+kn_dir = '../results/bert-large-cased-req-compl/kn/'
+fig_dir = '../results/bert-large-cased-req-compl/figs/'
 
 class Tee(object):
     def __init__(self, filename, mode="a"):
@@ -74,18 +74,28 @@ for k, v in base_kn_bag_counter.items():
 print('average base_kn', tot_kneurons / tot_bag_num)
 
 # =========== plot knowledge neuron distribution ===========
+# Find the maximum layer index among all kns
+max_layer = max(kn_bag_counter.keys()) if kn_bag_counter else 0
 
-plt.figure(figsize=(8, 3))
+# Dynamically set figure width: 0.5 inch per layer, minimum 8 inches
+fig_width = max(8, (max_layer + 1) * 0.5)
+plt.figure(figsize=(fig_width, 4))  # Slightly taller for more readable y-axis
 
-x = np.array([i + 1 for i in range(12)])
-y = np.array([kn_bag_counter[i] for i in range(12)])
-plt.xlabel('Layer', fontsize=20)
-plt.ylabel('Percentage', fontsize=20)
-plt.xticks([i + 1 for i in range(12)], labels=[i + 1 for i in range(12)], fontsize=20)
-plt.yticks(np.arange(-0.4, 0.5, 0.1), labels=[f'{np.abs(i)}%' for i in range(-40, 50, 10)], fontsize=18)
-plt.tick_params(axis="y", left=False, right=True, labelleft=False, labelright=True, rotation=0, labelsize=18)
-plt.ylim(-y.max() - 0.03, y.max() + 0.03)
-plt.xlim(0.3, 12.7)
+x = np.array([i + 1 for i in range(max_layer + 1)])
+y = np.array([kn_bag_counter.get(i, 0) for i in range(max_layer + 1)])
+plt.xlabel('Layer', fontsize=18)
+plt.ylabel('Percentage', fontsize=18)
+plt.xticks(x, labels=x, fontsize=14)
+
+# Set y-ticks dynamically based on data range
+y_min = min(-0.4, -y.max() - 0.03)
+y_max = max(0.5, y.max() + 0.03)
+yticks = np.linspace(y_min, y_max, num=10)
+plt.yticks(yticks, labels=[f'{int(val*100)}%' for val in yticks], fontsize=14)
+
+plt.tick_params(axis="y", left=False, right=True, labelleft=False, labelright=True, labelsize=14)
+plt.ylim(y_min, y_max)
+plt.xlim(0.3, max_layer + 1 + 0.7)
 bottom = -y
 y = y * 2
 plt.bar(x, y, width=1.02, color='#0165fc', bottom=bottom)

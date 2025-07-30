@@ -3,7 +3,6 @@ BERT MLM runner
 """
 
 import logging
-import argparse
 import math
 import os
 import torch
@@ -14,7 +13,7 @@ import pickle
 import time
 
 import transformers
-from transformers import BertTokenizer
+from transformers import BertTokenizer, AutoTokenizer
 from custom_bert import BertForMaskedLM
 import torch.nn.functional as F
 
@@ -94,90 +93,28 @@ def convert_to_triplet_ig(ig_list):
     return ig_triplet
 
 
-def main():
-    parser = argparse.ArgumentParser()
+class Args:
+    def __init__(self):
+        self.data_path = ""
+        self.tmp_data_path = "../data/biased_relations/biased_relations_all_bags.json"
+        self.bert_model = ""
+        self.output_dir = ""
+        self.output_prefix = "all"
+        self.max_seq_length = 128
+        self.do_lower_case = True # True for uncased models, False for cased models
+        self.no_cuda = False
+        self.gpus = '1'
+        self.seed = 42
+        self.debug = 100000
+        self.pt_relation = None
+        self.get_pred = True
+        self.get_ig_pred = False
+        self.get_ig_gold = False
+        self.get_base = False
+        self.batch_size = 20
+        self.num_batch = 1
 
-    # Basic parameters
-    parser.add_argument("--data_path",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The input data path. Should be .json file for the MLM task. ")
-    parser.add_argument("--tmp_data_path",
-                        default=None,
-                        type=str,
-                        help="Temporary input data path. Should be .json file for the MLM task. ")
-    parser.add_argument("--bert_model", default=None, type=str, required=True,
-                        help="Bert pre-trained model selected in the list: bert-base-uncased, "
-                            "bert-large-uncased, bert-base-cased, bert-base-multilingual, bert-base-chinese.")
-    parser.add_argument("--output_dir",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The output directory where the model predictions and checkpoints will be written.")
-    parser.add_argument("--output_prefix",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The output prefix to indentify each running of experiment. ")
-
-    # Other parameters
-    parser.add_argument("--max_seq_length",
-                        default=128,
-                        type=int,
-                        help="The maximum total input sequence length after WordPiece tokenization. \n"
-                            "Sequences longer than this will be truncated, and sequences shorter \n"
-                            "than this will be padded.")
-    parser.add_argument("--do_lower_case",
-                        default=False,
-                        action='store_true',
-                        help="Set this flag if you are using an uncased model")
-    parser.add_argument("--no_cuda",
-                        default=False,
-                        action='store_true',
-                        help="Whether not to use CUDA when available")
-    parser.add_argument("--gpus",
-                        type=str,
-                        default='0',
-                        help="available gpus id")
-    parser.add_argument('--seed',
-                        type=int,
-                        default=42,
-                        help="random seed for initialization")
-    parser.add_argument("--debug",
-                        type=int,
-                        default=-1,
-                        help="How many examples to debug. -1 denotes no debugging")
-    parser.add_argument("--pt_relation",
-                        type=str,
-                        default=None,
-                        help="Relation to calculate on clusters")
-
-    # parameters about integrated grad
-    parser.add_argument("--get_pred",
-                        action='store_true',
-                        help="Whether to get prediction results.")
-    parser.add_argument("--get_ig_pred",
-                        action='store_true',
-                        help="Whether to get integrated gradient at the predicted label.")
-    parser.add_argument("--get_ig_gold",
-                        action='store_true',
-                        help="Whether to get integrated gradient at the gold label.")
-    parser.add_argument("--get_base",
-                        action='store_true',
-                        help="Whether to get base values. ")
-    parser.add_argument("--batch_size",
-                        default=16,
-                        type=int,
-                        help="Total batch size for cut.")
-    parser.add_argument("--num_batch",
-                        default=10,
-                        type=int,
-                        help="Num batch of an example.")
-
-    # parse arguments
-    args = parser.parse_args()
-
+def main(args):
     # set device
     if args.no_cuda or not torch.cuda.is_available():
         device = torch.device("cpu")
@@ -187,7 +124,8 @@ def main():
         n_gpu = 1
     else:
         # !!! to implement multi-gpus
-        pass
+        device = torch.device("cuda:0")
+        n_gpu = torch.cuda.device_count()
     print("device: {} n_gpu: {}, distributed training: {}".format(device, n_gpu, bool(n_gpu > 1)))
 
     # set random seeds
@@ -202,8 +140,9 @@ def main():
     json.dump(args.__dict__, open(os.path.join(args.output_dir, args.output_prefix + '.args.json'), 'w'), sort_keys=True, indent=2)
 
     # init tokenizer
-    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
-
+    tokenizer = AutoTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
+    
+    
     # Load pre-trained BERT
     print("***** CUDA.empty_cache() *****")
     torch.cuda.empty_cache()
@@ -228,7 +167,7 @@ def main():
             bag_rel = eval_bag[0][2].split('(')[0]
             if bag_rel not in eval_bag_list_perrel:
                 eval_bag_list_perrel[bag_rel] = []
-            if len(eval_bag_list_perrel[bag_rel]) >= args.debug:
+            if args.debug != -1 and len(eval_bag_list_perrel[bag_rel]) >= args.debug:
                 continue
             eval_bag_list_perrel[bag_rel].append(eval_bag)
         with open(args.tmp_data_path, 'w') as fw:
@@ -260,7 +199,13 @@ def main():
                     input_len = int(input_mask[0].sum())
 
                     # record [MASK]'s position
-                    tgt_pos = tokens_info['tokens'].index('[MASK]')
+                    mask_token = tokenizer.mask_token
+                    tokens_stripped = [t.strip() for t in tokens_info['tokens']]
+                    if mask_token in tokens_stripped:
+                        tgt_pos = tokens_stripped.index(mask_token)
+                    else:
+                        logger.warning(f"{mask_token} not found in tokens: {tokens_info['tokens']}")
+                        continue 
 
                     # record various results
                     res_dict = {
@@ -322,7 +267,27 @@ def main():
         # record running time
         toc = time.perf_counter()
         print(f"***** Relation: {relation} evaluated. Costing time: {toc - tic:0.4f} seconds *****")
+        # Save computation time to txt
+        timing_path = os.path.join(args.output_dir, f"{args.output_prefix}_{relation}_timing.txt")
+        with open(timing_path, "a") as timing_file:
+            timing_file.write(f"Model: {args.bert_model}, Relation: {relation}, Time: {toc - tic:0.4f} seconds\n")
 
 
 if __name__ == "__main__":
-    main()
+    model_list = [
+        #"bert-base-uncased",
+        #"bert-large-uncased",
+        #"answerdotai/ModernBERT-large",
+        "answerdotai/ModernBERT-base",
+    ]
+
+    
+    for model_name in model_list:
+        print(f"Running for model: {model_name}")
+        args = Args()
+        args.bert_model = model_name
+        args.output_dir = f"../results/{model_name}"
+        args.output_prefix = f"all"
+        args.tmp_data_path = f"../data/biased_relations/biased_relations_all_bags.json"
+        os.makedirs(args.output_dir, exist_ok=True)
+        main(args)

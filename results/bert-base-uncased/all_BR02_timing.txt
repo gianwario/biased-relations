@@ -1,0 +1,1 @@
+Model: bert-base-uncased, Relation: BR02, Time: 83.7151 seconds

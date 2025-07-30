@@ -1,0 +1,15 @@
+model,task,biased_rel_removed,accuracy,perplexity
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,None,0.5956161303920191,10.2164888381958
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR01,0.5831315002137056,11.072248458862305
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR02,0.5791988756148981,11.27915096282959
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR03,0.5732998885172799,11.205109596252441
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR04,0.590141041753945,10.584392547607422
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR05,0.5841389939750595,10.670039176940918
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR06,0.5875745388989044,10.308469772338867
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR07,0.5892857142857143,10.45954418182373
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR08,0.5881523272214386,10.740086555480957
+aieng-lab/bert-large-cased_requirement-completion,requirement_completion,BR09,0.5852514919011083,10.942313194274902
+bert-large-cased,requirement_completion,None,0.5134291915355399,42.37238693237305
+bert-large-cased,requirement_completion,BR01,0.5051084674597621,43.224769592285156
+bert-large-cased,requirement_completion,BR02,0.5198256467941508,39.22847366333008
+bert-large-cased,requirement_completion,BR03,0.5238561634252134,38.314117431640625

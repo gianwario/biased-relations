@@ -3,8 +3,8 @@ from matplotlib import pyplot as plt
 import numpy as np
 import os
 
-kn_dir = '../results/bert-large-cased/kn/'
-fig_dir = '../results/bert-large-cased/figs/'
+kn_dir = '../results/bert-large-cased-req-compl/kn/'
+fig_dir = '../results/bert-large-cased-req-compl/figs/'
 with open(os.path.join(kn_dir, 'modify_activation_rlt.json'), 'r') as f:
     modified_rlts = json.load(f)
 with open(os.path.join(kn_dir, 'base_modify_activation_rlt.json'), 'r') as f:

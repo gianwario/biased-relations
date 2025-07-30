@@ -20,7 +20,7 @@ import torch.nn.functional as F
 logger = logging.getLogger(__name__)
 
 PRETRAINED_MODEL_ARCHIVE_MAP = {
-    'bert-base-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz",
+    'bert-base-uncased': "https://huggingface.co/google-bert/bert-base-uncased/resolve/main/pytorch_model.bin",
     'bert-large-uncased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased.tar.gz",
     'bert-base-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased.tar.gz",
     'bert-large-cased': "https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-cased.tar.gz",
@@ -39,8 +39,9 @@ PRETRAINED_MODEL_ARCHIVE_MAP = {
     # DistilBERT (smaller, faster BERT):
     'distilbert-base-uncased': "https://huggingface.co/distilbert-base-uncased/resolve/main/pytorch_model.bin",
     'distilbert-base-cased': "https://huggingface.co/distilbert-base-cased/resolve/main/pytorch_model.bin",
-    # ModernBERT Large:
-    'modern-bert-large': "https://huggingface.co/lysandre/modern-bert-large/resolve/main/pytorch_model.bin", 
+    # ModernBERT:
+    'answerdotai/ModernBERT-large': "https://huggingface.co/answerdotai/ModernBERT-large/resolve/main/pytorch_model.bin",
+    'answerdotai/ModernBERT-base': "https://huggingface.co/answerdotai/ModernBERT-base/resolve/main/pytorch_model.bin",
     # Domain-specific BERTs:
     'biobert-base-cased-v1.1': "https://huggingface.co/dmis-lab/biobert-base-cased-v1.1/resolve/main/pytorch_model.bin",
     'scibert-scivocab-uncased': "https://huggingface.co/allenai/scibert_scivocab_uncased/resolve/main/pytorch_model.bin",
@@ -583,7 +584,8 @@ class BertForMaskedLM(PreTrainedBertModel):
         else:
             last_hidden, ffn_weights = self.bert(input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids, tgt_pos=tgt_pos, tgt_layer=tgt_layer, tmp_score=tmp_score, imp_pos=imp_pos, imp_op=imp_op)  # (batch, max_len, hidden_size), (batch, max_len, ffn_size)
         last_hidden = last_hidden[:, tgt_pos, :]  # (batch, hidden_size)
-        ffn_weights = ffn_weights[:, tgt_pos, :]  # (batch, ffn_size)
+        if ffn_weights is not None:
+            ffn_weights = ffn_weights[:, tgt_pos, :]  # (batch, ffn_size) modified
         tgt_logits = self.cls(last_hidden)  # (batch, n_vocab)
         tgt_prob = F.softmax(tgt_logits, dim=1)  # (batch, n_vocab)
 

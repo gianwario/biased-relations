@@ -3,8 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-
-
+*all-BR*
+*kn_bag*
+*base_*
+*kn_rel*
+*datasets/
+*utils/
 # C extensions
 *.so
 
