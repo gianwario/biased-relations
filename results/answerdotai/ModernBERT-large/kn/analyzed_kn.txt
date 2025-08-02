@@ -1,0 +1,473 @@
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\answerdotai/ModernBERT-base\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Skipping ../results\aieng-lab/bert-large-cased_requirement-completion\kn, directory does not exist.
+Analyzing ../results\aieng-lab/ModernBERT-large_requirement-completion\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/bert-large-cased_incivility\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/ModernBERT-large_incivility\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/bert-large-cased_tone-bearing\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/ModernBERT-large_tone-bearing\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/bert-large-cased_sentiment\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/ModernBERT-large_sentiment\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/bert-large-cased_requirement-type\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton
+Analyzing ../results\aieng-lab/ModernBERT-large_requirement-type\kn
+average ig_kn 0.0
+average base_kn 0.0
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+ig kn has on average 0.0 inter kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inner kn interseciton
+calculating BR01
+calculating BR02
+calculating BR03
+calculating BR04
+calculating BR05
+calculating BR06
+calculating BR07
+calculating BR08
+calculating BR09
+base kn has on average 0.0 inter kn interseciton

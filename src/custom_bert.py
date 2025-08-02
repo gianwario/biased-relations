@@ -50,7 +50,19 @@ PRETRAINED_MODEL_ARCHIVE_MAP = {
     'finbert-pretrain': "https://huggingface.co/yiyanghkust/finbert-pretrain/resolve/main/pytorch_model.bin",
     # pretrained models for SE tasks:
     'aieng-lab/bert-large-cased_requirement-completion': "https://huggingface.co/aieng-lab/bert-large-cased_requirement-completion/resolve/main/model.safetensors",    
-    
+    'aieng-lab/ModernBERT-large_requirement-completion': "https://huggingface.co/aieng-lab/ModernBERT-large_requirement-completion/resolve/main/model.safetensors",    
+
+    'aieng-lab/bert-large-cased_incivility': "https://huggingface.co/aieng-lab/bert-large-cased_incivility/resolve/main/model.safetensors",    
+    'aieng-lab/ModernBERT-large_incivility': "https://huggingface.co/aieng-lab/ModernBERT-large_incivility/resolve/main/model.safetensors",    
+
+    'aieng-lab/bert-large-cased_tone-bearing': "https://huggingface.co/aieng-lab/bert-large-cased_tone-bearing/resolve/main/model.safetensors",    
+    'aieng-lab/ModernBERT-large_tone-bearing': "https://huggingface.co/aieng-lab/ModernBERT-large_tone-bearing/resolve/main/model.safetensors",    
+
+    'aieng-lab/bert-large-cased_sentiment': "https://huggingface.co/aieng-lab/bert-large-cased_sentiment/resolve/main/model.safetensors",    
+    'aieng-lab/ModernBERT-large_sentiment': "https://huggingface.co/aieng-lab/ModernBERT-large_sentiment/resolve/main/model.safetensors",    
+
+    'aieng-lab/bert-large-cased_requirement-type': "https://huggingface.co/aieng-lab/bert-large-cased_requirement-type/resolve/main/model.safetensors",    
+    'aieng-lab/ModernBERT-large_requirement-type': "https://huggingface.co/aieng-lab/ModernBERT-large_requirement-type/resolve/main/model.safetensors",    
     
     # ----------- UNAVAILABLE, NEEDED CUSTOM ROBERTA IMPLEMENTATION -----------
     # RoBERTa (BERT-like, often used in SE):

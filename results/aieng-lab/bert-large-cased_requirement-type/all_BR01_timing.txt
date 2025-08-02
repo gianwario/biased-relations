@@ -1,0 +1,1 @@
+Model: aieng-lab/bert-large-cased_requirement-type, Relation: BR01, Time: 394.3135 seconds

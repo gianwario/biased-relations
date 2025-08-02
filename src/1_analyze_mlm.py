@@ -140,7 +140,19 @@ def main(args):
     json.dump(args.__dict__, open(os.path.join(args.output_dir, args.output_prefix + '.args.json'), 'w'), sort_keys=True, indent=2)
 
     # init tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
+    if "ModernBERT-large_requirement-completion" in args.bert_model:
+        tokenizer_name = "answerdotai/ModernBERT-large"
+    elif "ModernBERT-large_incivility" in args.bert_model:
+        tokenizer_name = "answerdotai/ModernBERT-large"
+    elif "ModernBERT-large_tone-bearing" in args.bert_model:
+        tokenizer_name = "answerdotai/ModernBERT-large"
+    elif "ModernBERT-large_sentiment" in args.bert_model:
+        tokenizer_name = "answerdotai/ModernBERT-large"
+    elif "ModernBERT-large_requirement-type" in args.bert_model:
+        tokenizer_name = "answerdotai/ModernBERT-large"
+    else:
+        tokenizer_name = args.bert_model
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
     
     
     # Load pre-trained BERT
@@ -275,10 +287,23 @@ def main(args):
 
 if __name__ == "__main__":
     model_list = [
+        #"bert-base-cased",
+        #"bert-large-cased",
         #"bert-base-uncased",
         #"bert-large-uncased",
         #"answerdotai/ModernBERT-large",
-        "answerdotai/ModernBERT-base",
+        #"answerdotai/ModernBERT-base",
+        # FINETUNED models:
+        #"aieng-lab/bert-large-cased_requirement-completion",
+        #"aieng-lab/ModernBERT-large_requirement-completion",
+        "aieng-lab/bert-large-cased_incivility",
+        "aieng-lab/ModernBERT-large_incivility",
+        "aieng-lab/bert-large-cased_tone-bearing",
+        "aieng-lab/ModernBERT-large_tone-bearing",
+        "aieng-lab/bert-large-cased_sentiment",
+        "aieng-lab/ModernBERT-large_sentiment",
+        "aieng-lab/bert-large-cased_requirement-type",
+        "aieng-lab/ModernBERT-large_requirement-type",
     ]
 
     
