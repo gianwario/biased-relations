@@ -145,6 +145,6 @@ if __name__ == "__main__":
     ]
 
     for model_name in model_list:
-        results_root = f"../results/{model_name}"
+        results_root = f"../results/{model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name}"
         print(f"Processing results for model: {model_name}")
         process_results_dir(results_root)

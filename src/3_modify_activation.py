@@ -3,7 +3,6 @@ BERT MLM runner
 """
 
 import logging
-import argparse
 import math
 import os
 import torch
@@ -83,94 +82,47 @@ def scaled_input(emb, batch_size, num_batch):
     return res, step[0]
 
 
-def main():
-    parser = argparse.ArgumentParser()
-
-    # Basic parameters
-    parser.add_argument("--data_path",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The input data path. Should be .json file for the MLM task. ")
-    parser.add_argument("--tmp_data_path",
-                        default=None,
-                        type=str,
-                        help="Temporary input data path. Should be .json file for the MLM task. ")
-    parser.add_argument("--bert_model", default=None, type=str, required=True,
-                        help="Bert pre-trained model selected in the list: bert-base-uncased, "
-                            "bert-large-uncased, bert-base-cased, bert-base-multilingual, bert-base-chinese.")
-    parser.add_argument("--output_dir",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The output directory where the model predictions and checkpoints will be written.")
-    parser.add_argument("--kn_dir",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The directory where important positions are stored.")
-    parser.add_argument("--output_prefix",
-                        default='',
-                        type=str,
-                        help="The output prefix to indentify each running of experiment. ")
-
-    # Other parameters
-    parser.add_argument("--max_seq_length",
-                        default=128,
-                        type=int,
-                        help="The maximum total input sequence length after WordPiece tokenization. \n"
-                            "Sequences longer than this will be truncated, and sequences shorter \n"
-                            "than this will be padded.")
-    parser.add_argument("--do_lower_case",
-                        default=False,
-                        action='store_true',
-                        help="Set this flag if you are using an uncased model")
-    parser.add_argument("--no_cuda",
-                        default=False,
-                        action='store_true',
-                        help="Whether not to use CUDA when available")
-    parser.add_argument("--gpus",
-                        type=str,
-                        default='0',
-                        help="available gpus id")
-    parser.add_argument('--seed',
-                        type=int,
-                        default=42,
-                        help="random seed for initialization")
-    parser.add_argument("--debug",
-                        type=int,
-                        default=-1,
-                        help="How many examples to debug. -1 denotes no debugging")
-
-    # parse arguments
-    args = parser.parse_args()
-
+def run_modify_activation(
+    data_path,
+    tmp_data_path,
+    bert_model,
+    output_dir,
+    kn_dir,
+    output_prefix='',
+    max_seq_length=128,
+    do_lower_case=False,
+    no_cuda=False,
+    gpus='0',
+    seed=42,
+    debug=-1
+):
     # set device
-    if args.no_cuda or not torch.cuda.is_available():
+    if no_cuda or not torch.cuda.is_available():
         device = torch.device("cpu")
         n_gpu = 0
-    elif len(args.gpus) == 1:
-        device = torch.device("cuda:%s" % args.gpus)
+    elif len(gpus) == 1:
+        device = torch.device("cuda:%s" % gpus)
         n_gpu = 1
     else:
         # !!! to implement multi-gpus
-        pass
+        device = torch.device("cuda:0")
+        n_gpu = torch.cuda.device_count()
     logger.info("device: {} n_gpu: {}, distributed training: {}".format(device, n_gpu, bool(n_gpu > 1)))
 
     # set random seeds
-    random.seed(args.seed)
-    np.random.seed(args.seed)
-    torch.manual_seed(args.seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
     if n_gpu > 0:
-        torch.cuda.manual_seed_all(args.seed)
+        torch.cuda.manual_seed_all(seed)
 
     # init tokenizer
-    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
+    tokenizer = BertTokenizer.from_pretrained(bert_model, do_lower_case=do_lower_case)
 
     # Load pre-trained BERT
     logger.info("***** CUDA.empty_cache() *****")
     torch.cuda.empty_cache()
-    model = BertForMaskedLM.from_pretrained(args.bert_model)
+    model = BertForMaskedLM.from_pretrained(bert_model)
     model.to(device)
 
     # data parallel
@@ -179,11 +131,11 @@ def main():
     model.eval()
 
     # prepare eval set
-    if os.path.exists(args.tmp_data_path):
-        with open(args.tmp_data_path, 'r') as f:
+    if tmp_data_path and os.path.exists(tmp_data_path):
+        with open(tmp_data_path, 'r') as f:
             eval_bag_list_perrel = json.load(f)
     else:
-        with open(args.data_path, 'r') as f:
+        with open(data_path, 'r') as f:
             eval_bag_list_all = json.load(f)
         # split bag list into relations
         eval_bag_list_perrel = {}
@@ -191,16 +143,16 @@ def main():
             bag_rel = eval_bag[0][2].split('(')[0]
             if bag_rel not in eval_bag_list_perrel:
                 eval_bag_list_perrel[bag_rel] = []
-            if len(eval_bag_list_perrel[bag_rel]) >= args.debug:
+            if debug > 0 and len(eval_bag_list_perrel[bag_rel]) >= debug:
                 continue
             eval_bag_list_perrel[bag_rel].append(eval_bag)
-        with open(args.tmp_data_path, 'w') as fw:
-            json.dump(eval_bag_list_perrel, fw, indent=2)
-
+        if tmp_data_path:
+            with open(tmp_data_path, 'w') as fw:
+                json.dump(eval_bag_list_perrel, fw, indent=2)
 
     def eval_modification(prefix=''):
         rlt_dict = {}
-        for filename in os.listdir(args.kn_dir):
+        for filename in os.listdir(kn_dir):
             if not filename.startswith(f'{prefix}kn_bag-'):
                 continue
             relation = filename.split('.')[0].split('-')[-1]
@@ -218,7 +170,7 @@ def main():
                 'eh_oth:ave_delta': [],
                 'eh_oth:ave_delta_ratio': None
             }
-            with open(os.path.join(args.kn_dir, filename), 'r') as fr:
+            with open(os.path.join(kn_dir, filename), 'r') as fr:
                 kn_bag_list = json.load(fr)
             # record running time
             tic = time.perf_counter()
@@ -228,7 +180,7 @@ def main():
                 # =============== eval own bag: remove & enhance ================
                 eval_bag = eval_bag_list_perrel[relation][bag_idx]
                 for eval_example in eval_bag:
-                    eval_features, tokens_info = example2feature(eval_example, args.max_seq_length, tokenizer)
+                    eval_features, tokens_info = example2feature(eval_example, max_seq_length, tokenizer)
                     # convert features to long type tensors
                     baseline_ids, input_ids, input_mask, segment_ids = eval_features['baseline_ids'], eval_features['input_ids'], eval_features['input_mask'], eval_features['segment_ids']
                     baseline_ids = torch.tensor(baseline_ids, dtype=torch.long).unsqueeze(0)
@@ -266,7 +218,7 @@ def main():
                 oth_idx = random.randint(0, len(eval_bag_list_perrel[oth_relation]) - 1)
                 eval_bag = eval_bag_list_perrel[oth_relation][oth_idx]
                 for eval_example in eval_bag:
-                    eval_features, tokens_info = example2feature(eval_example, args.max_seq_length, tokenizer)
+                    eval_features, tokens_info = example2feature(eval_example, max_seq_length, tokenizer)
                     # convert features to long type tensors
                     baseline_ids, input_ids, input_mask, segment_ids = eval_features['baseline_ids'], eval_features['input_ids'], eval_features['input_mask'], eval_features['segment_ids']
                     baseline_ids = torch.tensor(baseline_ids, dtype=torch.long).unsqueeze(0)
@@ -310,11 +262,65 @@ def main():
             rlt_dict[save_key]['eh_oth:ave_delta_ratio'] = rlt_dict[save_key]['eh_oth:ave_delta'] / rlt_dict[save_key]['oth:ori_prob']
             print(save_key, '==============>', rlt_dict[save_key])
 
-        with open(os.path.join(args.kn_dir, f'{prefix}modify_activation_rlt.json'), 'w') as fw:
+        with open(os.path.join(kn_dir, f'{prefix}modify_activation_rlt.json'), 'w') as fw:
             json.dump(rlt_dict, fw, indent=2)
 
     eval_modification('')
-    #eval_modification('base_')
+    eval_modification('base_')
+
 
 if __name__ == "__main__":
-    main()
+    # Example usage for multiple models
+    model_list = [
+        "bert-base-cased",
+        "bert-large-cased",
+        "bert-base-uncased",
+        "bert-large-uncased",
+        "answerdotai/ModernBERT-large",
+        "answerdotai/ModernBERT-base",
+        # FINETUNED models:
+        "aieng-lab/bert-large-cased_requirement-completion",
+        "aieng-lab/ModernBERT-large_requirement-completion",
+        "aieng-lab/bert-large-cased_incivility",
+        "aieng-lab/ModernBERT-large_incivility",
+        "aieng-lab/bert-large-cased_tone-bearing",
+        "aieng-lab/ModernBERT-large_tone-bearing",
+        "aieng-lab/bert-large-cased_sentiment",
+        "aieng-lab/ModernBERT-large_sentiment",
+        "aieng-lab/bert-large-cased_requirement-type",
+        "aieng-lab/ModernBERT-large_requirement-type",
+    ]
+
+    for model_name in model_list:
+        print(f"Running for model: {model_name}")
+        data_path = ""
+        tmp_data_path = f"../data/biased_relations/biased_relations_all_bags.json"
+        bert_model = model_name
+        output_dir = f"../results/{model_name}"
+        kn_dir = f"../results/{model_name}/kn"
+        output_prefix = ""
+        max_seq_length = 128
+        do_lower_case = False
+        no_cuda = False
+        gpus = '1'
+        seed = 42
+        debug = 100000
+
+        if not os.path.exists(kn_dir):
+            print(f"Skipping {model_name}: kn_dir not found.")
+            continue
+
+        run_modify_activation(
+            data_path=data_path,
+            tmp_data_path=tmp_data_path,
+            bert_model=bert_model,
+            output_dir=output_dir,
+            kn_dir=kn_dir,
+            output_prefix=output_prefix,
+            max_seq_length=max_seq_length,
+            do_lower_case=do_lower_case,
+            no_cuda=no_cuda,
+            gpus=gpus,
+            seed=seed,
+            debug=debug
+        )

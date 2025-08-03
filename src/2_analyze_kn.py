@@ -217,8 +217,9 @@ if __name__ == "__main__":
     ]
 
     for model_name in model_list:
-        kn_dir = os.path.join("../results", model_name, "kn")
-        fig_dir = os.path.join("../results", model_name, "figs")
+        
+        kn_dir = os.path.join("../results", model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name, "kn")
+        fig_dir = os.path.join("../results", model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name, "figs")
         if os.path.exists(kn_dir):
             print(f"Analyzing {kn_dir}")
             analyze_kn_dir(kn_dir, fig_dir)
