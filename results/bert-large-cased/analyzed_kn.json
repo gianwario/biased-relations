@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\bert-large-cased\\kn",
+  "fig_dir": "../results\\bert-large-cased\\figs",
+  "stats": {
+    "average_ig_kn": 1.8810226155358898,
+    "average_base_kn": 88.41002949852508
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 1.1085949781195565,
+    "ig_inter_ave_intersec": 0.2784660766961652,
+    "base_inner_ave_intersec": 60.53472192717849,
+    "base_inter_ave_intersec": 36.76173058013766
+  }
+}

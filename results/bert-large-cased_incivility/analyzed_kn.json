@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\bert-large-cased_incivility\\kn",
+  "fig_dir": "../results\\bert-large-cased_incivility\\figs",
+  "stats": {
+    "average_ig_kn": 3.799410029498525,
+    "average_base_kn": 88.32350049164208
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 1.9586183455835493,
+    "ig_inter_ave_intersec": 1.2870009832841691,
+    "base_inner_ave_intersec": 61.00389811785699,
+    "base_inter_ave_intersec": 37.585880039331364
+  }
+}

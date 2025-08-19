@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\ModernBERT-base\\kn",
+  "fig_dir": "../results\\ModernBERT-base\\figs",
+  "stats": {
+    "average_ig_kn": 224.43756145526058,
+    "average_base_kn": 1909.2399213372664
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 155.05626248035009,
+    "ig_inter_ave_intersec": 137.27780727630284,
+    "base_inner_ave_intersec": 1440.5467880358585,
+    "base_inter_ave_intersec": 1401.034552605703
+  }
+}

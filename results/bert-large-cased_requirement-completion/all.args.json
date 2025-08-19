@@ -12,7 +12,7 @@
   "max_seq_length": 128,
   "no_cuda": false,
   "num_batch": 1,
-  "output_dir": "../results/bert-large-cased-req-compl",
+  "output_dir": "../results/bert-large-cased_requirement-completion",
   "output_prefix": "all",
   "pt_relation": "BR09",
   "seed": 42,

@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\bert-base-cased\\kn",
+  "fig_dir": "../results\\bert-base-cased\\figs",
+  "stats": {
+    "average_ig_kn": 2.4857423795476894,
+    "average_base_kn": 41.474926253687315
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 1.4940519182563623,
+    "ig_inter_ave_intersec": 0.28186823992133725,
+    "base_inner_ave_intersec": 28.698878361728344,
+    "base_inter_ave_intersec": 23.44882005899705
+  }
+}

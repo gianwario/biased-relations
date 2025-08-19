@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\bert-large-cased_tone-bearing\\kn",
+  "fig_dir": "../results\\bert-large-cased_tone-bearing\\figs",
+  "stats": {
+    "average_ig_kn": 3.9803343166175025,
+    "average_base_kn": 92.86529006882989
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 2.0479033011853676,
+    "ig_inter_ave_intersec": 1.2693903638151425,
+    "base_inner_ave_intersec": 64.65725241109742,
+    "base_inter_ave_intersec": 39.1856243854474
+  }
+}

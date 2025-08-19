@@ -9,20 +9,13 @@ import seaborn as sns
 import pandas as pd
 from pandas.core.frame import DataFrame
 
-def analyze_kn_dir(kn_dir, fig_dir):
-    class Tee(object):
-        def __init__(self, filename, mode="a"):
-            self.file = open(os.path.join(kn_dir, filename), mode, encoding="utf-8")
-            self.stdout = sys.stdout
-
-        def write(self, data):
-            self.file.write(data)
-            self.stdout.write(data)
-
-        def flush(self):
-            self.file.flush()
-            self.stdout.flush()
-    sys.stdout = Tee("analyzed_kn.txt", "a")
+def analyze_kn_dir(kn_dir, fig_dir, log_json_path):
+    log_data = {
+        "kn_dir": kn_dir,
+        "fig_dir": fig_dir,
+        "stats": {},
+        "intersection": {}
+    }
 
     # =========== stat kn_bag ig ==============
     y_points = []   
@@ -45,7 +38,7 @@ def analyze_kn_dir(kn_dir, fig_dir):
     for k, v in kn_bag_counter.items():
         kn_bag_counter[k] /= tot_kneurons
 
-    print('average ig_kn', tot_kneurons / tot_bag_num if tot_bag_num else 0)
+    log_data["stats"]["average_ig_kn"] = tot_kneurons / tot_bag_num if tot_bag_num else 0
 
     # =========== stat kn_bag base ==============
     tot_bag_num = 0
@@ -65,7 +58,7 @@ def analyze_kn_dir(kn_dir, fig_dir):
         tot_kneurons += base_kn_bag_counter[k]
     for k, v in base_kn_bag_counter.items():
         base_kn_bag_counter[k] /= tot_kneurons
-    print('average base_kn', tot_kneurons / tot_bag_num if tot_bag_num else 0)
+    log_data["stats"]["average_base_kn"] = tot_kneurons / tot_bag_num if tot_bag_num else 0
 
     # =========== plot knowledge neuron distribution ===========
     max_layer = max(kn_bag_counter.keys()) if kn_bag_counter else 0
@@ -119,7 +112,6 @@ def analyze_kn_dir(kn_dir, fig_dir):
 
     inner_ave_intersec = []
     for rel, kn_bag_list in kn_bag_list_per_rel.items():
-        print(f'calculating {rel}')
         len_kn_bag_list = len(kn_bag_list)
         for i in range(0, len_kn_bag_list):
             for j in range(i + 1, len_kn_bag_list):
@@ -127,12 +119,11 @@ def analyze_kn_dir(kn_dir, fig_dir):
                 kn_bag_2 = kn_bag_list[j]
                 num_intersec = cal_intersec(kn_bag_1, kn_bag_2)
                 inner_ave_intersec.append(num_intersec)
-    inner_ave_intersec = np.array(inner_ave_intersec).mean() if inner_ave_intersec else 0
-    print(f'ig kn has on average {inner_ave_intersec} inner kn interseciton')
+    inner_ave_intersec_mean = np.array(inner_ave_intersec).mean() if inner_ave_intersec else 0
+    log_data["intersection"]["ig_inner_ave_intersec"] = inner_ave_intersec_mean
 
     inter_ave_intersec = []
     for rel, kn_bag_list in kn_bag_list_per_rel.items():
-        print(f'calculating {rel}')
         len_kn_bag_list = len(kn_bag_list)
         for i in range(len_kn_bag_list):
             for j in range(100):
@@ -148,8 +139,8 @@ def analyze_kn_dir(kn_dir, fig_dir):
                 kn_bag_2 = kn_bag_list_per_rel[other_rel][other_idx]
                 num_intersec = cal_intersec(kn_bag_1, kn_bag_2)
                 inter_ave_intersec.append(num_intersec)
-    inter_ave_intersec = np.array(inter_ave_intersec).mean() if inter_ave_intersec else 0
-    print(f'ig kn has on average {inter_ave_intersec} inter kn interseciton')
+    inter_ave_intersec_mean = np.array(inter_ave_intersec).mean() if inter_ave_intersec else 0
+    log_data["intersection"]["ig_inter_ave_intersec"] = inter_ave_intersec_mean
 
     # ====== load base kn =======
     kn_bag_list_per_rel = {}
@@ -163,7 +154,6 @@ def analyze_kn_dir(kn_dir, fig_dir):
 
     inner_ave_intersec = []
     for rel, kn_bag_list in kn_bag_list_per_rel.items():
-        print(f'calculating {rel}')
         len_kn_bag_list = len(kn_bag_list)
         for i in range(0, len_kn_bag_list):
             for j in range(i + 1, len_kn_bag_list):
@@ -171,12 +161,11 @@ def analyze_kn_dir(kn_dir, fig_dir):
                 kn_bag_2 = kn_bag_list[j]
                 num_intersec = cal_intersec(kn_bag_1, kn_bag_2)
                 inner_ave_intersec.append(num_intersec)
-    inner_ave_intersec = np.array(inner_ave_intersec).mean() if inner_ave_intersec else 0
-    print(f'base kn has on average {inner_ave_intersec} inner kn interseciton')
+    inner_ave_intersec_mean = np.array(inner_ave_intersec).mean() if inner_ave_intersec else 0
+    log_data["intersection"]["base_inner_ave_intersec"] = inner_ave_intersec_mean
 
     inter_ave_intersec = []
     for rel, kn_bag_list in kn_bag_list_per_rel.items():
-        print(f'calculating {rel}')
         len_kn_bag_list = len(kn_bag_list)
         for i in range(len_kn_bag_list):
             for j in range(100):
@@ -192,8 +181,12 @@ def analyze_kn_dir(kn_dir, fig_dir):
                 kn_bag_2 = kn_bag_list_per_rel[other_rel][other_idx]
                 num_intersec = cal_intersec(kn_bag_1, kn_bag_2)
                 inter_ave_intersec.append(num_intersec)
-    inter_ave_intersec = np.array(inter_ave_intersec).mean() if inter_ave_intersec else 0
-    print(f'base kn has on average {inter_ave_intersec} inter kn interseciton')
+    inter_ave_intersec_mean = np.array(inter_ave_intersec).mean() if inter_ave_intersec else 0
+    log_data["intersection"]["base_inter_ave_intersec"] = inter_ave_intersec_mean
+
+    # Save log_data to JSON
+    with open(log_json_path, "w", encoding="utf-8") as logf:
+        json.dump(log_data, logf, indent=2)
 
 if __name__ == "__main__":
     model_list = [
@@ -217,11 +210,11 @@ if __name__ == "__main__":
     ]
 
     for model_name in model_list:
-        
         kn_dir = os.path.join("../results", model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name, "kn")
         fig_dir = os.path.join("../results", model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name, "figs")
+        log_json_path = os.path.join("../results", model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name, "analyzed_kn.json")
         if os.path.exists(kn_dir):
             print(f"Analyzing {kn_dir}")
-            analyze_kn_dir(kn_dir, fig_dir)
+            analyze_kn_dir(kn_dir, fig_dir, log_json_path)
         else:
             print(f"Skipping {kn_dir}, directory does not exist.")

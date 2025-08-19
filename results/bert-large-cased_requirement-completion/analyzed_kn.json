@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\bert-large-cased_requirement-completion\\kn",
+  "fig_dir": "../results\\bert-large-cased_requirement-completion\\figs",
+  "stats": {
+    "average_ig_kn": 2.0010090817356208,
+    "average_base_kn": 86.93945509586277
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 1.2579275716794707,
+    "ig_inter_ave_intersec": 0.3031685166498486,
+    "base_inner_ave_intersec": 59.31194172978914,
+    "base_inter_ave_intersec": 35.63355196770939
+  }
+}

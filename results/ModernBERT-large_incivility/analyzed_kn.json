@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\ModernBERT-large_incivility\\kn",
+  "fig_dir": "../results\\ModernBERT-large_incivility\\figs",
+  "stats": {
+    "average_ig_kn": 207.04228121927238,
+    "average_base_kn": 6064.33726647001
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 160.3457747376471,
+    "ig_inter_ave_intersec": 136.3115830875123,
+    "base_inner_ave_intersec": 5224.489909504185,
+    "base_inter_ave_intersec": 4950.821769911505
+  }
+}

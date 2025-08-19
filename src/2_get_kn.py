@@ -76,52 +76,46 @@ def stat(data, pos_type, rel):
     ave_len /= len(data)
     print(f'{rel}\'s {pos_type} has on average {ave_len} imp pos. ')
 
-def process_results_dir(results_root):
-    for root, dirs, files in os.walk(results_root):
-        kn_dir = os.path.join(root, 'kn')
-        if not os.path.exists(kn_dir):
-            os.makedirs(kn_dir)
-        
-        print(f'kn_dir: {kn_dir}')
+def process_results_dir(kn_dir,rlts_dir):
+    if not os.path.exists(kn_dir):
+        os.makedirs(kn_dir)
+    for filename in os.listdir(rlts_dir):
+        if filename.endswith('.rlt.jsonl'):
+            threshold_ratio = 0.2
+            mode_ratio_bag = 0.7
+            for max_it in range(6):
+                ave_kn_num, kn_bag_list, kn_rel = analysis_file(filename, rlts_dir)
+                if ave_kn_num < 2:
+                    mode_ratio_bag -= 0.05
+                if ave_kn_num > 5:
+                    mode_ratio_bag += 0.05
+                if ave_kn_num >= 2 and ave_kn_num <= 5:
+                    break
+            rel = filename.split('.')[0].split('-')[-1]
+            stat(kn_bag_list, 'kn_bag', rel)
+            stat(kn_rel, 'kn_rel', rel)
+            with open(os.path.join(kn_dir, f'kn_bag-{rel}.json'), 'w') as fw:
+                json.dump(kn_bag_list, fw, indent=2)
+            with open(os.path.join(kn_dir, f'kn_rel-{rel}.json'), 'w') as fw:
+                json.dump(kn_rel, fw, indent=2)
 
-        for filename in files:
-            if filename.endswith('.rlt.jsonl'):
-                global threshold_ratio, mode_ratio_bag
-                threshold_ratio = 0.2
-                mode_ratio_bag = 0.7
-                for max_it in range(6):
-                    ave_kn_num, kn_bag_list, kn_rel = analysis_file(filename, root)
-                    if ave_kn_num < 2:
-                        mode_ratio_bag -= 0.05
-                    if ave_kn_num > 5:
-                        mode_ratio_bag += 0.05
-                    if ave_kn_num >= 2 and ave_kn_num <= 5:
-                        break
-                rel = filename.split('.')[0].split('-')[-1]
-                stat(kn_bag_list, 'kn_bag', rel)
-                stat(kn_rel, 'kn_rel', rel)
-                with open(os.path.join(kn_dir, f'kn_bag-{rel}.json'), 'w') as fw:
-                    json.dump(kn_bag_list, fw, indent=2)
-                with open(os.path.join(kn_dir, f'kn_rel-{rel}.json'), 'w') as fw:
-                    json.dump(kn_rel, fw, indent=2)
-
-                threshold_ratio = 0.5
-                mode_ratio_bag = 0.7
-                for max_it in range(6):
-                    ave_kn_num, kn_bag_list, kn_rel = analysis_file(filename, root, 'base')
-                    if ave_kn_num < 2:
-                        mode_ratio_bag -= 0.05
-                    if ave_kn_num > 5:
-                        mode_ratio_bag += 0.05
-                    if ave_kn_num >= 2 and ave_kn_num <= 5:
-                        break
-                rel = filename.split('.')[0].split('-')[-1]
-                stat(kn_bag_list, 'kn_bag', rel)
-                stat(kn_rel, 'kn_rel', rel)
-                with open(os.path.join(kn_dir, f'base_kn_bag-{rel}.json'), 'w') as fw:
-                    json.dump(kn_bag_list, fw, indent=2)
-                with open(os.path.join(kn_dir, f'base_kn_rel-{rel}.json'), 'w') as fw:
-                    json.dump(kn_rel, fw, indent=2)
+            threshold_ratio = 0.5
+            mode_ratio_bag = 0.7
+            for max_it in range(6):
+                ave_kn_num, kn_bag_list, kn_rel = analysis_file(filename, rlts_dir, 'base')
+                if ave_kn_num < 2:
+                    mode_ratio_bag -= 0.05
+                if ave_kn_num > 5:
+                    mode_ratio_bag += 0.05
+                if ave_kn_num >= 2 and ave_kn_num <= 5:
+                    break
+            rel = filename.split('.')[0].split('-')[-1]
+            stat(kn_bag_list, 'kn_bag', rel)
+            stat(kn_rel, 'kn_rel', rel)
+            with open(os.path.join(kn_dir, f'base_kn_bag-{rel}.json'), 'w') as fw:
+                json.dump(kn_bag_list, fw, indent=2)
+            with open(os.path.join(kn_dir, f'base_kn_rel-{rel}.json'), 'w') as fw:
+                json.dump(kn_rel, fw, indent=2)
 
 if __name__ == "__main__":
     model_list = [
@@ -145,6 +139,7 @@ if __name__ == "__main__":
     ]
 
     for model_name in model_list:
-        results_root = f"../results/{model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name}"
+        r_dir = f"../results/{model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name}"
+        kn_dir = os.path.join(r_dir, 'kn')
         print(f"Processing results for model: {model_name}")
-        process_results_dir(results_root)
+        process_results_dir(kn_dir,r_dir)

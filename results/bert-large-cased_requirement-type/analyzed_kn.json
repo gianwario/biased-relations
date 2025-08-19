@@ -1,0 +1,14 @@
+{
+  "kn_dir": "../results\\bert-large-cased_requirement-type\\kn",
+  "fig_dir": "../results\\bert-large-cased_requirement-type\\figs",
+  "stats": {
+    "average_ig_kn": 3.741396263520157,
+    "average_base_kn": 88.45526057030482
+  },
+  "intersection": {
+    "ig_inner_ave_intersec": 1.993627055274674,
+    "ig_inter_ave_intersec": 1.2594690265486725,
+    "base_inner_ave_intersec": 60.58533372987212,
+    "base_inter_ave_intersec": 36.87840707964602
+  }
+}

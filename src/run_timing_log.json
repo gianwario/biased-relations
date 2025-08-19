@@ -1,0 +1,330 @@
+[
+  {
+    "model": "aieng-lab/ModernBERT-large_requirement-completion",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 3110.1632
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 2161.5389
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 4860.4834
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 6055.3167
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 2408.3716
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 24687.525
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 6881.6501
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 4777.7637
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 7974.3365
+      }
+    ]
+  },
+  {
+    "model": "aieng-lab/ModernBERT-large_incivility",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 4569.2004
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 3195.5222
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 7312.8933
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 9261.8991
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 2994.7659
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 17400.4285
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 4544.848
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 3148.0276
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 5413.9493
+      }
+    ]
+  },
+  {
+    "model": "aieng-lab/bert-large-cased_tone-bearing",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 2759.2897
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 1912.5512
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 4302.2345
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 5347.1667
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 2122.3142
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 15264.6281
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 3992.7766
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 2756.2527
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 4750.5243
+      }
+    ]
+  },
+  {
+    "model": "aieng-lab/ModernBERT-large_tone-bearing",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 3137.1471
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 2170.3637
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 4899.8885
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 6105.1123
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 2420.7777
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 17376.9304
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 4542.4891
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 3145.8054
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 5417.4226
+      }
+    ]
+  },
+  {
+    "model": "aieng-lab/bert-large-cased_sentiment",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 2764.3569
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 1932.278
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 4291.1699
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 5348.2675
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 2126.5977
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 15261.1939
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 3984.4349
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 2753.2002
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 4756.574
+      }
+    ]
+  },
+  {
+    "model": "aieng-lab/ModernBERT-large_sentiment",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 3133.1405
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 2188.5965
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 4895.8916
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 6109.7214
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 2419.2304
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 20253.57
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 6417.502
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 4624.7889
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 8013.2459
+      }
+    ]
+  },
+  {
+    "model": "aieng-lab/bert-large-cased_requirement-type",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 4177.3437
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 2880.4852
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 6393.7375
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 7972.0068
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 3227.122
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 23226.4573
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 6044.4891
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 4189.2177
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 7109.5262
+      }
+    ]
+  },
+  {
+    "model": "aieng-lab/ModernBERT-large_requirement-type",
+    "timing": [
+      {
+        "relation": "BR01",
+        "costing_time_seconds": 4790.9583
+      },
+      {
+        "relation": "BR02",
+        "costing_time_seconds": 3294.0533
+      },
+      {
+        "relation": "BR03",
+        "costing_time_seconds": 7366.2203
+      },
+      {
+        "relation": "BR04",
+        "costing_time_seconds": 8108.4847
+      },
+      {
+        "relation": "BR05",
+        "costing_time_seconds": 2423.7334
+      },
+      {
+        "relation": "BR06",
+        "costing_time_seconds": 17361.5022
+      },
+      {
+        "relation": "BR07",
+        "costing_time_seconds": 4535.3538
+      },
+      {
+        "relation": "BR08",
+        "costing_time_seconds": 3147.0933
+      },
+      {
+        "relation": "BR09",
+        "costing_time_seconds": 5410.7954
+      }
+    ]
+  }
+]
