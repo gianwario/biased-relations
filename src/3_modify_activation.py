@@ -13,7 +13,7 @@ import pickle
 import time
 
 import transformers
-from transformers import BertTokenizer
+from transformers import AutoTokenizer
 from custom_bert import BertForMaskedLM
 import torch.nn.functional as F
 
@@ -25,49 +25,50 @@ logger = logging.getLogger(__name__)
 
 
 def example2feature(example, max_seq_length, tokenizer):
-    """Convert an example into input features"""
-    features = []
-    tokenslist = []
+    """Convert an example into input features using proper tokenization and masking support"""
+    
+    # Replace [MASK] placeholder with the tokenizer's actual mask token
+    text = example[0].replace("[MASK]", tokenizer.mask_token)
 
-    ori_tokens = tokenizer.tokenize(example[0])
-    # All templates are simple, almost no one will exceed the length limit.
-    if len(ori_tokens) > max_seq_length - 2:
-        ori_tokens = ori_tokens[:max_seq_length - 2]
+    # Tokenize the input properly with encoding
+    enc = tokenizer.encode_plus(
+        text,
+        max_length=max_seq_length,
+        truncation=True,
+        padding="max_length",
+        return_tensors="pt",  # returns tensors, we convert them to list below
+        return_token_type_ids=True,
+        return_attention_mask=True,
+    )
 
-    # add special tokens
-    tokens = ["[CLS]"] + ori_tokens + ["[SEP]"]
-    base_tokens = ["[UNK]"] + ["[UNK]"] * len(ori_tokens) + ["[UNK]"]
-    segment_ids = [0] * len(tokens)
+    # Extract input features
+    input_ids = enc["input_ids"][0].tolist()
+    input_mask = enc["attention_mask"][0].tolist()
+    segment_ids = enc["token_type_ids"][0].tolist()
+    
+    # Baseline uses [UNK] everywhere (same length as input)
+    unk_id = tokenizer.convert_tokens_to_ids("[UNK]")
+    baseline_ids = [unk_id] * len(input_ids)
 
-    # Generate id and attention mask
-    input_ids = tokenizer.convert_tokens_to_ids(tokens)
-    baseline_ids = tokenizer.convert_tokens_to_ids(base_tokens)
-    input_mask = [1] * len(input_ids)
+    # Token-level info (for display/logging, not for indexing)
+    tokens = tokenizer.convert_ids_to_tokens(input_ids)
 
-    # Pad [PAD] tokens (id in BERT-base-cased: 0) up to the sequence length.
-    padding = [0] * (max_seq_length - len(input_ids))
-    input_ids += padding
-    baseline_ids += padding
-    segment_ids += padding
-    input_mask += padding
-
-    assert len(baseline_ids) == max_seq_length
-    assert len(input_ids) == max_seq_length
-    assert len(input_mask) == max_seq_length
-    assert len(segment_ids) == max_seq_length
-
+    # Construct the features dict
     features = {
         'input_ids': input_ids,
         'input_mask': input_mask,
         'segment_ids': segment_ids,
         'baseline_ids': baseline_ids,
     }
+
+    # Token info (optional, for logging or display purposes)
     tokens_info = {
-        "tokens":tokens,
-        "relation":example[2],
-        "gold_obj":example[1],
+        "tokens": tokens,
+        "relation": example[2],
+        "gold_obj": example[1],
         "pred_obj": None
     }
+
     return features, tokens_info
 
 
@@ -117,7 +118,14 @@ def run_modify_activation(
         torch.cuda.manual_seed_all(seed)
 
     # init tokenizer
-    tokenizer = BertTokenizer.from_pretrained(bert_model, do_lower_case=do_lower_case)
+    tokenizer_name = bert_model
+    if "ModernBERT-large" in model_name:
+        tokenizer_name = "answerdotai/ModernBERT-large"
+    if "ModernBERT-base" in model_name:
+        tokenizer_name = "answerdotai/ModernBERT-base"
+
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, do_lower_case=do_lower_case, force_download=True)
+
 
     # Load pre-trained BERT
     logger.info("***** CUDA.empty_cache() *****")
@@ -168,7 +176,8 @@ def run_modify_activation(
                 'rm_oth:ave_delta': [],
                 'rm_oth:ave_delta_ratio': None,
                 'eh_oth:ave_delta': [],
-                'eh_oth:ave_delta_ratio': None
+                'eh_oth:ave_delta_ratio': None,
+                'time': None
             }
             with open(os.path.join(kn_dir, filename), 'r') as fr:
                 kn_bag_list = json.load(fr)
@@ -193,7 +202,13 @@ def run_modify_activation(
                     segment_ids = segment_ids.to(device)
 
                     # record [MASK]'s position
-                    tgt_pos = tokens_info['tokens'].index('[MASK]')
+                    mask_token_id = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+                    try:
+                        tgt_pos = eval_features['input_ids'].index(mask_token_id)
+                    except ValueError:
+                        print("Warning: [MASK] token ID not found in input_ids:", eval_features['input_ids'])
+                        continue
+
                     # record [MASK]'s gold label
                     gold_label = tokenizer.convert_tokens_to_ids(tokens_info['gold_obj'])
 
@@ -231,7 +246,13 @@ def run_modify_activation(
                     segment_ids = segment_ids.to(device)
 
                     # record [MASK]'s position
-                    tgt_pos = tokens_info['tokens'].index('[MASK]')
+                    mask_token_id = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+                    try:
+                        tgt_pos = eval_features['input_ids'].index(mask_token_id)
+                    except ValueError:
+                        print("Warning: [MASK] token ID not found in input_ids:", eval_features['input_ids'])
+                        continue
+
                     # record [MASK]'s gold label
                     gold_label = tokenizer.convert_tokens_to_ids(tokens_info['gold_obj'])
 
@@ -252,7 +273,7 @@ def run_modify_activation(
             # record running time
             toc = time.perf_counter()
             logger.info(f"***** Relation: {relation} evaluated. Costing time: {toc - tic:0.4f} seconds *****")
-
+            
             for k, v in rlt_dict[save_key].items():
                 if rlt_dict[save_key][k] is not None and len(rlt_dict[save_key][k]) > 0:
                     rlt_dict[save_key][k] = np.array(rlt_dict[save_key][k]).mean()
@@ -260,6 +281,7 @@ def run_modify_activation(
             rlt_dict[save_key]['eh_own:ave_delta_ratio'] = rlt_dict[save_key]['eh_own:ave_delta'] / rlt_dict[save_key]['own:ori_prob']
             rlt_dict[save_key]['rm_oth:ave_delta_ratio'] = rlt_dict[save_key]['rm_oth:ave_delta'] / rlt_dict[save_key]['oth:ori_prob']
             rlt_dict[save_key]['eh_oth:ave_delta_ratio'] = rlt_dict[save_key]['eh_oth:ave_delta'] / rlt_dict[save_key]['oth:ori_prob']
+            rlt_dict[save_key]['time'] = toc - tic
             print(save_key, '==============>', rlt_dict[save_key])
 
         with open(os.path.join(kn_dir, f'{prefix}modify_activation_rlt.json'), 'w') as fw:
@@ -272,12 +294,12 @@ def run_modify_activation(
 if __name__ == "__main__":
     # Example usage for multiple models
     model_list = [
-        "bert-base-cased",
-        "bert-large-cased",
-        "bert-base-uncased",
-        "bert-large-uncased",
-        "answerdotai/ModernBERT-large",
-        "answerdotai/ModernBERT-base",
+        #"bert-base-cased",
+        #"bert-large-cased",
+        #"bert-base-uncased",
+        #"bert-large-uncased",
+        #"answerdotai/ModernBERT-large",
+        #"answerdotai/ModernBERT-base",
         # FINETUNED models:
         "aieng-lab/bert-large-cased_requirement-completion",
         "aieng-lab/ModernBERT-large_requirement-completion",
@@ -296,11 +318,11 @@ if __name__ == "__main__":
         data_path = ""
         tmp_data_path = f"../data/biased_relations/biased_relations_all_bags.json"
         bert_model = model_name
-        output_dir = f"../results/{model_name}"
-        kn_dir = f"../results/{model_name}/kn"
+        output_dir = f"../results/{model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name}"
+        kn_dir = f"../results/{model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name}/kn"
         output_prefix = ""
         max_seq_length = 128
-        do_lower_case = False
+        do_lower_case = True if 'uncased' in model_name else False
         no_cuda = False
         gpus = '1'
         seed = 42
