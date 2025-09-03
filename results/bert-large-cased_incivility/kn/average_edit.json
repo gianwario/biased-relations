@@ -1,0 +1,19 @@
+{
+  "success_updated": NaN,
+  "success_updated_5": NaN,
+  "ori_changed": NaN,
+  "tgt_prob_inc": NaN,
+  "tgt_prob_inc_ratio": NaN,
+  "tgt_ori_rank": NaN,
+  "tgt_new_rank": NaN,
+  "tgt_rank_inc": NaN,
+  "other_ppl_inc": [],
+  "ori_inner_log_ppl": NaN,
+  "new_inner_log_ppl": NaN,
+  "ori_inter_log_ppl": NaN,
+  "new_inter_log_ppl": NaN,
+  "ori_inner_ppl": NaN,
+  "new_inner_ppl": NaN,
+  "ori_inter_ppl": NaN,
+  "new_inter_ppl": NaN
+}

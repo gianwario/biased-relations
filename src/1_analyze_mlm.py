@@ -15,6 +15,7 @@ import time
 import transformers
 from transformers import BertTokenizer, AutoTokenizer
 from custom_bert import BertForMaskedLM
+from custom_modernbert import ModernBertForMaskedLM
 import torch.nn.functional as F
 
 # set logger
@@ -124,13 +125,23 @@ def run(args):
         tokenizer_name = "answerdotai/ModernBERT-large"
     if "ModernBERT-base" in model_name:
         tokenizer_name = "answerdotai/ModernBERT-base"
-
-    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, do_lower_case=args['do_lower_case'], force_download=True)
-
+    def load_tokenizer(model_name: str):
+        try:
+            return AutoTokenizer.from_pretrained(model_name, use_fast=True, trust_remote_code=True)
+        except Exception:
+            # fall back to local snapshot if needed
+            from huggingface_hub import snapshot_download
+            local_dir = snapshot_download(repo_id=model_name)
+            return AutoTokenizer.from_pretrained(local_dir, use_fast=True, trust_remote_code=True)
+    #tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, do_lower_case=args['do_lower_case'], force_download=True, use_fast=True, trust_remote_code=True)
+    tokenizer = load_tokenizer(tokenizer_name)
     # Load pre-trained BERT
     print("***** CUDA.empty_cache() *****")
     torch.cuda.empty_cache()
-    model = BertForMaskedLM.from_pretrained(args['bert_model'])
+    if "modernbert" in args['bert_model'].lower():
+        model = ModernBertForMaskedLM.from_pretrained(args['bert_model'], trust_remote_code=True)
+    else:
+        model = BertForMaskedLM.from_pretrained(args['bert_model'])
     model.to(device)
 
     # data parallel
@@ -264,18 +275,18 @@ if __name__ == "__main__":
         #"bert-large-cased",
         #"bert-base-uncased",
         #"bert-large-uncased",
-        #"answerdotai/ModernBERT-large",
-        #"answerdotai/ModernBERT-base",
+        "answerdotai/ModernBERT-large",
+        "answerdotai/ModernBERT-base",
         # FINETUNED models:
         #"aieng-lab/bert-large-cased_requirement-completion",
         "aieng-lab/ModernBERT-large_requirement-completion",
         #"aieng-lab/bert-large-cased_incivility",
         "aieng-lab/ModernBERT-large_incivility",
-        "aieng-lab/bert-large-cased_tone-bearing",
+        #"aieng-lab/bert-large-cased_tone-bearing",
         "aieng-lab/ModernBERT-large_tone-bearing",
-        "aieng-lab/bert-large-cased_sentiment",
+        #"aieng-lab/bert-large-cased_sentiment",
         "aieng-lab/ModernBERT-large_sentiment",
-        "aieng-lab/bert-large-cased_requirement-type",
+        #"aieng-lab/bert-large-cased_requirement-type",
         "aieng-lab/ModernBERT-large_requirement-type",
     ]
 

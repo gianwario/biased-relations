@@ -1,0 +1,19 @@
+{
+  "success_updated": 0.0,
+  "success_updated_5": 0.3333333333333333,
+  "ori_changed": 0.6666666666666666,
+  "tgt_prob_inc": 0.1221121564714925,
+  "tgt_prob_inc_ratio": 95.57388991594566,
+  "tgt_ori_rank": 3501.3333333333335,
+  "tgt_new_rank": 1511.6666666666667,
+  "tgt_rank_inc": 1989.6666666666667,
+  "other_ppl_inc": [],
+  "ori_inner_log_ppl": 8.23696749572076,
+  "new_inner_log_ppl": 8.235393709140224,
+  "ori_inter_log_ppl": 8.861521244187331,
+  "new_inter_log_ppl": 8.754456088310237,
+  "ori_inner_ppl": 3778.0659178319106,
+  "new_inner_ppl": 3772.12472470132,
+  "ori_inter_ppl": 7055.207278242335,
+  "new_inter_ppl": 6338.871839558837
+}

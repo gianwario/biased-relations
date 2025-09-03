@@ -1,0 +1,73 @@
+{
+  "original_accuracy": {
+    "mean": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "erased_accuracy": {
+    "mean": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "erased_ratio_accuracy": {
+    "mean": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "num_kn_rel": {
+    "mean": 19.444444444444443,
+    "min": 16.0,
+    "max": 20.0
+  },
+  "original_ppl": {
+    "mean": 59075.31162222222,
+    "min": 29018.2269,
+    "max": 179603.5404
+  },
+  "erased_ppl": {
+    "mean": 114366.8086111111,
+    "min": 63093.9901,
+    "max": 261290.7546
+  },
+  "ppl_increase_ratio": {
+    "mean": 1.1318333333333332,
+    "min": 0.4548,
+    "max": 1.7265
+  },
+  "other_original_accuracy": {
+    "mean": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "other_erased_accuracy": {
+    "mean": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "other_erased_ratio_accuracy": {
+    "mean": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "other_original_ppl": {
+    "mean": 49381.20647777777,
+    "min": 42508.1428,
+    "max": 56863.6833
+  },
+  "other_erased_ppl": {
+    "mean": 90806.74012222223,
+    "min": 59053.7772,
+    "max": 103928.4059
+  },
+  "other_ppl_increase_ratio": {
+    "mean": 0.8328777777777777,
+    "min": 0.3892,
+    "max": 1.085
+  },
+  "time_seconds": {
+    "mean": 476.5181933000001,
+    "min": 464.7911546999967,
+    "max": 489.1733787999983
+  },
+  "n_relations": 9
+}

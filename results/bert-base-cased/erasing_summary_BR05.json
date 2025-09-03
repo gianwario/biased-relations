@@ -1,0 +1,17 @@
+{
+  "relation": "BR05",
+  "original_accuracy": 0.0,
+  "erased_accuracy": 0.0,
+  "erased_ratio_accuracy": 0.0,
+  "num_kn_rel": 20,
+  "original_ppl": 6224.6156,
+  "erased_ppl": 17687.1542,
+  "ppl_increase_ratio": 1.8415,
+  "other_original_accuracy": 0.0012,
+  "other_erased_accuracy": 0.0007,
+  "other_erased_ratio_accuracy": 0.4167,
+  "other_original_ppl": 15163.6832,
+  "other_erased_ppl": 41209.0679,
+  "other_ppl_increase_ratio": 1.7176,
+  "time": 259.9371859999999
+}

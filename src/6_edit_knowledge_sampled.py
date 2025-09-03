@@ -16,7 +16,7 @@ from pprint import pprint
 from collections import Counter
 
 import transformers
-from transformers import BertTokenizer
+from transformers import AutoTokenizer
 from custom_bert import BertForMaskedLM
 import torch.nn.functional as F
 
@@ -28,49 +28,50 @@ logger = logging.getLogger(__name__)
 
 
 def example2feature(example, max_seq_length, tokenizer):
-    """Convert an example into input features"""
-    features = []
-    tokenslist = []
+    """Convert an example into input features using proper tokenization and masking support"""
+    
+    # Replace [MASK] placeholder with the tokenizer's actual mask token
+    text = example[0].replace("[MASK]", tokenizer.mask_token)
 
-    ori_tokens = tokenizer.tokenize(example[0])
-    # All templates are simple, almost no one will exceed the length limit.
-    if len(ori_tokens) > max_seq_length - 2:
-        ori_tokens = ori_tokens[:max_seq_length - 2]
+    # Tokenize the input properly with encoding
+    enc = tokenizer.encode_plus(
+        text,
+        max_length=max_seq_length,
+        truncation=True,
+        padding="max_length",
+        return_tensors="pt",  # returns tensors, we convert them to list below
+        return_token_type_ids=True,
+        return_attention_mask=True,
+    )
 
-    # add special tokens
-    tokens = ["[CLS]"] + ori_tokens + ["[SEP]"]
-    base_tokens = ["[UNK]"] + ["[UNK]"] * len(ori_tokens) + ["[UNK]"]
-    segment_ids = [0] * len(tokens)
+    # Extract input features
+    input_ids = enc["input_ids"][0].tolist()
+    input_mask = enc["attention_mask"][0].tolist()
+    segment_ids = enc["token_type_ids"][0].tolist()
+    
+    # Baseline uses [UNK] everywhere (same length as input)
+    unk_id = tokenizer.convert_tokens_to_ids("[UNK]")
+    baseline_ids = [unk_id] * len(input_ids)
 
-    # Generate id and attention mask
-    input_ids = tokenizer.convert_tokens_to_ids(tokens)
-    baseline_ids = tokenizer.convert_tokens_to_ids(base_tokens)
-    input_mask = [1] * len(input_ids)
+    # Token-level info (for display/logging, not for indexing)
+    tokens = tokenizer.convert_ids_to_tokens(input_ids)
 
-    # Pad [PAD] tokens (id in BERT-base-cased: 0) up to the sequence length.
-    padding = [0] * (max_seq_length - len(input_ids))
-    input_ids += padding
-    baseline_ids += padding
-    segment_ids += padding
-    input_mask += padding
-
-    assert len(baseline_ids) == max_seq_length
-    assert len(input_ids) == max_seq_length
-    assert len(input_mask) == max_seq_length
-    assert len(segment_ids) == max_seq_length
-
+    # Construct the features dict
     features = {
         'input_ids': input_ids,
         'input_mask': input_mask,
         'segment_ids': segment_ids,
         'baseline_ids': baseline_ids,
     }
+
+    # Token info (optional, for logging or display purposes)
     tokens_info = {
-        "tokens":tokens,
-        "relation":example[2],
-        "gold_obj":example[1],
+        "tokens": tokens,
+        "relation": example[2],
+        "gold_obj": example[1],
         "pred_obj": None
     }
+
     return features, tokens_info
 
 
@@ -93,78 +94,26 @@ def pos_str2list(pos_str):
     return [int(pos) for pos in pos_str.split('@')]
 
 
-def main():
-    parser = argparse.ArgumentParser()
-
-    # Basic parameters
-    parser.add_argument("--data_path",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The input data path. Should be .json file for the MLM task. ")
-    parser.add_argument("--tmp_data_path",
-                        default=None,
-                        type=str,
-                        help="Temporary input data path. Should be .json file for the MLM task. ")
-    parser.add_argument("--bert_model", default=None, type=str, required=True,
-                        help="Bert pre-trained model selected in the list: bert-base-uncased, "
-                            "bert-large-uncased, bert-base-cased, bert-base-multilingual, bert-base-chinese.")
-    parser.add_argument("--output_dir",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The output directory where the model predictions and checkpoints will be written.")
-    parser.add_argument("--kn_dir",
-                        default=None,
-                        type=str,
-                        required=True,
-                        help="The directory where important positions are stored.")
-
-    # Other parameters
-    parser.add_argument("--max_seq_length",
-                        default=128,
-                        type=int,
-                        help="The maximum total input sequence length after WordPiece tokenization. \n"
-                            "Sequences longer than this will be truncated, and sequences shorter \n"
-                            "than this will be padded.")
-    parser.add_argument("--do_lower_case",
-                        default=False,
-                        action='store_true',
-                        help="Set this flag if you are using an uncased model")
-    parser.add_argument("--no_cuda",
-                        default=False,
-                        action='store_true',
-                        help="Whether not to use CUDA when available")
-    parser.add_argument("--gpus",
-                        type=str,
-                        default='0',
-                        help="available gpus id")
-    parser.add_argument('--seed',
-                        type=int,
-                        default=42,
-                        help="random seed for initialization")
-    parser.add_argument("--debug",
-                        type=int,
-                        default=-1,
-                        help="How many examples to debug. -1 denotes no debugging")
-    parser.add_argument("--norm_lambda1",
-                        type=int,
-                        default=1,
-                        help="norm_lambda1")
-    parser.add_argument("--norm_lambda2",
-                        type=int,
-                        default=1,
-                        help="norm_lambda2")
-
-    # parse arguments
-    args = parser.parse_args()
+def main(bert_model,
+         data_path,
+         tmp_data_path,
+         kn_dir,
+         output_dir,
+         gpus,
+         max_seq_length,
+         debug,
+         do_lower_case,
+         no_cuda=False,
+         seed=42,
+         norm_lambda1=1,
+         norm_lambda2=8):
 
     # set device
-    if args.no_cuda or not torch.cuda.is_available():
+    if no_cuda or not torch.cuda.is_available():
         device = torch.device("cpu")
         n_gpu = 0
-    elif len(args.gpus) == 1:
-        device = torch.device("cuda:%s" % args.gpus)
+    elif len(gpus) == 1:
+        device = torch.device("cuda:%s" % gpus)
         n_gpu = 1
     else:
         # !!! to implement multi-gpus
@@ -172,22 +121,29 @@ def main():
     logger.info("device: {} n_gpu: {}, distributed training: {}".format(device, n_gpu, bool(n_gpu > 1)))
 
     # set random seeds
-    random.seed(args.seed)
-    np.random.seed(args.seed)
-    torch.manual_seed(args.seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
     if n_gpu > 0:
-        torch.cuda.manual_seed_all(args.seed)
+        torch.cuda.manual_seed_all(seed)
 
     # save args
-    os.makedirs(args.output_dir, exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
 
     # init tokenizer
-    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
+    tokenizer_name = bert_model
+    if "ModernBERT-large" in model_name:
+        tokenizer_name = "answerdotai/ModernBERT-large"
+    if "ModernBERT-base" in model_name:
+        tokenizer_name = "answerdotai/ModernBERT-base"
+
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, do_lower_case=do_lower_case, force_download=True)
+
 
     # Load pre-trained BERT
     logger.info("***** CUDA.empty_cache() *****")
     torch.cuda.empty_cache()
-    model = BertForMaskedLM.from_pretrained(args.bert_model)
+    model = BertForMaskedLM.from_pretrained(bert_model)
     model.to(device)
 
     # data parallel
@@ -196,11 +152,11 @@ def main():
     model.eval()
 
     # prepare eval set
-    if os.path.exists(args.tmp_data_path):
-        with open(args.tmp_data_path, 'r') as f:
+    if os.path.exists(tmp_data_path):
+        with open(tmp_data_path, 'r') as f:
             eval_bag_list_perrel = json.load(f)
     else:
-        with open(args.data_path, 'r') as f:
+        with open(data_path, 'r') as f:
             eval_bag_list_all = json.load(f)
         # split bag list into relations
         eval_bag_list_perrel = {}
@@ -208,10 +164,10 @@ def main():
             bag_rel = eval_bag[0][2].split('(')[0]
             if bag_rel not in eval_bag_list_perrel:
                 eval_bag_list_perrel[bag_rel] = []
-            if len(eval_bag_list_perrel[bag_rel]) >= args.debug:
+            if len(eval_bag_list_perrel[bag_rel]) >= debug:
                 continue
             eval_bag_list_perrel[bag_rel].append(eval_bag)
-        with open(args.tmp_data_path, 'w') as fw:
+        with open(tmp_data_path, 'w') as fw:
             json.dump(eval_bag_list_perrel, fw, indent=2)
 
 
@@ -239,7 +195,7 @@ def main():
     def edit(rel, bag_idx, tgt_ent):
         eval_bag = eval_bag_list_perrel[rel][bag_idx]
     
-        with open(os.path.join(args.kn_dir, f'kn_bag-{rel}.json'), 'r') as fr:
+        with open(os.path.join(kn_dir, f'kn_bag-{rel}.json'), 'r') as fr:
             kn_bag_list = json.load(fr)
         
 
@@ -263,7 +219,9 @@ def main():
             'ori_inter_log_ppl': [],
             'ori_inner_log_ppl': [],
             'new_inter_log_ppl': [],
-            'new_inner_log_ppl': []
+            'new_inner_log_ppl': [],
+            'time':None,
+            'rel': rel,
         }
 
         if len(kn_bag) == 0:
@@ -271,8 +229,9 @@ def main():
 
         rd_idx = random.randint(1, len(eval_bag)) - 1
 
+        tic = time.perf_counter()
         eval_example = eval_bag[rd_idx]
-        eval_features, tokens_info = example2feature(eval_example, args.max_seq_length, tokenizer)
+        eval_features, tokens_info = example2feature(eval_example, max_seq_length, tokenizer)
         # convert features to long type tensors
         baseline_ids, input_ids, input_mask, segment_ids = eval_features['baseline_ids'], eval_features['input_ids'], eval_features['input_mask'], eval_features['segment_ids']
         baseline_ids = torch.tensor(baseline_ids, dtype=torch.long).unsqueeze(0)
@@ -285,7 +244,13 @@ def main():
         segment_ids = segment_ids.to(device)
 
         # record [MASK]'s position
-        tgt_pos = tokens_info['tokens'].index('[MASK]')
+        mask_token_id = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+        try:
+            tgt_pos = eval_features['input_ids'].index(mask_token_id)
+        except ValueError:
+            print("Warning: [MASK] token ID not found in input_ids:", eval_features['input_ids'])
+            return
+    
         # record [MASK]'s gold label
         tgt_label_id = tokenizer.convert_tokens_to_ids(tgt_ent)
 
@@ -314,8 +279,8 @@ def main():
         tgt_emb_norm = torch.norm(tgt_emb)
         for layer, pos in kn_bag:
             value_norm = torch.norm(model.bert.encoder.layer[layer].output.dense.weight[:, pos])
-            lambda_list_1.append(value_norm / ori_pred_emb_norm * args.norm_lambda1)
-            lambda_list_2.append(value_norm / tgt_emb_norm * args.norm_lambda2)
+            lambda_list_1.append(value_norm / ori_pred_emb_norm * norm_lambda1)
+            lambda_list_2.append(value_norm / tgt_emb_norm * norm_lambda2)
         with torch.no_grad():
             for i, (layer, pos) in enumerate(kn_bag):
                 model.bert.encoder.layer[layer].output.dense.weight[:, pos] -= ori_pred_emb * lambda_list_1[i]
@@ -366,7 +331,7 @@ def main():
             rand_bag_idx = inner_rand_bag_idx_list[i]
             eval_bag = eval_bag_list[rand_bag_idx]
             for idx, eval_example in enumerate(eval_bag):
-                eval_features, tokens_info = example2feature(eval_example, args.max_seq_length, tokenizer)
+                eval_features, tokens_info = example2feature(eval_example, max_seq_length, tokenizer)
                 # convert features to long type tensors
                 baseline_ids, input_ids, input_mask, segment_ids = eval_features['baseline_ids'], eval_features['input_ids'], eval_features['input_mask'], eval_features['segment_ids']
                 baseline_ids = torch.tensor(baseline_ids, dtype=torch.long).unsqueeze(0)
@@ -378,7 +343,13 @@ def main():
                 input_mask = input_mask.to(device)
                 segment_ids = segment_ids.to(device)
                 # record [MASK]'s position
-                tgt_pos = tokens_info['tokens'].index('[MASK]')
+                mask_token_id = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+                try:
+                    tgt_pos = eval_features['input_ids'].index(mask_token_id)
+                except ValueError:
+                    print("Warning: [MASK] token ID not found in input_ids:", eval_features['input_ids'])
+                    continue
+    
                 gold_id = tokenizer.convert_tokens_to_ids(tokens_info['gold_obj'])
                 _, logits = model(input_ids=input_ids, attention_mask=input_mask, token_type_ids=segment_ids, tgt_pos=tgt_pos, tgt_layer=0)  # (1, n_vocab)
                 gold_prob = F.softmax(logits, dim=-1)[0][gold_id]
@@ -403,7 +374,7 @@ def main():
             rand_bag_idx = inter_rand_bag_idx_list[i]
             eval_bag = eval_bag_list[rand_bag_idx]
             for idx, eval_example in enumerate(eval_bag):
-                eval_features, tokens_info = example2feature(eval_example, args.max_seq_length, tokenizer)
+                eval_features, tokens_info = example2feature(eval_example, max_seq_length, tokenizer)
                 # convert features to long type tensors
                 baseline_ids, input_ids, input_mask, segment_ids = eval_features['baseline_ids'], eval_features['input_ids'], eval_features['input_mask'], eval_features['segment_ids']
                 baseline_ids = torch.tensor(baseline_ids, dtype=torch.long).unsqueeze(0)
@@ -415,7 +386,13 @@ def main():
                 input_mask = input_mask.to(device)
                 segment_ids = segment_ids.to(device)
                 # record [MASK]'s position
-                tgt_pos = tokens_info['tokens'].index('[MASK]')
+                mask_token_id = tokenizer.convert_tokens_to_ids(tokenizer.mask_token)
+                try:
+                    tgt_pos = eval_features['input_ids'].index(mask_token_id)
+                except ValueError:
+                    print("Warning: [MASK] token ID not found in input_ids:", eval_features['input_ids'])
+                    continue
+    
                 gold_id = tokenizer.convert_tokens_to_ids(tokens_info['gold_obj'])
                 _, logits = model(input_ids=input_ids, attention_mask=input_mask, token_type_ids=segment_ids, tgt_pos=tgt_pos, tgt_layer=0)  # (1, n_vocab)
                 gold_prob = F.softmax(logits, dim=-1)[0][gold_id]
@@ -440,7 +417,7 @@ def main():
             rand_bag_idx = inner_rand_bag_idx_list[i]
             eval_bag = eval_bag_list[rand_bag_idx]
             for idx, eval_example in enumerate(eval_bag):
-                eval_features, tokens_info = example2feature(eval_example, args.max_seq_length, tokenizer)
+                eval_features, tokens_info = example2feature(eval_example, max_seq_length, tokenizer)
                 # convert features to long type tensors
                 baseline_ids, input_ids, input_mask, segment_ids = eval_features['baseline_ids'], eval_features['input_ids'], eval_features['input_mask'], eval_features['segment_ids']
                 baseline_ids = torch.tensor(baseline_ids, dtype=torch.long).unsqueeze(0)
@@ -452,7 +429,11 @@ def main():
                 input_mask = input_mask.to(device)
                 segment_ids = segment_ids.to(device)
                 # record [MASK]'s position
+                if '[MASK]' not in tokens_info['tokens']:
+                    print("Warning: [MASK] not found in tokens:", tokens_info['tokens'])
+                    continue
                 tgt_pos = tokens_info['tokens'].index('[MASK]')
+    
                 gold_id = tokenizer.convert_tokens_to_ids(tokens_info['gold_obj'])
                 _, logits = model(input_ids=input_ids, attention_mask=input_mask, token_type_ids=segment_ids, tgt_pos=tgt_pos, tgt_layer=0)  # (1, n_vocab)
                 gold_prob = F.softmax(logits, dim=-1)[0][gold_id]
@@ -468,7 +449,7 @@ def main():
             rand_bag_idx = inter_rand_bag_idx_list[i]
             eval_bag = eval_bag_list[rand_bag_idx]
             for idx, eval_example in enumerate(eval_bag):
-                eval_features, tokens_info = example2feature(eval_example, args.max_seq_length, tokenizer)
+                eval_features, tokens_info = example2feature(eval_example, max_seq_length, tokenizer)
                 # convert features to long type tensors
                 baseline_ids, input_ids, input_mask, segment_ids = eval_features['baseline_ids'], eval_features['input_ids'], eval_features['input_mask'], eval_features['segment_ids']
                 baseline_ids = torch.tensor(baseline_ids, dtype=torch.long).unsqueeze(0)
@@ -480,7 +461,11 @@ def main():
                 input_mask = input_mask.to(device)
                 segment_ids = segment_ids.to(device)
                 # record [MASK]'s position
+                if '[MASK]' not in tokens_info['tokens']:
+                    print("Warning: [MASK] not found in tokens:", tokens_info['tokens'])
+                    continue
                 tgt_pos = tokens_info['tokens'].index('[MASK]')
+    
                 gold_id = tokenizer.convert_tokens_to_ids(tokens_info['gold_obj'])
                 _, logits = model(input_ids=input_ids, attention_mask=input_mask, token_type_ids=segment_ids, tgt_pos=tgt_pos, tgt_layer=0)  # (1, n_vocab)
                 gold_prob = F.softmax(logits, dim=-1)[0][gold_id]
@@ -494,7 +479,8 @@ def main():
             for i, (layer, pos) in enumerate(kn_bag):
                 model.bert.encoder.layer[layer].output.dense.weight[:, pos] += ori_pred_emb * lambda_list_1[i]
                 model.bert.encoder.layer[layer].output.dense.weight[:, pos] -= tgt_emb * lambda_list_2[i]
-
+        toc = time.perf_counter()
+        results['time'] = toc - tic
         return results
 
     rels = list(eval_bag_list_perrel.keys())
@@ -530,6 +516,8 @@ def main():
                 if replaced_tail != eval_bag_list_perrel[rel][sampled_bag_idx][0][1]:
                     break
             results = edit(rel, sampled_bag_idx, replaced_tail)
+            with open(os.path.join(kn_dir, f'{rel}_edit.json'), 'w') as fw:
+                json.dump(results, fw, indent=2)
             if results is None or isinstance(results, str):
                 continue
             rel_sample_cnt += 1
@@ -575,7 +563,58 @@ def main():
     print(f'MRR: {ori_MRR:.8} -> {new_MRR:.8} (up {new_MRR - ori_MRR:.8})')
     print(f"inner PPL: {ave_results['ori_inner_ppl']:.8} -> {ave_results['new_inner_ppl']:.8} (up {ave_results['new_inner_ppl'] - ave_results['ori_inner_ppl']:.8})")
     print(f"inter PPL: {ave_results['ori_inter_ppl']:.8} -> {ave_results['new_inter_ppl']:.8} (up {ave_results['new_inter_ppl'] - ave_results['ori_inter_ppl']:.8})")
-
+    with open(os.path.join(kn_dir, f'average_edit.json'), 'w') as fw:
+        json.dump(ave_results, fw, indent=2)
 
 if __name__ == "__main__":
-    main()
+    model_list = [
+        #"bert-base-cased",
+        #"bert-large-cased",
+        #"bert-base-uncased",
+        #"bert-large-uncased",
+        "answerdotai/ModernBERT-large",
+        "answerdotai/ModernBERT-base",
+        # FINETUNED models:
+        "aieng-lab/bert-large-cased_requirement-completion",
+        "aieng-lab/ModernBERT-large_requirement-completion",
+        "aieng-lab/bert-large-cased_incivility",
+        "aieng-lab/ModernBERT-large_incivility",
+        "aieng-lab/bert-large-cased_tone-bearing",
+        "aieng-lab/ModernBERT-large_tone-bearing",
+        "aieng-lab/bert-large-cased_sentiment",
+        "aieng-lab/ModernBERT-large_sentiment",
+        "aieng-lab/bert-large-cased_requirement-type",
+        "aieng-lab/ModernBERT-large_requirement-type",
+    ]
+
+    for model_name in model_list:
+        print(f"Running for model: {model_name}")
+        data_path = ""
+        tmp_data_path = f"../data/biased_relations/biased_relations_all_bags.json"
+        bert_model = model_name
+        output_dir = f"../results/{model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name}"
+        kn_dir = f"../results/{model_name.split('/')[1] if len(model_name.split('/')) > 1 else model_name}/kn"
+        max_seq_length = 128
+        do_lower_case = True if 'uncased' in model_name else False
+        no_cuda = False
+        gpus = '1'
+        seed = 42
+        debug = 100000
+
+        if not os.path.exists(kn_dir):
+            print(f"Skipping {model_name}: kn_dir not found.")
+            continue
+
+        main(
+            data_path=data_path,
+            tmp_data_path=tmp_data_path,
+            bert_model=bert_model,
+            output_dir=output_dir,
+            kn_dir=kn_dir,
+            max_seq_length=max_seq_length,
+            do_lower_case=do_lower_case,
+            no_cuda=no_cuda,
+            gpus=gpus,
+            seed=seed,
+            debug=debug
+        )

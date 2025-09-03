@@ -292,7 +292,6 @@ def run_modify_activation(
 
 
 if __name__ == "__main__":
-    # Example usage for multiple models
     model_list = [
         #"bert-base-cased",
         #"bert-large-cased",
