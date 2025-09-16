@@ -1,0 +1,2 @@
+Correlation num_kn_rel <-> ppl_increase_ratio: rho=-0.026, p=0.818
+Correlation ig_inner_inter <-> other_ppl_increase_ratio: rho=-0.538, p=2.24e-07

@@ -1,0 +1,2 @@
+Wilcoxon signed-rank test (erased > original): W=3321.0, p=2.68e-15, n=81
+Cliff's Delta: 1.000
